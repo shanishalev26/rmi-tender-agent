@@ -283,6 +283,15 @@ st.markdown(
         [data-testid="stTabs"] [data-testid="stMarkdownContainer"] p {
             font-size: 0.95rem;
         }
+
+        [data-testid="stAppViewContainer"],
+        [data-testid="stMainBlockContainer"],
+        [data-testid="stMain"],
+        section.main {
+            direction: rtl;
+            text-align: right;
+        }
+        
     </style>
     """,
     unsafe_allow_html=True,
