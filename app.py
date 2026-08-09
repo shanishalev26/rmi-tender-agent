@@ -162,7 +162,6 @@ st.markdown(
         }
 
         [data-testid="stTabs"] [role="tablist"] {
-            flex-direction: row-reverse;
             gap: 0.45rem;
             background: rgba(255, 255, 255, 0.72);
             border: 1px solid var(--border);
