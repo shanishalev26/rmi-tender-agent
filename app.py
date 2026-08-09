@@ -162,6 +162,7 @@ st.markdown(
         }
 
         [data-testid="stTabs"] [role="tablist"] {
+            direction: rtl;
             gap: 0.45rem;
             background: rgba(255, 255, 255, 0.72);
             border: 1px solid var(--border);
@@ -278,7 +279,7 @@ st.markdown(
         [data-testid="stTabs"] button {
             padding: 0 14px;
         }
-        
+
         [data-testid="stTabs"] [data-testid="stMarkdownContainer"] p {
             font-size: 0.95rem;
         }
