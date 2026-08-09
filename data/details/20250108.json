@@ -1,0 +1,546 @@
+{
+  "MichrazID": 20250108,
+  "MichrazName": "108/2025",
+  "KodMerchav": 2,
+  "MaxToWin": 1,
+  "StatusMichraz": 1,
+  "KodYeudMichraz": 1,
+  "KodYeshuv": 6700,
+  "YechidotDiur": 15,
+  "Shchuna": "המושבה",
+  "KodTzuratHaknaya": 2,
+  "PirsumDate": "2025-04-30T00:00:00+03:00",
+  "PtichaDate": "2026-10-07T00:00:00+03:00",
+  "SgiraDate": "2026-11-23T12:00:00+02:00",
+  "VaadaDate": null,
+  "HagralaDate": null,
+  "SiyurDate": null,
+  "KodSugMichraz": 2,
+  "SchumHishtatfut": null,
+  "KodTashlum": 9,
+  "UpdateDate": "2026-08-09T10:44:09.733+03:00",
+  "HagashaMekuvenet": true,
+  "MatziaCanLimit": false,
+  "KlitatHatzaotMode": 1,
+  "RashutPituach": 0,
+  "MechirWithAgorot": false,
+  "MaxHatzaot": null,
+  "CheckArvutMode": 2,
+  "KhalYaadRashi": 1,
+  "Uchlusiyot": [
+    1,
+    3,
+    5
+  ],
+  "MechirSafMichraz": null,
+  "TokefArvut": "2025-11-30T00:00:00+02:00",
+  "TokefArvutSarvan": "2026-01-30T00:00:00+02:00",
+  "SumArvutSarvan": null,
+  "MinMishtatfim": null,
+  "MechirSafType": 3,
+  "KlitaDate": "2025-04-30T09:06:49.62+03:00",
+  "StatusMichrazMurchav": 1,
+  "SchumArvut": 0,
+  "isSC": 0,
+  "KayamSivsud": 0,
+  "DivurPirsum": 0,
+  "ChelkiyutShava": null,
+  "DivurTotzaot": null,
+  "Divur": null,
+  "SugMechirMufchat": 0,
+  "ReadyForHagasha": null,
+  "SugTacharut": 4,
+  "mpHatzaaotMichraz": [],
+  "Tik": [
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024173",
+      "MitchamName": "178",
+      "Shetach": 431,
+      "ShetachBniya": 0,
+      "Kibolet": 1,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024173",
+          "Tochnit": "207-0351742",
+          "MigrashName": "178       ",
+          "TochnitMigrashID": 292131
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272334,
+          "MichrazID": 20250108,
+          "TikID": "0000800024173",
+          "Gush": "15350",
+          "Helka": "32"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024165",
+      "MitchamName": "179",
+      "Shetach": 431,
+      "ShetachBniya": 0,
+      "Kibolet": 1,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024165",
+          "Tochnit": "207-0351742",
+          "MigrashName": "179       ",
+          "TochnitMigrashID": 292123
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272326,
+          "MichrazID": 20250108,
+          "TikID": "0000800024165",
+          "Gush": "15350",
+          "Helka": "33"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024172",
+      "MitchamName": "180",
+      "Shetach": 431,
+      "ShetachBniya": 0,
+      "Kibolet": 1,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024172",
+          "Tochnit": "207-0351742",
+          "MigrashName": "180       ",
+          "TochnitMigrashID": 292130
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272333,
+          "MichrazID": 20250108,
+          "TikID": "0000800024172",
+          "Gush": "15350",
+          "Helka": "34"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024167",
+      "MitchamName": "181",
+      "Shetach": 438,
+      "ShetachBniya": 0,
+      "Kibolet": 1,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024167",
+          "Tochnit": "207-0351742",
+          "MigrashName": "181       ",
+          "TochnitMigrashID": 292125
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272328,
+          "MichrazID": 20250108,
+          "TikID": "0000800024167",
+          "Gush": "15350",
+          "Helka": "35"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024166",
+      "MitchamName": "205",
+      "Shetach": 480,
+      "ShetachBniya": 0,
+      "Kibolet": 1,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024166",
+          "Tochnit": "207-0351742",
+          "MigrashName": "205       ",
+          "TochnitMigrashID": 292124
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272327,
+          "MichrazID": 20250108,
+          "TikID": "0000800024166",
+          "Gush": "15350",
+          "Helka": "59"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024164",
+      "MitchamName": "435",
+      "Shetach": 586,
+      "ShetachBniya": 0,
+      "Kibolet": 2,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024164",
+          "Tochnit": "207-0351742",
+          "MigrashName": "435       ",
+          "TochnitMigrashID": 292122
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272325,
+          "MichrazID": 20250108,
+          "TikID": "0000800024164",
+          "Gush": "15350",
+          "Helka": "69"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024168",
+      "MitchamName": "456",
+      "Shetach": 543,
+      "ShetachBniya": 0,
+      "Kibolet": 2,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024168",
+          "Tochnit": "207-0351742",
+          "MigrashName": "456       ",
+          "TochnitMigrashID": 292126
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272329,
+          "MichrazID": 20250108,
+          "TikID": "0000800024168",
+          "Gush": "15350",
+          "Helka": "90"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024171",
+      "MitchamName": "457",
+      "Shetach": 540,
+      "ShetachBniya": 0,
+      "Kibolet": 2,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024171",
+          "Tochnit": "207-0351742",
+          "MigrashName": "457       ",
+          "TochnitMigrashID": 292129
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272332,
+          "MichrazID": 20250108,
+          "TikID": "0000800024171",
+          "Gush": "15350",
+          "Helka": "91"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024169",
+      "MitchamName": "458",
+      "Shetach": 539,
+      "ShetachBniya": 0,
+      "Kibolet": 2,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024169",
+          "Tochnit": "207-0351742",
+          "MigrashName": "458       ",
+          "TochnitMigrashID": 292127
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272330,
+          "MichrazID": 20250108,
+          "TikID": "0000800024169",
+          "Gush": "15350",
+          "Helka": "92"
+        }
+      ]
+    },
+    {
+      "MichrazID": 20250108,
+      "TikID": "0000800024170",
+      "MitchamName": "477",
+      "Shetach": 609,
+      "ShetachBniya": 0,
+      "Kibolet": 2,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": 0,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20250108,
+          "TikID": "0000800024170",
+          "Tochnit": "207-0351742",
+          "MigrashName": "477       ",
+          "TochnitMigrashID": 292128
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 272331,
+          "MichrazID": 20250108,
+          "TikID": "0000800024170",
+          "Gush": "15350",
+          "Helka": "111"
+        }
+      ]
+    }
+  ],
+  "MichrazDocList": [
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131793,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-08-09T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131794,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-06-03T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131795,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-04-16T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131796,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-01-28T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131797,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-12-28T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131798,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-11-09T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131799,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-07-27T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131800,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-07-09T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20250108,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 131801,
+      "Teur": "פרסום ראשון",
+      "DocName": "פרסום ראשון.pdf",
+      "UpdateDate": "2025-04-30T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    }
+  ],
+  "MessageDetails": {
+    "messageCode": 2,
+    "messageText": "המכרז טרם נפתח להגשת הצעות",
+    "messageTextShort": null,
+    "messageType": "\u0000"
+  },
+  "MichrazLinks": [
+    {
+      "url": "https://apps.land.gov.il/TabaSearch/#/Plans?planNumber=2015115",
+      "DisplayText": "מאגר תוכניות בניין עיר",
+      "CssClass": "icon-taba"
+    }
+  ],
+  "Comments": [
+    "באחריות המציעים להתעדכן בכל שינוי ו/או הבהרה ו/או עדכון במכרז באתר רמ\"י עד למועד האחרון להגשת ההצעות.",
+    "כל הצעה למכרז זה, אשר תוגש במערכת המכרזים המקוונת באמצעות אותה ההזדהות בממשל זמין, תעדכן את קודמתה."
+  ],
+  "MichrazFullDocument": {
+    "MichrazID": 20250108,
+    "Size": 959072,
+    "FileType": "application/pdf",
+    "RowID": -1,
+    "Teur": "מסמך הפרסום המלא",
+    "DocName": "מסמך הפרסום המלא.pdf",
+    "UpdateDate": "2026-08-09T10:44:14.413+03:00",
+    "Url": null,
+    "MahutMismachID": 0,
+    "PirsumType": 2
+  },
+  "ShowStatusMapa": null
+}

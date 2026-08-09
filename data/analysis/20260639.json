@@ -1,0 +1,1138 @@
+{
+  "michraz_id": 20260639,
+  "analyzed_at": "2026-08-09T13:30:55.640848+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": "חוברת המכרז.pdf",
+      "description": "חוברת המכרז",
+      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20260639",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "source_document_id": 1,
+      "file_type": "application/pdf",
+      "downloaded_at": "2026-08-09T13:30:23.909174+00:00",
+      "local_path": "data/booklets/20260639.pdf",
+      "file_size_bytes": 1503437,
+      "processing_status": "processed"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "refreshed_at": "2026-08-09T14:48:29.364633+00:00",
+      "data": {
+        "מספר מכרז": "639/2026",
+        "קוד יישוב": 5000,
+        "קוד ייעוד": 99,
+        "קוד סוג מכרז": 10,
+        "שכונה": "ברנט 18",
+        "מגרשים": [
+          "24"
+        ],
+        "שטח": 198,
+        "יחידות דיור": 0,
+        "מחיר מינימום": 7760000.0,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 1552000,
+        "תוקף ערבות": "2027-01-10T00:00:00+02:00",
+        "גוש/חלקה": [
+          "גוש 7112 חלקה 24"
+        ],
+        "גושים/חלקות מובנים": [
+          {
+            "gush": "7112",
+            "chelka": "24"
+          }
+        ],
+        "מספרי תכנית מובנים": [],
+        "תכניות/מגרשים מובנים": [],
+        "תאריך פרסום": "2026-06-15T00:00:00+03:00",
+        "מועד אחרון": "2026-08-10T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20260639",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20260639/PirsumDocs",
+        "מסמכים": [
+          "פרסום בערבית.pdf",
+          "תשריט המכרז.pdf",
+          "חוברת המכרז.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260639&rowId=-1&size=236075&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 236075,
+            "source_updated_at": "2026-06-24T14:22:17.33+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום בערבית.pdf",
+            "description": "פרסום בערבית",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260639&rowId=3&size=205854&typePirsum=2&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%91%D7%A2%D7%A8%D7%91%D7%99%D7%AA.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%91%D7%A2%D7%A8%D7%91%D7%99%D7%AA&fileType=application%2Fpdf",
+            "source_document_id": 3,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 205854,
+            "source_updated_at": "2026-06-24T14:22:17.093+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "תשריט המכרז.pdf",
+            "description": "תשריט המכרז",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260639&rowId=2&size=238425&typePirsum=2&fileName=%D7%AA%D7%A9%D7%A8%D7%99%D7%98+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%AA%D7%A9%D7%A8%D7%99%D7%98+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
+            "source_document_id": 2,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 238425,
+            "source_updated_at": "2026-06-22T14:59:41.097+03:00"
+          },
+          {
+            "role": "tender_booklet",
+            "name": "חוברת המכרז.pdf",
+            "description": "חוברת המכרז",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260639&rowId=1&size=1503437&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
+            "source_document_id": 1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 1503437,
+            "source_updated_at": "2026-06-22T14:59:07.103+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260639&rowId=127202&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 127202,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-06-15T00:00:00+03:00"
+          }
+        ],
+        "סוג מכרז": "מכרזי עמידר",
+        "יישוב": "תל אביב יפו",
+        "ייעוד מכרז": "אחר"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "success",
+      "document_path": "data/booklets/20260639.pdf",
+      "error": null,
+      "data": {
+        "plan_number": {
+          "value": null,
+          "source_document": "20260639.pdf",
+          "page": null,
+          "excerpt": null,
+          "confidence": "low"
+        },
+        "threshold_conditions": [
+          {
+            "value": "זכאים להשתתף במכרז, אזרחי מדינת ישראל לרבות תאגידים, אשר אינם זרים כהגדרתם בחוק מקרקעי ישראל, אזרחי ישראל 1960, ואשר מצורף כנספח למכרז",
+            "source_document": "20260639.pdf",
+            "page": 7,
+            "excerpt": "זכאים להשתתף במכרז, אזרחי מדינת ישראל לרבות תאגידים, אשר אינם זרים כהגדרתם בחוק מקרקעי ישראל 1960, ואשר מצורף כנספח למכרז.",
+            "confidence": "high"
+          },
+          {
+            "value": "בנכס מחזיק דייר אשר לו זכויות דיירות מוגנת כמפורט בחוברת מכרז זו",
+            "source_document": "20260639.pdf",
+            "page": 1,
+            "excerpt": "בנכס מחזיק דייר אשר לו זכויות דיירות מוגנת כמפורט בחוברת מכרז זו.",
+            "confidence": "high"
+          },
+          {
+            "value": "מציע רשאי להגיש הצעה אחת בלבד למכרז",
+            "source_document": "20260639.pdf",
+            "page": 8,
+            "excerpt": "מציע יחיד רשאי בתוך 30 ימים ממועד ההודעה על אי זכייתו לעיין בהצעה הזוכה",
+            "confidence": "medium"
+          },
+          {
+            "value": "על המציע לצרף להצעתו ערבות בנקאית כמפורט בחוברת המכרז",
+            "source_document": "20260639.pdf",
+            "page": 8,
+            "excerpt": "כל המציעים יצרפו להצעתם ערבות בנקאית, המצאת ערבות זו הינה תנאי סף להשתתפות בהתמחאה/המחיארות יהיה לביית המחירים",
+            "confidence": "medium"
+          },
+          {
+            "value": "מחיר המינימום למכרז הינו 7,760,000 ש\"ח וסכום זה אינו כולל מע\"מ",
+            "source_document": "20260639.pdf",
+            "page": 5,
+            "excerpt": "מחיר המינימום למכרז הינו 7,760,000 נש. סכום זה אינו כולל מע\"מ וישמש את המציעים כמחיר מינימלי להגשת ההצעה לרכישת הזכויות בנכס.",
+            "confidence": "high"
+          },
+          {
+            "value": "המועד האחרון להגשת ההצעות הוא יום ב' 10 באוגוסט 2026 בשעה 12:00",
+            "source_document": "20260639.pdf",
+            "page": 1,
+            "excerpt": "המועד האחרון להגשת ההצעות: יום ב' 10 באוגוסט, 2026, בשעה: 12:00.",
+            "confidence": "high"
+          }
+        ],
+        "point_to_check": {
+          "value": "בנכס מחזיק דייר אשר לו זכויות דיירות מוגנת, ועל המציע לבדוק את אפשרות מימוש זכויות הבניה מכל מבחינה קונסטרוקטיבית ומבחינת תכנונית ואין למזמינה כל אחריות בקשר לכך",
+          "source_document": "20260639.pdf",
+          "page": 3,
+          "excerpt": "לוכה/מציע, כי לאחריות של הזוכה/מציע בלבד לבדוק על אפשרויות מימוש זכויות הבניה מכל בחינה שהיא, לרבות אך לא רק מבחינה קונסטרוקטיבית ומבחינת תכנונית ואין למזמינה כל אחריות לכך בקשר לכך. לזוכה/מציע לא תהיה כל טענה ו/או דרישה ו/או תביעה כלפי המזמינה בקשר לכך.",
+          "confidence": "high"
+        }
+      }
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-09T13:31:01.010298+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "7112",
+            "chelka": "24",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 4
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [],
+        "searched_plan_numbers": [],
+        "block_parcels": [
+          {
+            "gush": "7112",
+            "chelka": "24"
+          }
+        ],
+        "address_keywords": [
+          "ברנט"
+        ],
+        "candidates": [
+          {
+            "plan_number": "507-0609180",
+            "plan_id": 5050456,
+            "city": "תל אביב יפו",
+            "plan_name": "תא/מק/4743 - ברנט וולוזין",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "31/05/19",
+            "relation_type": null,
+            "main_designation": "מגורים",
+            "housing_units": null,
+            "match_score": 30,
+            "match_reasons": [
+              "שם התכנית תואם לכתובת המכרז: ברנט"
+            ],
+            "documents": [
+              {
+                "name": "תנועה",
+                "document_type_code": 38,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/38.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי",
+                "document_type_code": 4,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ביוב",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/43.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ניקוז",
+                "document_type_code": 45,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/45.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט סקר עצים בוגרים",
+                "document_type_code": 58,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/58.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/59.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "הוראות ביוב",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/הוראות ביוב.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "ניקוז ונגר עילי",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/ניקוז ונגר עילי.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרסום למתן תוקף",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/פרסום למתן תוקף.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "שימור-סקר תיעוד מתחמי",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/שימור-סקר תיעוד מתחמי.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050456_M.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט מצב קיים",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050456_K.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/telmer/5050456.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 6.005859375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/telmer/5050456.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=5050456"
+              }
+            },
+            "general_info": {
+              "category": "מגורים",
+              "planningCommitteType": "מקומית",
+              "planType": "מפורטת",
+              "planningCommitte": "תל-אביב",
+              "planningConpany": null,
+              "responsibile": null
+            },
+            "areas": [
+              {
+                "designation": "מגורים",
+                "groupDesignation": "01",
+                "dunamArea": 4.542,
+                "percentageOfPlan": 72.3709,
+                "plots": 24,
+                "mrResidence": 9593.0,
+                "units": 0
+              },
+              {
+                "designation": "שטח לדרכים",
+                "groupDesignation": "08",
+                "dunamArea": 1.443,
+                "percentageOfPlan": 22.9923,
+                "plots": 3,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "אחר",
+                "groupDesignation": "7",
+                "dunamArea": 0.291,
+                "percentageOfPlan": 4.6367,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          },
+          {
+            "plan_number": "675א",
+            "plan_id": 5006151,
+            "city": "תל אביב יפו",
+            "plan_name": "השהיית תכניות",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "09/06/67",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5006151.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/telmer/5006151.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 952 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/telmer/5006151.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "תא/A",
+            "plan_id": 5006476,
+            "city": "תל אביב יפו",
+            "plan_name": "מנדטורית",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "01/02/45",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5006476.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/telmer/5006476.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.58984375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/telmer/5006476.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=5006476"
+              }
+            }
+          },
+          {
+            "plan_number": "תתל/102",
+            "plan_id": 5050578,
+            "city": "תל אביב יפו",
+            "plan_name": "תת\"ל 102 - קו מטרו M2",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "08/05/24",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "אקוסטיקה",
+                "document_type_code": 2,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי",
+                "document_type_code": 4,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תסקיר השפעה על הסביבה 1",
+                "document_type_code": 40,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/40_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תסקיר השפעה על הסביבה 2",
+                "document_type_code": 40,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/40_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ניקוז",
+                "document_type_code": 45,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/45.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט סקר עצים בוגרים 1",
+                "document_type_code": 58,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/58_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט סקר עצים בוגרים 2",
+                "document_type_code": 58,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/58_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט סקר עצים בוגרים 3",
+                "document_type_code": 58,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/58_3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 1",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 10",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_10.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 11",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_11.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 12",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_12.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 13",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_13.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 14",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_14.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 15",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_15.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 2",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 3",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 4",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 5",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_5.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 6",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_6.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 7",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_7.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 8",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_8.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים 9",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/59_9.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "אדריכלות 1",
+                "document_type_code": 61,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/61_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "אדריכלות 2",
+                "document_type_code": 61,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/61_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "אדריכלות 3",
+                "document_type_code": 61,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/61_3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "אדריכלות 4",
+                "document_type_code": 61,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/61_4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "אדריכלות 5",
+                "document_type_code": 61,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/61_5.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח 1",
+                "document_type_code": 63,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/63_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח 2",
+                "document_type_code": 63,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/63_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח 3",
+                "document_type_code": 63,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/63_3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תוואי מסילה-1",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תוואי מסילה-1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תוואי מסילה-2",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תוואי מסילה-2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תוואי מסילה-3",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תוואי מסילה-3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תוואי מסילה-4",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תוואי מסילה-4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנוחה-1",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תנוחה-1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנוחה-2",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תנוחה-2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנוחה-3",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תנוחה-3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנוחה-4",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תנוחה-4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנוחה-5",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תנוחה-5.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט על גבי תכניות מתאר",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050578/100/תשריט על גבי תכניות מתאר.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מצב מאושר-1",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מאושר-1.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מאושר-2",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מאושר-2.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מאושר-3",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מאושר-3.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מאושר-4",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מאושר-4.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 1",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 1.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 10",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 10.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 11",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 11.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 12",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 12.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 13",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 13.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 14",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 14.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 15",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 15.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 16",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 16.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 17",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 17.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 18",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 18.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 19",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 19.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 2",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 2.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 20",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 20.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 21",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 21.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 22",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 22.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 23",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 23.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 24",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 24.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 3",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 3.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 4",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 4.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 5",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 5.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 6",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 6.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 7",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 7.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 8",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 8.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "מצב מוצע-גיליון 9",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050578/מצב מוצע-גיליון 9.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/telmer/5050578.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 865 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/telmer/5050578.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=5050578"
+              }
+            }
+          }
+        ],
+        "selected_plan": {
+          "plan_number": "507-0609180",
+          "plan_id": 5050456,
+          "city": "תל אביב יפו",
+          "plan_name": "תא/מק/4743 - ברנט וולוזין",
+          "status": "פרסום לתוקף בעיתונים",
+          "status_date": "31/05/19",
+          "relation_type": null,
+          "main_designation": "מגורים",
+          "housing_units": null,
+          "match_score": 30,
+          "match_reasons": [
+            "שם התכנית תואם לכתובת המכרז: ברנט"
+          ],
+          "documents": [
+            {
+              "name": "תנועה",
+              "document_type_code": 38,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/38.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "בינוי",
+              "document_type_code": 4,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/4.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ביוב",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/43.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ניקוז",
+              "document_type_code": 45,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/45.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט סקר עצים בוגרים",
+              "document_type_code": 58,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/58.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "מסמך סקר עצים בוגרים",
+              "document_type_code": 59,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/59.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "הוראות ביוב",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/הוראות ביוב.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "ניקוז ונגר עילי",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/ניקוז ונגר עילי.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרסום למתן תוקף",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/פרסום למתן תוקף.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "שימור-סקר תיעוד מתחמי",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/telmer/5050456/100/שימור-סקר תיעוד מתחמי.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט מצב מוצע",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050456_M.pdf",
+              "group": "tasritim"
+            },
+            {
+              "name": "תשריט מצב קיים",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/telmer/5050456_K.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/telmer/5050456.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 6.005859375 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/telmer/5050456.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=5050456"
+            }
+          },
+          "general_info": {
+            "category": "מגורים",
+            "planningCommitteType": "מקומית",
+            "planType": "מפורטת",
+            "planningCommitte": "תל-אביב",
+            "planningConpany": null,
+            "responsibile": null
+          },
+          "areas": [
+            {
+              "designation": "מגורים",
+              "groupDesignation": "01",
+              "dunamArea": 4.542,
+              "percentageOfPlan": 72.3709,
+              "plots": 24,
+              "mrResidence": 9593.0,
+              "units": 0
+            },
+            {
+              "designation": "שטח לדרכים",
+              "groupDesignation": "08",
+              "dunamArea": 1.443,
+              "percentageOfPlan": 22.9923,
+              "plots": 3,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "אחר",
+              "groupDesignation": "7",
+              "dunamArea": 0.291,
+              "percentageOfPlan": 4.6367,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום ששם התכנית תואם לכתובת המכרז: ברנט.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-09T14:48:29.372275+00:00",
+      "score": 85,
+      "data_coverage": 65,
+      "recommendation": "דורש בירור",
+      "matched_criteria": [
+        "אזור פעילות",
+        "סוג פרויקט",
+        "סטטוס תכנוני"
+      ],
+      "criteria_requiring_clarification": [
+        "מספר יחידות דיור",
+        "הוצאות פיתוח"
+      ],
+      "missing_information": [
+        "מספר יחידות הדיור אינו זמין או שאינו רלוונטי לסוג המכרז, ונדרש בירור.",
+        "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "matched",
+          "actual": "תל אביב יפו",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים"
+          ],
+          "points_awarded": 20,
+          "explanation": "היישוב תל אביב יפו נמצא באזורי הפעילות של החברה."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "matched",
+          "actual": "מגורים",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 20,
+          "explanation": "ייעוד התכנית שנבחרה הוא מגורים, והוא מתאים לפרופיל החברה."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": {
+            "minimum": 10,
+            "maximum": 250
+          },
+          "points_awarded": 0,
+          "explanation": "מספר יחידות הדיור אינו זמין או שאינו רלוונטי לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": 20000000,
+          "points_awarded": 0,
+          "explanation": "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "matched",
+          "actual": "פרסום לתוקף בעיתונים",
+          "expected": "תכנית מאושרת",
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: פרסום לתוקף בעיתונים."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "not_matched",
+          "actual": 0,
+          "expected": 14,
+          "points_awarded": 0,
+          "explanation": "נותרו רק 0 ימים עד למועד ההגשה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+      }
+    }
+  }
+}

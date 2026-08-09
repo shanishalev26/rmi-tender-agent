@@ -1,0 +1,377 @@
+{
+  "michraz_id": 20220173,
+  "analyzed_at": "2026-08-09T13:46:20.221979+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": null,
+      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20220173",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "file_type": null,
+      "downloaded_at": null,
+      "local_path": null,
+      "processing_status": "not_found"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "173/2022",
+        "קוד יישוב": 3616,
+        "קוד ייעוד": 3,
+        "קוד סוג מכרז": 1,
+        "שכונה": " מעלה אדומים",
+        "מגרשים": [
+          "1"
+        ],
+        "שטח": 378,
+        "יחידות דיור": 0,
+        "מחיר מינימום": 0.0,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 0,
+        "תוקף ערבות": "2024-12-29T00:00:00+02:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "420/1/11/6"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "420/1/11/6",
+            "lot_name": null,
+            "tik_id": "173",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2022-05-26T00:00:00+03:00",
+        "מועד אחרון": "2026-08-17T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20220173",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "סוג מכרז": "מכרז פומבי רגיל",
+        "יישוב": "מעלה אדומים",
+        "ייעוד מכרז": "מסחר ו/או משרדים"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "booklet_not_found",
+      "document_path": null,
+      "error": null,
+      "data": null
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-09T13:46:22.157881+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "420/1/11/6",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 1
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "420/1/11/6"
+        ],
+        "searched_plan_numbers": [
+          "420/1/11/6"
+        ],
+        "block_parcels": [],
+        "address_keywords": [
+          "מעלה",
+          "אדומים"
+        ],
+        "candidates": [
+          {
+            "plan_number": "420/1/11/6",
+            "plan_id": 7000955,
+            "city": "מעלה אדומים",
+            "plan_name": "שינוי יעוד לאזור מסחרי",
+            "status": "אושרה לתוקף בו. משנה להתיישבות",
+            "status_date": "06/09/06",
+            "relation_type": null,
+            "main_designation": "מסחר ומשרדים",
+            "housing_units": null,
+            "match_score": 100,
+            "match_reasons": [
+              "מספר התכנית זהה למספר התכנית שנמצא במקור"
+            ],
+            "documents": [
+              {
+                "name": "בינוי",
+                "document_type_code": 4,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/yosh/7000955/4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/yosh/7000955.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/yosh/7000955.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.25 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/yosh/7000955.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=7000955"
+              }
+            },
+            "general_info": {
+              "category": "מסחר ומשרדים",
+              "planningCommitteType": "מחוזית",
+              "planType": "מפורטת",
+              "planningCommitte": "מעלה אדומים",
+              "planningConpany": "עיריה                    ",
+              "responsibile": "עיריה"
+            },
+            "areas": [
+              {
+                "designation": "מסחר ומשרדים",
+                "groupDesignation": "03",
+                "dunamArea": 0.378,
+                "percentageOfPlan": 66.6666,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטחים פתוחים",
+                "groupDesignation": "07",
+                "dunamArea": 0.189,
+                "percentageOfPlan": 33.3333,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          }
+        ],
+        "selected_plan": {
+          "plan_number": "420/1/11/6",
+          "plan_id": 7000955,
+          "city": "מעלה אדומים",
+          "plan_name": "שינוי יעוד לאזור מסחרי",
+          "status": "אושרה לתוקף בו. משנה להתיישבות",
+          "status_date": "06/09/06",
+          "relation_type": null,
+          "main_designation": "מסחר ומשרדים",
+          "housing_units": null,
+          "match_score": 100,
+          "match_reasons": [
+            "מספר התכנית זהה למספר התכנית שנמצא במקור"
+          ],
+          "documents": [
+            {
+              "name": "בינוי",
+              "document_type_code": 4,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/yosh/7000955/4.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/yosh/7000955.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/yosh/7000955.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 1.25 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/yosh/7000955.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=7000955"
+            }
+          },
+          "general_info": {
+            "category": "מסחר ומשרדים",
+            "planningCommitteType": "מחוזית",
+            "planType": "מפורטת",
+            "planningCommitte": "מעלה אדומים",
+            "planningConpany": "עיריה                    ",
+            "responsibile": "עיריה"
+          },
+          "areas": [
+            {
+              "designation": "מסחר ומשרדים",
+              "groupDesignation": "03",
+              "dunamArea": 0.378,
+              "percentageOfPlan": 66.6666,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטחים פתוחים",
+              "groupDesignation": "07",
+              "dunamArea": 0.189,
+              "percentageOfPlan": 33.3333,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום שמספר התכנית זהה למספר התכנית שנמצא במקור.",
+        "plan_detail_error": null,
+        "requires_verification": false
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-09T14:33:05.509966+00:00",
+      "score": 23,
+      "data_coverage": 65,
+      "recommendation": "דורש בירור",
+      "matched_criteria": [
+        "סטטוס תכנוני"
+      ],
+      "criteria_requiring_clarification": [
+        "מספר יחידות דיור",
+        "הוצאות פיתוח"
+      ],
+      "missing_information": [
+        "מספר יחידות הדיור אינו זמין או שאינו רלוונטי לסוג המכרז, ונדרש בירור.",
+        "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "מעלה אדומים",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב מעלה אדומים אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "מסחר ו/או משרדים",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 0,
+          "explanation": "ייעוד המכרז ברמ״י הוא מסחר ו/או משרדים, והוא אינו מתאים לסוגי הפרויקטים שהוגדרו."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": {
+            "minimum": 10,
+            "maximum": 250
+          },
+          "points_awarded": 0,
+          "explanation": "מספר יחידות הדיור אינו זמין או שאינו רלוונטי לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": 20000000,
+          "points_awarded": 0,
+          "explanation": "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "matched",
+          "actual": "אושרה לתוקף בו. משנה להתיישבות",
+          "expected": "תכנית מאושרת",
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: אושרה לתוקף בו. משנה להתיישבות."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "not_matched",
+          "actual": 7,
+          "expected": 14,
+          "points_awarded": 0,
+          "explanation": "נותרו רק 7 ימים עד למועד ההגשה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+      }
+    }
+  }
+}

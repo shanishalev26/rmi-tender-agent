@@ -1,0 +1,158 @@
+{
+  "MichrazID": 20260639,
+  "MichrazName": "639/2026",
+  "KodMerchav": 5,
+  "MaxToWin": null,
+  "StatusMichraz": 1,
+  "KodYeudMichraz": 99,
+  "KodYeshuv": 5000,
+  "YechidotDiur": 0,
+  "Shchuna": "ברנט 18",
+  "KodTzuratHaknaya": 2,
+  "PirsumDate": "2026-06-15T00:00:00+03:00",
+  "PtichaDate": "2026-06-15T00:00:00+03:00",
+  "SgiraDate": "2026-08-10T12:00:00+03:00",
+  "VaadaDate": null,
+  "HagralaDate": null,
+  "SiyurDate": null,
+  "KodSugMichraz": 10,
+  "SchumHishtatfut": null,
+  "KodTashlum": 9,
+  "UpdateDate": "2026-06-16T16:05:51.603+03:00",
+  "HagashaMekuvenet": false,
+  "MatziaCanLimit": false,
+  "KlitatHatzaotMode": 3,
+  "RashutPituach": 1,
+  "MechirWithAgorot": false,
+  "MaxHatzaot": null,
+  "CheckArvutMode": 2,
+  "KhalYaadRashi": null,
+  "Uchlusiyot": [],
+  "MechirSafMichraz": 7760000.0,
+  "TokefArvut": "2027-01-10T00:00:00+02:00",
+  "TokefArvutSarvan": "2027-03-10T00:00:00+02:00",
+  "SumArvutSarvan": null,
+  "MinMishtatfim": null,
+  "MechirSafType": 3,
+  "KlitaDate": "2026-06-16T16:05:51.62+03:00",
+  "StatusMichrazMurchav": 2,
+  "SchumArvut": 1552000,
+  "isSC": 0,
+  "KayamSivsud": 0,
+  "DivurPirsum": 0,
+  "ChelkiyutShava": null,
+  "DivurTotzaot": null,
+  "Divur": null,
+  "SugMechirMufchat": 0,
+  "ReadyForHagasha": null,
+  "SugTacharut": null,
+  "mpHatzaaotMichraz": [],
+  "Tik": [
+    {
+      "MichrazID": 20260639,
+      "TikID": "639-26",
+      "MitchamName": "24",
+      "Shetach": 198,
+      "ShetachBniya": 0,
+      "Kibolet": null,
+      "HotzaotPituach": 0,
+      "MechirSaf": 7760000.0,
+      "mechirShuma": 0,
+      "SchumArvut": 1552000,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": null,
+      "MechirMaximum": null,
+      "TochnitMigrash": [],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": [
+        {
+          "id": 266064,
+          "MichrazID": 20260639,
+          "TikID": "639-26",
+          "Gush": "7112",
+          "Helka": "24"
+        }
+      ]
+    }
+  ],
+  "MichrazDocList": [
+    {
+      "MichrazID": 20260639,
+      "Size": 205854,
+      "FileType": "application/pdf",
+      "RowID": 3,
+      "Teur": "פרסום בערבית",
+      "DocName": "פרסום בערבית.pdf",
+      "UpdateDate": "2026-06-24T14:22:17.093+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 2
+    },
+    {
+      "MichrazID": 20260639,
+      "Size": 238425,
+      "FileType": "application/pdf",
+      "RowID": 2,
+      "Teur": "תשריט המכרז",
+      "DocName": "תשריט המכרז.pdf",
+      "UpdateDate": "2026-06-22T14:59:41.097+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 2
+    },
+    {
+      "MichrazID": 20260639,
+      "Size": 1503437,
+      "FileType": "application/pdf",
+      "RowID": 1,
+      "Teur": "חוברת המכרז",
+      "DocName": "חוברת המכרז.pdf",
+      "UpdateDate": "2026-06-22T14:59:07.103+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 2
+    },
+    {
+      "MichrazID": 20260639,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 127202,
+      "Teur": "פרסום ראשון",
+      "DocName": "פרסום ראשון.pdf",
+      "UpdateDate": "2026-06-15T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    }
+  ],
+  "MessageDetails": {
+    "messageCode": 1,
+    "messageText": "המכרז אינו מאופשר להגשת הצעה מקוונת",
+    "messageTextShort": null,
+    "messageType": "\u0000"
+  },
+  "MichrazLinks": [
+    {
+      "url": "https://apps.land.gov.il/TabaSearch/#/Plans?planNumber=",
+      "DisplayText": "מאגר תוכניות בניין עיר",
+      "CssClass": "icon-taba"
+    }
+  ],
+  "Comments": [
+    "באחריות המציעים להתעדכן בכל שינוי ו/או הבהרה ו/או עדכון במכרז באתר רמ\"י עד למועד האחרון להגשת ההצעות."
+  ],
+  "MichrazFullDocument": {
+    "MichrazID": 20260639,
+    "Size": 236075,
+    "FileType": "application/pdf",
+    "RowID": -1,
+    "Teur": "מסמך הפרסום המלא",
+    "DocName": "מסמך הפרסום המלא.pdf",
+    "UpdateDate": "2026-06-24T14:22:17.33+03:00",
+    "Url": null,
+    "MahutMismachID": 0,
+    "PirsumType": 2
+  },
+  "ShowStatusMapa": null
+}

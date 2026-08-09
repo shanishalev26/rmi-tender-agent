@@ -1,0 +1,1024 @@
+{
+  "michraz_id": 20240309,
+  "analyzed_at": "2026-08-09T13:33:15.108973+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": "חוברת המכרז.pdf",
+      "description": "חוברת המכרז",
+      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240309",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "source_document_id": 1,
+      "file_type": "application/pdf",
+      "downloaded_at": "2026-08-09T13:32:21.705961+00:00",
+      "local_path": "data/booklets/20240309.pdf",
+      "file_size_bytes": 2440761,
+      "processing_status": "processed"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "309/2024",
+        "קוד יישוב": 7200,
+        "קוד ייעוד": 2,
+        "קוד סוג מכרז": 1,
+        "שכונה": "",
+        "מגרשים": [
+          "א"
+        ],
+        "שטח": 10222,
+        "יחידות דיור": 258,
+        "מחיר מינימום": 28581922.0,
+        "הוצאות פיתוח": 21926622,
+        "סכום ערבות": 20939000,
+        "תוקף ערבות": "2027-01-17T00:00:00+02:00",
+        "גוש/חלקה": [
+          "גוש 3751 חלקה 163",
+          "גוש 3751 חלקה 164",
+          "גוש 3751 חלקה 165",
+          "גוש 3751 חלקה 166",
+          "גוש 3751 חלקה 167",
+          "גוש 3751 חלקה 168"
+        ],
+        "גושים/חלקות מובנים": [
+          {
+            "gush": "3751",
+            "chelka": "163"
+          },
+          {
+            "gush": "3751",
+            "chelka": "164"
+          },
+          {
+            "gush": "3751",
+            "chelka": "165"
+          },
+          {
+            "gush": "3751",
+            "chelka": "166"
+          },
+          {
+            "gush": "3751",
+            "chelka": "167"
+          },
+          {
+            "gush": "3751",
+            "chelka": "168"
+          }
+        ],
+        "מספרי תכנית מובנים": [
+          "407-0139295"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "14",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          },
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "15",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          },
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "16",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          },
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "17",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          },
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "18",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          },
+          {
+            "plan_number": "407-0139295",
+            "lot_name": "19",
+            "tik_id": "0000800026375",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2024-09-05T00:00:00+03:00",
+        "מועד אחרון": "2026-08-17T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240309",
+        "מסמכים": [
+          "פרסום עדכון.pdf",
+          "חוזה חכירה עדכני.pdf",
+          "הודעה בדבר חוזה חכירה עדכני.pdf",
+          "מכתב הרשות המקומית.pdf",
+          "עדכון.pdf",
+          "חוברת המכרז.pdf",
+          "תשריט.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "סוג מכרז": "מכרז פומבי רגיל",
+        "יישוב": "נס ציונה",
+        "ייעוד מכרז": "בנייה רוויה"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "success",
+      "document_path": "data/booklets/20240309.pdf",
+      "error": null,
+      "data": {
+        "plan_number": {
+          "value": "נס155/ (407-0139295)",
+          "source_document": "20240309.pdf",
+          "page": 7,
+          "excerpt": "התכנית החלה )התקפה( הינה : נס155/ ) 407-0139295( )להלן \" תכנית\" או \"תב\"ע\"(",
+          "confidence": "high"
+        },
+        "threshold_conditions": [
+          {
+            "value": "המחיר המוצע לא יפחת ממחיר המינימום הנקוב בטבלה (28,581,923 ש\"ח לא כולל מע\"מ); הצעה במחיר נמוך יותר תיפסל",
+            "source_document": "20240309.pdf",
+            "page": 11,
+            "excerpt": "המחיר המוצע לא יפחת מהסכום הנקוב בטבלה שבסעיף 1 )עמודה שכותרתה \"מחיר מינימום בש\"ח )לא כולל מע\"מ(( )להלן: \"מחיר מינימום\"(, הצעה שתכלול מחיר מוצע נמוך ממחיר המינימום תיפסל ולא תובא במניין ההצעות הכשרות במכרז זה.",
+            "confidence": "high"
+          },
+          {
+            "value": "יש לצרף להצעה ערבות אוטונומית בלתי מותנית לפקודת רשות מקרקעי ישראל בגובה 20,939,000 ש\"ח לפחות (ערבות דיגיטלית)",
+            "source_document": "20240309.pdf",
+            "page": 24,
+            "excerpt": "המציע יצרף להצעה ערבות אוטונומית בלתי מותנית לפקודת רשות מקרקעי ישראל בנוסח המצ\"ב לחוברת המכרז לכל הפחות בסכום המפורט בטבלה שבסעיף 1",
+            "confidence": "high"
+          },
+          {
+            "value": "ההצעה חייבת לכלול טופס אישור הצעה חתום ומאומת כנדרש, אחרת ההצעה תיפסל",
+            "source_document": "20240309.pdf",
+            "page": 2,
+            "excerpt": "יודגש כי הצעה אשר תתקבל ללא טופס אישור הצעה חתום ומאומת כנדרש תיפסל.",
+            "confidence": "high"
+          },
+          {
+            "value": "מציע רשאי להגיש הצעה אחת בלבד; מציע שיגיש יותר מהצעה אחת, כל הצעותיו יפסלו",
+            "source_document": "20240309.pdf",
+            "page": 11,
+            "excerpt": "מציע רשאי להגיש הצעה אחת בלבד )בטופס הצעה אחד בלבד(. מציע שיגיש יותר מהצעה אחת, בין אם יחידי ובין אם במשותף, יראה רמ\"י, את כל הצעותיו, שלו ושל שותפיו, כפסולות.",
+            "confidence": "high"
+          },
+          {
+            "value": "המועד האחרון להגשת ההצעות הינו 17/08/2026 עד השעה 12:00 בצהריים",
+            "source_document": "20240309.pdf",
+            "page": 24,
+            "excerpt": "המועד האחרון להגשת ההצעות למכרז הינו בתאריך 17/08/2026 עד השעה 12:00 בצהרי ים )להלן: \"מועד אחרון להגשת הצעות\"(.",
+            "confidence": "high"
+          },
+          {
+            "value": "מציע שהינו חברה קבלנית סרבנית רישום חייב לצרף ערבות להבטחת רישום בסך 100,000 ₪, אחרת יהיה מנוע מהשתתפות במכרז והצעתו תיפסל",
+            "source_document": "20240309.pdf",
+            "page": 14,
+            "excerpt": "מציע אשר הינו חברה קבלנית אשר הוגדרה כסרבנית רישום, כהגדרתה בסימן ג' בפרק משנה 4.5 לקובץ החלטות מועצת מקרקעי ישראל, עד למועד האחרון להגשת הצעות, יהיה מנוע מלהשתתף במכרז והצעתו תיפסל, אלא אם כן יצרף להצעתו במכרז ערבות אוטונומית וצמודה בנוסח המצ\"ב לחוברת המכרז",
+            "confidence": "high"
+          }
+        ],
+        "point_to_check": {
+          "value": "על המציע לבדוק בעצמו ו/או באמצעות אנשי מקצוע מטעמו את המידע התכנוני המלא ברשות המקומית וברשויות התכנון המוסמכות, לרבות מסמכי התכנית, תדריך התכנוני, זכויות בניה, גבולות המתחם ותנאים להוצאת היתר בניה",
+          "source_document": "20240309.pdf",
+          "page": 6,
+          "excerpt": "על המציע לבדוק בעצמו ו/או באמצעות אנשי מקצוע מטעמו את המידע התכנוני המלא ברשות המקומית וברשויות התכנון המוסמכות, לרבות מסמכי התכנית החלה על המתחם על נספחיה, התדריך התכנוני, תיק המידע ברשות המקומית, זכויות בניה, גבולות המתחם, שטחים גובלים, קווי בנין, התנאים להוצאת היתר בניה, הוראות שימור וכל מידע תכנוני ו/או מידע אחר הרלוונטי לצורך הגשת ההצעה ולביצוע מלוא התחייבויות המציע על פי מסמכי ותנאי המכרז .",
+          "confidence": "high"
+        }
+      }
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-09T13:33:22.648084+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "407-0139295",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 1
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "163",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "164",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "165",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "166",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "167",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "3751",
+            "chelka": "168",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 9
+        }
+      ],
+      "data": {
+        "ai_plan_number": "נס155/ (407-0139295)",
+        "usable_ai_plan_number": "נס155/ (407-0139295)",
+        "structured_plan_numbers": [
+          "407-0139295"
+        ],
+        "searched_plan_numbers": [
+          "407-0139295"
+        ],
+        "block_parcels": [
+          {
+            "gush": "3751",
+            "chelka": "163"
+          },
+          {
+            "gush": "3751",
+            "chelka": "164"
+          },
+          {
+            "gush": "3751",
+            "chelka": "165"
+          },
+          {
+            "gush": "3751",
+            "chelka": "166"
+          },
+          {
+            "gush": "3751",
+            "chelka": "167"
+          },
+          {
+            "gush": "3751",
+            "chelka": "168"
+          }
+        ],
+        "address_keywords": [],
+        "candidates": [
+          {
+            "plan_number": "407-0139295",
+            "plan_id": 4023253,
+            "city": "נס ציונה",
+            "plan_name": "יצירת שכ' מגורים - 220 יח\"ד",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "07/05/17",
+            "relation_type": null,
+            "main_designation": "מגורים",
+            "housing_units": 220,
+            "match_score": 100,
+            "match_reasons": [
+              "מספר התכנית זהה למספר התכנית שנמצא במקור"
+            ],
+            "documents": [
+              {
+                "name": "טבלאות איזון והקצאה 1",
+                "document_type_code": 20,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/20_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "טבלאות איזון והקצאה 2",
+                "document_type_code": 20,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/20_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי",
+                "document_type_code": 4,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ביוב 1",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/43_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ביוב 2",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/43_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ניקוז",
+                "document_type_code": 45,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/45.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "נספח נופי וסקר עצים",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/נספח נופי וסקר עצים.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תחבורה",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/תחבורה.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תיעול וניקוז",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/תיעול וניקוז.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב קיים",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4023253_K.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4023253_M.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4023253.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 4.00390625 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4023253.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=4023253"
+              }
+            },
+            "general_info": {
+              "category": "מגורים",
+              "planningCommitteType": "מחוזית",
+              "planType": "מפורטת",
+              "planningCommitte": "נס-ציונה",
+              "planningConpany": "אדר' אורי שירן ",
+              "responsibile": "רמ'י"
+            },
+            "areas": [
+              {
+                "designation": "מגורים",
+                "groupDesignation": "01",
+                "dunamArea": 16.708,
+                "percentageOfPlan": 20.0479,
+                "plots": 19,
+                "mrResidence": 60560.0,
+                "units": 220
+              },
+              {
+                "designation": "מוסדות ציבוריים",
+                "groupDesignation": "05",
+                "dunamArea": 35.286,
+                "percentageOfPlan": 42.3398,
+                "plots": 2,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטח לדרכים",
+                "groupDesignation": "08",
+                "dunamArea": 22.801,
+                "percentageOfPlan": 27.359,
+                "plots": 9,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטחים פתוחים",
+                "groupDesignation": "07",
+                "dunamArea": 8.507,
+                "percentageOfPlan": 10.2075,
+                "plots": 6,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "אחר",
+                "groupDesignation": "10",
+                "dunamArea": 0.038,
+                "percentageOfPlan": 0.0455,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          },
+          {
+            "plan_number": "407-0250795",
+            "plan_id": 4051064,
+            "city": "נס ציונה",
+            "plan_name": "נס/2/1/ג- שימושים והוראות במרתפים",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "12/02/21",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "פרסום למתן תוקף",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4051064/100/פרסום למתן תוקף.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4051064_M.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4051064.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 2.001953125 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4051064.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "407-1238658",
+            "plan_id": 4054374,
+            "city": "נס ציונה",
+            "plan_name": "נס/9/1/ב - שינוי הוראות לבריכות שחייה",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "30/05/25",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "פרסום למתן תוקף",
+                "document_type_code": 75,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4054374/75.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4054374_M.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4054374.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 4.78125 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4054374.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/1/1",
+            "plan_id": 4014369,
+            "city": "נס ציונה",
+            "plan_name": "קביעת אזורים",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "02/11/72",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4014369.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט 2",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4014369_2.PDF",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט 1",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4014369_1.PDF",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4014369.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 3.513671875 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4014369.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=4014369"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/1/1/א",
+            "plan_id": 4008858,
+            "city": "נס ציונה",
+            "plan_name": "שינוי הוראות",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "10/07/80",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4008858.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 11 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4008858.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/2/1",
+            "plan_id": 4008768,
+            "city": "נס ציונה",
+            "plan_name": "נס ציונה",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "27/02/92",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4008768.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 11 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4008768.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/2/1/ב",
+            "plan_id": 4013665,
+            "city": "נס ציונה",
+            "plan_name": "",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "22/10/03",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4013665.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 11 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4013665.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/2/1א",
+            "plan_id": 4008240,
+            "city": "נס ציונה",
+            "plan_name": "נס ציונה",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "03/12/95",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4008240.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 11 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4008240.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "נס/9/1",
+            "plan_id": 4021101,
+            "city": "נס ציונה",
+            "plan_name": "מתן הנחיות תכנוניות להקמת בריכות שחיה",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "05/11/14",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4021101.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4021101.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4021101.zip"
+              }
+            }
+          }
+        ],
+        "selected_plan": {
+          "plan_number": "407-0139295",
+          "plan_id": 4023253,
+          "city": "נס ציונה",
+          "plan_name": "יצירת שכ' מגורים - 220 יח\"ד",
+          "status": "פרסום לתוקף ברשומות",
+          "status_date": "07/05/17",
+          "relation_type": null,
+          "main_designation": "מגורים",
+          "housing_units": 220,
+          "match_score": 100,
+          "match_reasons": [
+            "מספר התכנית זהה למספר התכנית שנמצא במקור"
+          ],
+          "documents": [
+            {
+              "name": "טבלאות איזון והקצאה 1",
+              "document_type_code": 20,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/20_1.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "טבלאות איזון והקצאה 2",
+              "document_type_code": 20,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/20_2.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "בינוי",
+              "document_type_code": 4,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/4.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ביוב 1",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/43_1.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ביוב 2",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/43_2.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ניקוז",
+              "document_type_code": 45,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/45.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "נספח נופי וסקר עצים",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/נספח נופי וסקר עצים.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תחבורה",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/תחבורה.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תיעול וניקוז",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/merkaz/4023253/100/תיעול וניקוז.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט מצב קיים",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4023253_K.pdf",
+              "group": "tasritim"
+            },
+            {
+              "name": "תשריט מצב מוצע",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/merkaz/4023253_M.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/merkaz/4023253.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 4.00390625 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/merkaz/4023253.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=4023253"
+            }
+          },
+          "general_info": {
+            "category": "מגורים",
+            "planningCommitteType": "מחוזית",
+            "planType": "מפורטת",
+            "planningCommitte": "נס-ציונה",
+            "planningConpany": "אדר' אורי שירן ",
+            "responsibile": "רמ'י"
+          },
+          "areas": [
+            {
+              "designation": "מגורים",
+              "groupDesignation": "01",
+              "dunamArea": 16.708,
+              "percentageOfPlan": 20.0479,
+              "plots": 19,
+              "mrResidence": 60560.0,
+              "units": 220
+            },
+            {
+              "designation": "מוסדות ציבוריים",
+              "groupDesignation": "05",
+              "dunamArea": 35.286,
+              "percentageOfPlan": 42.3398,
+              "plots": 2,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטח לדרכים",
+              "groupDesignation": "08",
+              "dunamArea": 22.801,
+              "percentageOfPlan": 27.359,
+              "plots": 9,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטחים פתוחים",
+              "groupDesignation": "07",
+              "dunamArea": 8.507,
+              "percentageOfPlan": 10.2075,
+              "plots": 6,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "אחר",
+              "groupDesignation": "10",
+              "dunamArea": 0.038,
+              "percentageOfPlan": 0.0455,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום שמספר התכנית זהה למספר התכנית שנמצא במקור.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-09T14:33:05.513377+00:00",
+      "score": 35,
+      "data_coverage": 100,
+      "recommendation": "התאמה נמוכה",
+      "matched_criteria": [
+        "סוג פרויקט",
+        "סטטוס תכנוני"
+      ],
+      "criteria_requiring_clarification": [],
+      "missing_information": [],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "נס ציונה",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב נס ציונה אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "matched",
+          "actual": "בנייה רוויה",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 20,
+          "explanation": "ייעוד המכרז ברמ״י הוא בנייה רוויה, ולכן סוג הפרויקט סווג כמגורים, והוא מתאים לפרופיל החברה."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": 258,
+          "expected": {
+            "minimum": 10,
+            "maximum": 250
+          },
+          "points_awarded": 0,
+          "explanation": "258 יחידות אינן בטווח שהגדירה החברה."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "not_matched",
+          "actual": 21926622,
+          "expected": 20000000,
+          "points_awarded": 0,
+          "explanation": "הוצאות הפיתוח חורגות מהמקסימום שהוגדר."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "matched",
+          "actual": "פרסום לתוקף ברשומות",
+          "expected": "תכנית מאושרת",
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: פרסום לתוקף ברשומות."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "not_matched",
+          "actual": 7,
+          "expected": 14,
+          "points_awarded": 0,
+          "explanation": "נותרו רק 7 ימים עד למועד ההגשה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+      }
+    }
+  }
+}

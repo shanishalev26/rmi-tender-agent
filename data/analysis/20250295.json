@@ -1,0 +1,387 @@
+{
+  "michraz_id": 20250295,
+  "analyzed_at": "2026-08-09T13:41:21.239305+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": "חוברת המכרז.pdf",
+      "description": "חוברת המכרז",
+      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20250295",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "source_document_id": 1,
+      "file_type": "application/pdf",
+      "downloaded_at": "2026-08-09T13:40:25.061193+00:00",
+      "local_path": "data/booklets/20250295.pdf",
+      "file_size_bytes": 5160556,
+      "processing_status": "processing_failed"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "295/2025",
+        "קוד יישוב": 7100,
+        "קוד ייעוד": 2,
+        "קוד סוג מכרז": 9,
+        "שכונה": "מגדל",
+        "מגרשים": [
+          "א"
+        ],
+        "שטח": 419,
+        "יחידות דיור": 1,
+        "מחיר מינימום": 147420.0,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 32400,
+        "תוקף ערבות": "2026-10-18T00:00:00+03:00",
+        "גוש/חלקה": [
+          "גוש 1247 חלקה 15",
+          "גוש 1247 חלקה 54"
+        ],
+        "גושים/חלקות מובנים": [
+          {
+            "gush": "1247",
+            "chelka": "15"
+          },
+          {
+            "gush": "1247",
+            "chelka": "54"
+          }
+        ],
+        "מספרי תכנית מובנים": [
+          "1054690"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "1054690",
+            "lot_name": "מתחם א",
+            "tik_id": "0000800022145",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2025-07-01T00:00:00+03:00",
+        "מועד אחרון": "2026-08-17T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20250295",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "חוזה חכירה עדכני.pdf",
+          "הסכם הרשאה לתכנון עדכני.pdf",
+          "הודעה בדבר חוזה חכירה עדכני.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "מודעת הבהרה.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "חוברת המכרז.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "סוג מכרז": "מכרז ייזום",
+        "יישוב": "אשקלון",
+        "ייעוד מכרז": "בנייה רוויה"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "invalid_json",
+      "document_path": "data/booklets/20250295.pdf",
+      "error": "Extra data: line 75 column 1 (char 3835)",
+      "data": null
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-09T13:41:23.256602+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "1054690",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 0
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "1247",
+            "chelka": "15",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 3
+        },
+        {
+          "method": "block_and_parcel",
+          "payload": {
+            "planNumber": "",
+            "gush": "1247",
+            "chelka": "54",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 3
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "1054690"
+        ],
+        "searched_plan_numbers": [
+          "1054690"
+        ],
+        "block_parcels": [
+          {
+            "gush": "1247",
+            "chelka": "15"
+          },
+          {
+            "gush": "1247",
+            "chelka": "54"
+          }
+        ],
+        "address_keywords": [
+          "מגדל"
+        ],
+        "candidates": [
+          {
+            "plan_number": "159/03/4",
+            "plan_id": 1001434,
+            "city": "אשקלון",
+            "plan_name": "שינוי יעוד",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "24/04/75",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001434.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001434.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.650390625 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001434.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001434"
+              }
+            }
+          },
+          {
+            "plan_number": "2/101/02/4",
+            "plan_id": 1001174,
+            "city": "אשקלון",
+            "plan_name": "קביעת אזור מגורים משולב",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "23/03/75",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001174.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001174.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.4326171875 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001174.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001174"
+              }
+            }
+          },
+          {
+            "plan_number": "ד/222",
+            "plan_id": 1007333,
+            "city": "אשקלון",
+            "plan_name": "תכנית מס' ד/222 - תכנית מתאר - שיקום העיר הישנה אשקלון ",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "23/10/67",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1007333.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1007333.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 2.314453125 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1007333.zip"
+              }
+            }
+          }
+        ],
+        "selected_plan": null,
+        "selection_reason": "נמצאו תכניות החלות על הגוש והחלקה, אך אין מספיק מידע לבחירת תכנית אחת.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-09T14:33:05.517220+00:00",
+      "score": 40,
+      "data_coverage": 50,
+      "recommendation": "דורש בירור",
+      "matched_criteria": [
+        "סוג פרויקט"
+      ],
+      "criteria_requiring_clarification": [
+        "אזור פעילות",
+        "הוצאות פיתוח",
+        "סטטוס תכנוני"
+      ],
+      "missing_information": [
+        "לא נמצא שם יישוב שניתן להשוות לאזורי הפעילות של החברה.",
+        "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור.",
+        "לא נמצא סטטוס תכנוני ברור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים"
+          ],
+          "points_awarded": 0,
+          "explanation": "לא נמצא שם יישוב שניתן להשוות לאזורי הפעילות של החברה."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "matched",
+          "actual": "בנייה רוויה",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 20,
+          "explanation": "ייעוד המכרז ברמ״י הוא בנייה רוויה, ולכן סוג הפרויקט סווג כמגורים, והוא מתאים לפרופיל החברה."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": 1,
+          "expected": {
+            "minimum": 10,
+            "maximum": 250
+          },
+          "points_awarded": 0,
+          "explanation": "1 יחידות אינן בטווח שהגדירה החברה."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": 20000000,
+          "points_awarded": 0,
+          "explanation": "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": "תכנית מאושרת",
+          "points_awarded": 0,
+          "explanation": "לא נמצא סטטוס תכנוני ברור."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "not_matched",
+          "actual": 7,
+          "expected": 14,
+          "points_awarded": 0,
+          "explanation": "נותרו רק 7 ימים עד למועד ההגשה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+      }
+    }
+  }
+}

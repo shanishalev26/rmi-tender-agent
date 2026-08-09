@@ -1,0 +1,565 @@
+{
+  "michraz_id": 20230376,
+  "analyzed_at": "2026-08-09T13:39:36.484936+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": null,
+      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20230376",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "file_type": null,
+      "downloaded_at": null,
+      "local_path": null,
+      "processing_status": "not_found"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "376/2023",
+        "קוד יישוב": 962,
+        "קוד ייעוד": 1,
+        "קוד סוג מכרז": 2,
+        "שכונה": "מערבית",
+        "מגרשים": [
+          "1"
+        ],
+        "שטח": null,
+        "יחידות דיור": 120,
+        "מחיר מינימום": null,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 0,
+        "תוקף ערבות": "2024-10-20T00:00:00+03:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "259-0100495, 259-1017102"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "259-0100495, 259-1017102",
+            "lot_name": null,
+            "tik_id": "376",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2023-12-26T00:00:00+02:00",
+        "מועד אחרון": "2026-12-14T12:00:00+02:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20230376",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "סוג מכרז": "הרשמה והגרלה",
+        "יישוב": "טובא זנגריה",
+        "ייעוד מכרז": "בנייה נמוכה/צמודת קרקע"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "booklet_not_found",
+      "document_path": null,
+      "error": null,
+      "data": null
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-09T13:39:38.856639+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "259-0100495, 259-1017102",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 1
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "259-0100495, 259-1017102"
+        ],
+        "searched_plan_numbers": [
+          "259-0100495, 259-1017102"
+        ],
+        "block_parcels": [],
+        "address_keywords": [
+          "מערבית"
+        ],
+        "candidates": [
+          {
+            "plan_number": "259-0100495",
+            "plan_id": 2051579,
+            "city": "טובא זנגריה",
+            "plan_name": "ג/22786 שכונה מערבית טובא זנגריה",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "29/03/19",
+            "relation_type": null,
+            "main_designation": "מגורים",
+            "housing_units": 296,
+            "match_score": 30,
+            "match_reasons": [
+              "שם התכנית תואם לכתובת המכרז: מערבית"
+            ],
+            "documents": [
+              {
+                "name": "תשתיות ביוב 1",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/43_1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ביוב 2",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/43_2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות מים",
+                "document_type_code": 44,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/44.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ניקוז",
+                "document_type_code": 45,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/45.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט סקר עצים בוגרים",
+                "document_type_code": 58,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/58.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך סקר עצים בוגרים",
+                "document_type_code": 59,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/59.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/בינוי ופיתוח.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "דרכים תנועה וחניה",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/דרכים תנועה וחניה.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "הליכים סטטוטוריים-דברי הסבר בערבית",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/הליכים סטטוטוריים-דברי הסבר בערבית.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרוגרמה לשטחי ציבור",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרוגרמה לשטחי ציבור.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרסום למתן תוקף",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרסום למתן תוקף.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרשה - ניקוז",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרשה - ניקוז.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרשה מים וביוב",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרשה מים וביוב.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב קיים",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2051579_K.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2051579_M.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/tzafon/2051579.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 8.2958984375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/tzafon/2051579.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=2051579"
+              }
+            },
+            "general_info": {
+              "category": "מגורים",
+              "planningCommitteType": "מחוזית",
+              "planType": "מתאר מקומית",
+              "planningCommitte": "אצבע הגליל",
+              "planningConpany": null,
+              "responsibile": null
+            },
+            "areas": [
+              {
+                "designation": "מגורים",
+                "groupDesignation": "01",
+                "dunamArea": 56.252,
+                "percentageOfPlan": 45.9928,
+                "plots": 97,
+                "mrResidence": 64536.0,
+                "units": 296
+              },
+              {
+                "designation": "מוסדות ציבוריים",
+                "groupDesignation": "05",
+                "dunamArea": 11.944,
+                "percentageOfPlan": 9.7656,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטח לדרכים",
+                "groupDesignation": "08",
+                "dunamArea": 40.007,
+                "percentageOfPlan": 32.7105,
+                "plots": 20,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטחים פתוחים",
+                "groupDesignation": "07",
+                "dunamArea": 14.103,
+                "percentageOfPlan": 11.5309,
+                "plots": 1,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          }
+        ],
+        "selected_plan": {
+          "plan_number": "259-0100495",
+          "plan_id": 2051579,
+          "city": "טובא זנגריה",
+          "plan_name": "ג/22786 שכונה מערבית טובא זנגריה",
+          "status": "פרסום לתוקף בעיתונים",
+          "status_date": "29/03/19",
+          "relation_type": null,
+          "main_designation": "מגורים",
+          "housing_units": 296,
+          "match_score": 30,
+          "match_reasons": [
+            "שם התכנית תואם לכתובת המכרז: מערבית"
+          ],
+          "documents": [
+            {
+              "name": "תשתיות ביוב 1",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/43_1.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ביוב 2",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/43_2.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות מים",
+              "document_type_code": 44,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/44.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ניקוז",
+              "document_type_code": 45,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/45.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט סקר עצים בוגרים",
+              "document_type_code": 58,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/58.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "מסמך סקר עצים בוגרים",
+              "document_type_code": 59,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/59.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "בינוי ופיתוח",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/בינוי ופיתוח.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "דרכים תנועה וחניה",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/דרכים תנועה וחניה.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "הליכים סטטוטוריים-דברי הסבר בערבית",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/הליכים סטטוטוריים-דברי הסבר בערבית.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרוגרמה לשטחי ציבור",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרוגרמה לשטחי ציבור.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרסום למתן תוקף",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרסום למתן תוקף.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרשה - ניקוז",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרשה - ניקוז.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרשה מים וביוב",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2051579/100/פרשה מים וביוב.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט מצב קיים",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2051579_K.pdf",
+              "group": "tasritim"
+            },
+            {
+              "name": "תשריט מצב מוצע",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2051579_M.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/tzafon/2051579.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 8.2958984375 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/tzafon/2051579.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=2051579"
+            }
+          },
+          "general_info": {
+            "category": "מגורים",
+            "planningCommitteType": "מחוזית",
+            "planType": "מתאר מקומית",
+            "planningCommitte": "אצבע הגליל",
+            "planningConpany": null,
+            "responsibile": null
+          },
+          "areas": [
+            {
+              "designation": "מגורים",
+              "groupDesignation": "01",
+              "dunamArea": 56.252,
+              "percentageOfPlan": 45.9928,
+              "plots": 97,
+              "mrResidence": 64536.0,
+              "units": 296
+            },
+            {
+              "designation": "מוסדות ציבוריים",
+              "groupDesignation": "05",
+              "dunamArea": 11.944,
+              "percentageOfPlan": 9.7656,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטח לדרכים",
+              "groupDesignation": "08",
+              "dunamArea": 40.007,
+              "percentageOfPlan": 32.7105,
+              "plots": 20,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטחים פתוחים",
+              "groupDesignation": "07",
+              "dunamArea": 14.103,
+              "percentageOfPlan": 11.5309,
+              "plots": 1,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום ששם התכנית תואם לכתובת המכרז: מערבית.",
+        "plan_detail_error": null,
+        "requires_verification": false
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-09T14:33:05.512474+00:00",
+      "score": 76,
+      "data_coverage": 85,
+      "recommendation": "מתאים לבדיקה",
+      "matched_criteria": [
+        "סוג פרויקט",
+        "מספר יחידות דיור",
+        "סטטוס תכנוני",
+        "זמן עד להגשה"
+      ],
+      "criteria_requiring_clarification": [
+        "הוצאות פיתוח"
+      ],
+      "missing_information": [
+        "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "טובא זנגריה",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב טובא זנגריה אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "matched",
+          "actual": "בנייה נמוכה/צמודת קרקע",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 20,
+          "explanation": "ייעוד המכרז ברמ״י הוא בנייה נמוכה/צמודת קרקע, ולכן סוג הפרויקט סווג כמגורים, והוא מתאים לפרופיל החברה."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "matched",
+          "actual": 120,
+          "expected": {
+            "minimum": 10,
+            "maximum": 250
+          },
+          "points_awarded": 20,
+          "explanation": "120 יחידות נמצאות בטווח שהוגדר."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": 20000000,
+          "points_awarded": 0,
+          "explanation": "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "matched",
+          "actual": "פרסום לתוקף בעיתונים",
+          "expected": "תכנית מאושרת",
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: פרסום לתוקף בעיתונים."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "matched",
+          "actual": 126,
+          "expected": 14,
+          "points_awarded": 10,
+          "explanation": "נותרו 126 ימים, מספיק לפי פרופיל החברה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+      }
+    }
+  }
+}

@@ -1,0 +1,810 @@
+{
+  "MichrazID": 20190091,
+  "MichrazName": "91/2019",
+  "KodMerchav": 7,
+  "MaxToWin": null,
+  "StatusMichraz": 1,
+  "KodYeudMichraz": 2,
+  "KodYeshuv": 3760,
+  "YechidotDiur": 111,
+  "Shchuna": "",
+  "KodTzuratHaknaya": 2,
+  "PirsumDate": "2019-04-04T00:00:00+03:00",
+  "PtichaDate": "2026-08-02T00:00:00+03:00",
+  "SgiraDate": "2026-10-05T12:00:00+03:00",
+  "VaadaDate": null,
+  "HagralaDate": null,
+  "SiyurDate": null,
+  "KodSugMichraz": 1,
+  "SchumHishtatfut": 0.0,
+  "KodTashlum": 9,
+  "UpdateDate": "2026-07-01T12:14:46.78+03:00",
+  "HagashaMekuvenet": true,
+  "MatziaCanLimit": false,
+  "KlitatHatzaotMode": 3,
+  "RashutPituach": 0,
+  "MechirWithAgorot": false,
+  "MaxHatzaot": 1,
+  "CheckArvutMode": 2,
+  "KhalYaadRashi": null,
+  "Uchlusiyot": [],
+  "MechirSafMichraz": null,
+  "TokefArvut": "2023-11-26T00:00:00+02:00",
+  "TokefArvutSarvan": "2024-01-26T00:00:00+02:00",
+  "SumArvutSarvan": null,
+  "MinMishtatfim": null,
+  "MechirSafType": 3,
+  "KlitaDate": "2019-04-04T00:00:00+03:00",
+  "StatusMichrazMurchav": 2,
+  "SchumArvut": 0,
+  "isSC": 0,
+  "KayamSivsud": 0,
+  "DivurPirsum": 0,
+  "ChelkiyutShava": null,
+  "DivurTotzaot": null,
+  "Divur": null,
+  "SugMechirMufchat": 0,
+  "ReadyForHagasha": false,
+  "SugTacharut": null,
+  "mpHatzaaotMichraz": [],
+  "Tik": [
+    {
+      "MichrazID": 20190091,
+      "TikID": "70132187א",
+      "MitchamName": "200",
+      "Shetach": 15711,
+      "ShetachBniya": 0,
+      "Kibolet": 111,
+      "HotzaotPituach": 0,
+      "MechirSaf": null,
+      "mechirShuma": 0,
+      "SchumArvut": 0,
+      "ShemZoche": null,
+      "SchumZchiya": null,
+      "TmuraMufchetet": null,
+      "MechirMaximum": null,
+      "TochnitMigrash": [
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "200       ",
+          "TochnitMigrashID": 287103
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "201       ",
+          "TochnitMigrashID": 287104
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "202       ",
+          "TochnitMigrashID": 287105
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "204       ",
+          "TochnitMigrashID": 287107
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "708       ",
+          "TochnitMigrashID": 287128
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "205       ",
+          "TochnitMigrashID": 287108
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "707       ",
+          "TochnitMigrashID": 287127
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "709       ",
+          "TochnitMigrashID": 287129
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "714       ",
+          "TochnitMigrashID": 287134
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "710       ",
+          "TochnitMigrashID": 287130
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "721       ",
+          "TochnitMigrashID": 287141
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "722       ",
+          "TochnitMigrashID": 287142
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "723       ",
+          "TochnitMigrashID": 287143
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "900       ",
+          "TochnitMigrashID": 287144
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "901       ",
+          "TochnitMigrashID": 287145
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "902       ",
+          "TochnitMigrashID": 287146
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "703       ",
+          "TochnitMigrashID": 287123
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "704       ",
+          "TochnitMigrashID": 287124
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "203       ",
+          "TochnitMigrashID": 287106
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "718       ",
+          "TochnitMigrashID": 287138
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "719       ",
+          "TochnitMigrashID": 287139
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "720       ",
+          "TochnitMigrashID": 287140
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "903       ",
+          "TochnitMigrashID": 287147
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "904       ",
+          "TochnitMigrashID": 287148
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "705       ",
+          "TochnitMigrashID": 287125
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "706       ",
+          "TochnitMigrashID": 287126
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "717       ",
+          "TochnitMigrashID": 287137
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "702       ",
+          "TochnitMigrashID": 287122
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "208       ",
+          "TochnitMigrashID": 287111
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "209       ",
+          "TochnitMigrashID": 287112
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "210       ",
+          "TochnitMigrashID": 287113
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "211       ",
+          "TochnitMigrashID": 287114
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "716       ",
+          "TochnitMigrashID": 287136
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "711       ",
+          "TochnitMigrashID": 287131
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "213       ",
+          "TochnitMigrashID": 287116
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "214       ",
+          "TochnitMigrashID": 287117
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "215       ",
+          "TochnitMigrashID": 287118
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "216       ",
+          "TochnitMigrashID": 287119
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "700       ",
+          "TochnitMigrashID": 287120
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "712       ",
+          "TochnitMigrashID": 287132
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "206       ",
+          "TochnitMigrashID": 287109
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "207       ",
+          "TochnitMigrashID": 287110
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "713       ",
+          "TochnitMigrashID": 287133
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "715       ",
+          "TochnitMigrashID": 287135
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "701       ",
+          "TochnitMigrashID": 287121
+        },
+        {
+          "MichrazID": 20190091,
+          "TikID": "70132187א",
+          "Tochnit": "121/18",
+          "MigrashName": "212       ",
+          "TochnitMigrashID": 287115
+        }
+      ],
+      "mpHatzaaotMitcham": [],
+      "GushHelka": []
+    }
+  ],
+  "MichrazDocList": [
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128153,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-07-01T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128154,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-04-27T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128155,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-02-11T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128156,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2026-01-06T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128157,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-11-09T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128158,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-07-28T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128159,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-06-17T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128160,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2025-03-24T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128161,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2024-12-30T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128162,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2024-09-30T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128163,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2024-03-26T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128164,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2023-12-12T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128165,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2023-08-01T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128166,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2023-05-17T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128167,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2023-02-22T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128168,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2022-12-21T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128169,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2022-09-20T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128170,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2022-05-03T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128171,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2022-02-07T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128172,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2021-12-19T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128173,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2021-09-14T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128174,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2021-08-25T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128175,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2021-06-07T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128176,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2021-02-17T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128177,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2020-11-10T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128178,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2020-08-18T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128179,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2020-04-22T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128180,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2020-03-17T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128181,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2019-12-25T00:00:00+02:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128182,
+      "Teur": "פרסום דחיית מועדים",
+      "DocName": "פרסום דחיית מועדים.pdf",
+      "UpdateDate": "2019-09-19T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128183,
+      "Teur": "פרסום עדכון",
+      "DocName": "פרסום עדכון.pdf",
+      "UpdateDate": "2019-06-26T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    },
+    {
+      "MichrazID": 20190091,
+      "Size": null,
+      "FileType": "application/pdf",
+      "RowID": 128184,
+      "Teur": "פרסום ראשון",
+      "DocName": "פרסום ראשון.pdf",
+      "UpdateDate": "2019-04-04T00:00:00+03:00",
+      "Url": null,
+      "MahutMismachID": 0,
+      "PirsumType": 3
+    }
+  ],
+  "MessageDetails": {
+    "messageCode": 2,
+    "messageText": "המכרז טרם נפתח להגשת הצעות,עדיין לא פורסמה חוברת למכרז",
+    "messageTextShort": null,
+    "messageType": "\u0000"
+  },
+  "MichrazLinks": [
+    {
+      "url": "https://apps.land.gov.il/TabaSearch/#/Plans?planNumber=7001548",
+      "DisplayText": "מאגר תוכניות בניין עיר",
+      "CssClass": "icon-taba"
+    }
+  ],
+  "Comments": [
+    "באחריות המציעים להתעדכן בכל שינוי ו/או הבהרה ו/או עדכון במכרז באתר רמ\"י עד למועד האחרון להגשת ההצעות.",
+    "כל הצעה למכרז זה, אשר תוגש במערכת המכרזים המקוונת באמצעות אותה ההזדהות בממשל זמין, תעדכן את קודמתה."
+  ],
+  "MichrazFullDocument": {
+    "MichrazID": 20190091,
+    "Size": 3280766,
+    "FileType": "application/pdf",
+    "RowID": -1,
+    "Teur": "מסמך הפרסום המלא",
+    "DocName": "מסמך הפרסום המלא.pdf",
+    "UpdateDate": "2026-07-01T12:14:59.557+03:00",
+    "Url": null,
+    "MahutMismachID": 0,
+    "PirsumType": 2
+  },
+  "ShowStatusMapa": null
+}
