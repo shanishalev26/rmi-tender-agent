@@ -291,7 +291,11 @@ st.markdown(
             direction: rtl;
             text-align: right;
         }
-        
+
+        [class*="st-emotion-cache"] {
+            direction: rtl;
+            text-align: right;
+        }
     </style>
     """,
     unsafe_allow_html=True,
