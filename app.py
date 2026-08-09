@@ -162,7 +162,7 @@ st.markdown(
         }
 
         [data-testid="stTabs"] [role="tablist"] {
-            gap: 0.45rem;
+            gap: 1.2rem;
             background: rgba(255, 255, 255, 0.72);
             border: 1px solid var(--border);
             border-radius: 16px;
