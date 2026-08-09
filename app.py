@@ -268,6 +268,20 @@ st.markdown(
                 padding-right: 1rem;
             }
         }
+
+        [data-testid="stMetricValue"] {
+            font-size: 1.5rem;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+
+        [data-testid="stTabs"] button {
+            padding: 0 14px;
+        }
+        
+        [data-testid="stTabs"] [data-testid="stMarkdownContainer"] p {
+            font-size: 0.95rem;
+        }
     </style>
     """,
     unsafe_allow_html=True,
