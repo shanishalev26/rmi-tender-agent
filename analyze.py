@@ -3,8 +3,8 @@ import json
 import os
 from datetime import datetime, timezone
 
+from rmi_client import get_session
 from get_booklet import (
-    get_session,
     get_tender_detail,
     extract_api_facts,
     get_tender_lookups,
@@ -122,8 +122,7 @@ def analyze(michraz_id):
 
     if pdf_path:
         try:
-            raw_ai_output = extract_from_pdf(pdf_path)
-            ai_fields = json.loads(raw_ai_output)
+            ai_fields = extract_from_pdf(pdf_path)
             ai_status = "success"
 
         except json.JSONDecodeError as error:

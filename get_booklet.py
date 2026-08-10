@@ -1,7 +1,8 @@
 import requests, json, os
 from datetime import datetime, timezone
 
-BASE = "https://apps.land.gov.il/MichrazimSite"
+from rmi_client import BASE, HEADERS
+
 DETAIL_URL = f"{BASE}/api/MichrazDetailsApi/Get"
 FILE_URL = f"{BASE}/api/MichrazDetailsApi/GetFileContent"
 GENERAL_TABLES_URL = f"{BASE}/api/GeneralTablesApi"
@@ -13,25 +14,6 @@ TENDER_TYPE_TABLE_ID = 215
 # The RMI API and frontend use TableID -1 to translate KodYeudMichraz ׳ייעוד מכרז׳
 TENDER_DESIGNATION_TABLE_ID = -1
 
-HEADERS = {
-    "Accept": "application/json, text/plain, */*",
-    "Origin": BASE,
-    "Referer": BASE + "/",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                  "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17 Safari/605.1.15",
-}
-
-
-def get_session():
-    """Creates and initializes a session for RMI API requests."""
-    s = requests.Session()
-
-    # Keep cookies between requests. First access the RMI website,
-    # then reuse the same session for API calls
-    s.get(BASE + "/", headers=HEADERS, timeout=30)
-    return s
-
-#שלושה דבריים עקריים: פניייה לרמ״י,שומירת תשובה כג׳ייסון מקומי ומחזירה את הנתונים להמשך עיבוד
 def get_tender_detail(session, michraz_id):
     """Fetches full tender details from RMI, saves the raw JSON, and returns it."""
 

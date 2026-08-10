@@ -1,12 +1,12 @@
-import requests
 import json
 import os
 
-BASE = "https://apps.land.gov.il/MichrazimSite"
+from rmi_client import BASE, HEADERS, get_session
+
 SEARCH_URL = f"{BASE}/api/SearchApi/Search"
 
-#הסינון ששלח האתר: מכרזים פעיליםב
-payload = {
+# Match the RMI frontend search payload. ActiveMichraz selects active tenders.
+SEARCH_PAYLOAD = {
     "Uchlusiya": [],
     "QuickResultsInMonth": False,
     "QuickResultsIWeek": False,
@@ -16,28 +16,44 @@ payload = {
     "ActiveMichraz": True,
 }
 
-# כותרות שגורמות לבקשה להיראות כמו דפדפן אמיתי
-headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json, text/plain, */*",
-    "Origin": BASE,
-    "Referer": BASE + "/",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                  "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17 Safari/605.1.15",
-}
 
-session = requests.Session()
-session.get(BASE + "/", headers=headers, timeout=30)  # חימום - אוסף cookies
+def fetch_active_tenders(session):
+    """Fetches active tenders from the RMI search API and returns them as a list."""
+    response = session.post(
+        SEARCH_URL,
+        json=SEARCH_PAYLOAD,
+        headers=HEADERS,
+        timeout=30,
+    )
+
+    # Do not parse or save an HTTP error response as tender data
+    response.raise_for_status()
+    tenders = response.json()
+
+    if not isinstance(tenders, list):
+        raise ValueError(
+            "RMI SearchApi returned an unexpected response format"
+        )
+
+    return tenders
 
 
-resp = session.post(SEARCH_URL, json=payload, headers=headers, timeout=30)
-print("Status:", resp.status_code)
+def save_tenders(tenders):
+    """Saves the current tender list to data/tenders.json."""
+    # This file is a current snapshot, so each refresh replaces the old list.
+    os.makedirs("data", exist_ok=True)
 
-tenders = resp.json()
+    with open("data/tenders.json", "w", encoding="utf-8") as file:
+        json.dump(tenders, file, ensure_ascii=False, indent=2)
 
-# שמירה לקובץ מסודר, במקום הדפסה לטרמינל שהופך עברית
-os.makedirs("data", exist_ok=True)
-with open("data/tenders.json", "w", encoding="utf-8") as f:
-    json.dump(tenders, f, ensure_ascii=False, indent=2)
 
-print("saved", len(tenders), "tenders -> data/tenders.json")
+def main():
+    """Fetches and saves the current active tenders"""
+    session = get_session()
+    tenders = fetch_active_tenders(session)
+    save_tenders(tenders)
+    print(f"saved {len(tenders)} tenders -> data/tenders.json")
+
+
+if __name__ == "__main__":
+    main()
