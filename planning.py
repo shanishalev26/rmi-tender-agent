@@ -1,10 +1,13 @@
 import argparse
-import json
 from datetime import datetime, timezone
-from pathlib import Path
 from urllib.parse import urljoin
 
 import requests
+
+from analysis_store import (
+    load_analysis_record,
+    save_analysis_record,
+)
 
 PLANNING_PAGE_URL = "https://apps.land.gov.il/TabaSearch/"
 PLANNING_API_URL = (
@@ -15,19 +18,6 @@ PLAN_DETAIL_API_URL = (
     "https://apps.land.gov.il/"
     "TabaSearch/api/Plan/GetPlanData"
 )
-
-def load_analysis(michraz_id):
-    """Loads an analysis record and returns it with its path."""
-    path = Path(f"data/analysis/{michraz_id}.json")
-
-    if not path.exists():
-        raise FileNotFoundError(
-            f"Analysis file was not found: {path}"
-        )
-
-    with path.open("r", encoding="utf-8") as file:
-        return json.load(file), path
-
 
 def get_ai_plan_number(record):
     """Returns the plan number extracted by the AI, or None."""
@@ -471,7 +461,9 @@ def choose_plan(candidates):
 def find_plans_for_tender(michraz_id):
     """Finds planning candidates and saves the planning source for one tender."""
     # Step 1: Load the tender inputs used for planning searches.
-    record, analysis_path = load_analysis(michraz_id)
+    record, analysis_path = load_analysis_record(
+        michraz_id
+    )
 
     api_data = get_api_data(record)
     block_parcels = extract_block_parcels(api_data)
@@ -624,16 +616,7 @@ def find_plans_for_tender(michraz_id):
     # Matching depends on planning and must be recalculated after this update.
     record.pop("derived_analysis", None)
 
-    with analysis_path.open(
-        "w",
-        encoding="utf-8",
-    ) as file:
-        json.dump(
-            record,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    save_analysis_record(record, analysis_path)
 
     print(
         f"Found {len(candidates)} planning candidate(s)."

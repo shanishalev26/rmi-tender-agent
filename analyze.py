@@ -1,8 +1,12 @@
 import argparse
 import json
-import os
 from datetime import datetime, timezone
 
+from analysis_store import (
+    get_analysis_path,
+    load_analysis_record,
+    save_analysis_record,
+)
 from rmi_client import get_session
 from get_booklet import (
     get_rmi_tender_data,
@@ -11,51 +15,17 @@ from get_booklet import (
 from extract import extract_from_pdf
 
 
-def _save_analysis_record(record, output_path):
-    """Saves an analysis record without leaving a partial JSON file"""
-    os.makedirs(
-        os.path.dirname(output_path),
-        exist_ok=True,
-    )
-
-    temporary_path = output_path + ".tmp"
-
-    with open(
-        temporary_path,
-        "w",
-        encoding="utf-8",
-    ) as file:
-        json.dump(
-            record,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-    os.replace(
-        temporary_path,
-        output_path,
-    )
-
-
 def refresh_rmi_data(michraz_id):
     """Refreshes only the RMI source in an existing analysis record."""
-    output_path = (
-        f"data/analysis/{michraz_id}.json"
-    )
+    output_path = get_analysis_path(michraz_id)
 
-    if not os.path.exists(output_path):
+    if not output_path.exists():
         raise FileNotFoundError(
             f"Analysis record was not found: "
             f"{output_path}"
         )
 
-    with open(
-        output_path,
-        "r",
-        encoding="utf-8",
-    ) as file:
-        record = json.load(file)
+    record, output_path = load_analysis_record(michraz_id)
 
     session = get_session()
     _, api_facts = get_rmi_tender_data(
@@ -72,7 +42,7 @@ def refresh_rmi_data(michraz_id):
         "data": api_facts,
     }
 
-    _save_analysis_record(record, output_path)
+    save_analysis_record(record, output_path)
 
     return record
 
@@ -150,10 +120,9 @@ def analyze(michraz_id):
         },
     }
 
-    output_directory = "data/analysis"
-    output_path = f"{output_directory}/{michraz_id}.json"
+    output_path = get_analysis_path(michraz_id)
 
-    _save_analysis_record(record, output_path)
+    save_analysis_record(record, output_path)
 
     print(f"OK -> {output_path}")
     print(f"AI extraction status: {ai_status}")
