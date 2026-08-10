@@ -1,4 +1,3 @@
-import argparse
 import json, os, base64
 from dotenv import load_dotenv
 from anthropic import Anthropic
@@ -121,11 +120,16 @@ PROMPT = """
 
 
 def extract_from_pdf(pdf_path):
+    """Extracts structured tender facts from a PDF using Claude"""
+
+    # Step 1: Read the PDF and prepare it for Claude
     with open(pdf_path, "rb") as f:
+        # The document block accepts PDF bytes as a base64 string
         pdf_b64 = base64.standard_b64encode(
             f.read()
         ).decode("utf-8")
 
+    # Give Claude only the file name so it can report a clear source_document
     source_document = os.path.basename(pdf_path)
 
     prompt_with_filename = (
@@ -133,6 +137,7 @@ def extract_from_pdf(pdf_path):
         f"{PROMPT}"
     )
 
+    # Step 2: Send the PDF and extraction instructions to Claude
     msg = client.messages.create(
         model="claude-sonnet-5",
         max_tokens=4000,
@@ -158,11 +163,11 @@ def extract_from_pdf(pdf_path):
         ],
     )
 
-    text_blocks = [
-        block.text
-        for block in msg.content
-        if block.type == "text"
-    ]
+    # Step 3: Collect the text returned by Claude
+    text_blocks = []
+    for block in msg.content:
+        if block.type == "text":
+            text_blocks.append(block.text)
 
     if not text_blocks:
         block_types = [block.type for block in msg.content]
@@ -173,8 +178,10 @@ def extract_from_pdf(pdf_path):
             f"content_blocks={block_types}"
         )
 
-    raw = "".join(text_blocks).strip()
+    raw = "".join(text_blocks).strip() #The all text that Claude returned, including any extra text before or after the JSON.
 
+    # Step 4: Extract the JSON from Claude's text and convert it to a dictionary
+    # Allow extra text around the JSON, but let json.loads validate the result.
     start = raw.find("{")
     end = raw.rfind("}")
 
@@ -184,41 +191,40 @@ def extract_from_pdf(pdf_path):
             f"Raw output:\n{raw}"
         )
 
-    return raw[start:end + 1]
+    data = json.loads(raw[start:end + 1])
 
+    # Step 5: Validate that the extracted data has the structure expected by the system
+    if not isinstance(data, dict):
+        raise ValueError("Claude JSON output must be an object")
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Extract booklet fields using AI"
-    )
-    parser.add_argument(
-        "michraz_id",
-        type=int,
-        help="RMI tender ID",
-    )
-    args = parser.parse_args()
+    required_fields = {
+        "plan_number",
+        "threshold_conditions",
+        "point_to_check",
+    }
+    missing_fields = required_fields - data.keys()
 
-    pdf_path = f"data/booklets/{args.michraz_id}.pdf"
-
-    print(f"Sending {pdf_path} to Claude...")
-    raw = extract_from_pdf(pdf_path)
-    try:
-        data = json.loads(raw)
-
-        os.makedirs("data/extracted", exist_ok=True)
-
-        output_path = (
-            f"data/extracted/{args.michraz_id}.json"
+    if missing_fields:
+        names = ", ".join(sorted(missing_fields))
+        raise ValueError(
+            f"Claude JSON output is missing required fields: {names}"
         )
 
-        with open(
-            output_path,
-            "w",
-            encoding="utf-8",
-        ) as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"OK -> {output_path}  (open it in VS Code)")
+    if not isinstance(data["plan_number"], dict):
+        raise ValueError("plan_number must be an object")
 
-    except json.JSONDecodeError:
-        print("Model did not return valid JSON. Raw output:\n")
-        print(raw)
+    if not isinstance(data["threshold_conditions"], list):
+        raise ValueError("threshold_conditions must be a list")
+
+    if not all(
+        isinstance(condition, dict)
+        for condition in data["threshold_conditions"]
+    ):
+        raise ValueError(
+            "Each threshold condition must be an object"
+        )
+
+    if not isinstance(data["point_to_check"], dict):
+        raise ValueError("point_to_check must be an object")
+
+    return data
