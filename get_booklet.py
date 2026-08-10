@@ -7,12 +7,10 @@ FILE_URL = f"{BASE}/api/MichrazDetailsApi/GetFileContent"
 GENERAL_TABLES_URL = f"{BASE}/api/GeneralTablesApi"
 YESHUVIM_URL = f"{BASE}/api/YeshuvimApi/Get"
 
-# Verified against RMI's official GeneralTablesApi:
-# TableID 215 is "סוג מכרז".
+# TableID 215 contains ׳סוג מכרז׳ values
 TENDER_TYPE_TABLE_ID = 215
 
-# Verified against RMI's official GeneralTablesApi and frontend:
-# TableID -1 resolves KodYeudMichraz for displayed tenders.
+# The RMI API and frontend use TableID -1 to translate KodYeudMichraz ׳ייעוד מכרז׳
 TENDER_DESIGNATION_TABLE_ID = -1
 
 HEADERS = {
@@ -25,25 +23,34 @@ HEADERS = {
 
 
 def get_session():
-    """פותח session ומבצע בקשת חימום כדי לאסוף cookies."""
+    """Creates and initializes a session for RMI API requests."""
     s = requests.Session()
+
+    # Keep cookies between requests. First access the RMI website,
+    # then reuse the same session for API calls
     s.get(BASE + "/", headers=HEADERS, timeout=30)
     return s
 
-
+#שלושה דבריים עקריים: פניייה לרמ״י,שומירת תשובה כג׳ייסון מקומי ומחזירה את הנתונים להמשך עיבוד
 def get_tender_detail(session, michraz_id):
-    """מביא את כל פרטי המכרז מה-API ושומר את ה-JSON הגולמי המלא."""
+    """Fetches full tender details from RMI, saves the raw JSON, and returns it."""
+
+    #DETAIL_URL is the API endpoint used to request tender details. The tender ID is sent separately as a query parameter
     response = session.get(
         DETAIL_URL,
         params={"michrazID": michraz_id},
         headers=HEADERS,
         timeout=30,
     )
-    response.raise_for_status()
-    detail = response.json()
 
+    # Stop on HTTP errors instead of saving an error page as tender data
+    response.raise_for_status()
+    detail = response.json() #הופך את הג׳ייסון שקיבלנו לאובייקט פייתון (מילון)
+
+    # Support both the first run and later refreshes
     os.makedirs("data/details", exist_ok=True)
 
+    # שומר את הנתונים שהתקבלו מקומי כקובץ ג׳ייסון, כדי שנוכל להשתמש בהם בהמשך
     with open(f"data/details/{michraz_id}.json", "w", encoding="utf-8") as f:
         json.dump(detail, f, ensure_ascii=False, indent=2)
 
@@ -51,12 +58,16 @@ def get_tender_detail(session, michraz_id):
 
 
 def get_document_source_url(document):
+    """Returns the RMI source URL for a tender document"""
+    #סוג פרסום הוא 1 וגם רמ״י סיפקה כבר שדה כתובת אז פשוט מחזירים את הכתובת שהגיעה מ- api
     if (
         document.get("PirsumType") == 1
         and document.get("Url")
     ):
         return document["Url"]
 
+    # אם אין כתובת מוכנה,מגיעים לחלק זה- בונים מילון של הפרמטרים שצריך לצרף לכתובת המסמך
+    # Use .get() because some metadata fields are optional
     params = {
         "michrazId": document.get("MichrazID"),
         "rowId": document.get("RowID"),
@@ -67,14 +78,21 @@ def get_document_source_url(document):
         "fileType": document.get("FileType"),
     }
 
+    #  בניית url מלא -query parametersעם כל ה־
     return requests.Request(
         "GET",
         FILE_URL,
         params=params,
-    ).prepare().url
+    ).prepare().url #רק יוצרים אובייקט בקשה (ולא שולחים אותה בפועל)
+
+
+def _is_tender_booklet(document):
+    """Returns whether RMI describes the document as the tender booklet"""
+    return document.get("Teur") == "חוברת המכרז"
 
 
 def get_tender_documents(detail):
+    """Combines the full tender document and attachments into one metadata list"""
     documents = []
 
     full_document = detail.get(
@@ -83,6 +101,8 @@ def get_tender_documents(detail):
 
     source_documents = []
 
+    # MichrazFullDocument is the complete publication document
+    # MichrazDocList contains separate documents and attachments
     if full_document:
         source_documents.append(
             ("full_tender_document", full_document)
@@ -94,7 +114,7 @@ def get_tender_documents(detail):
     ):
         role = "tender_attachment"
 
-        if document.get("Teur") == "חוברת המכרז":
+        if _is_tender_booklet(document):
             role = "tender_booklet"
 
         source_documents.append((role, document))
@@ -122,14 +142,9 @@ def get_tender_documents(detail):
 
     return documents
 
-
+#מחזירה שני מילונים: אחד-לסוג מכרז, השני-לייעוד מכרז
 def get_tender_lookups(session):
-    """
-    Return RMI's official tender type and designation mappings.
-
-    Failure to load this optional enrichment does not prevent the
-    tender's raw codes and other facts from being preserved.
-    """
+    """Returns RMI Code-to-Value lookups for tender type and designation"""
     try:
         response = session.get(
             GENERAL_TABLES_URL,
@@ -142,6 +157,8 @@ def get_tender_lookups(session):
     except (requests.RequestException, ValueError):
         return {}, {}
 
+    # GeneralTablesApi returns several tables, so filter rows by TableID
+    # Each lookup maps a raw Code to its readable Value
     tender_type_lookup = {
         row["Code"]: str(row["Value"]).strip()
         for row in rows
@@ -170,12 +187,7 @@ def get_tender_lookups(session):
 
 
 def get_locality_lookup(session):
-    """
-    Return RMI's official KodYeshuv-to-locality mapping.
-
-    Failure to load this optional enrichment does not prevent
-    the tender's raw code and other facts from being preserved.
-    """
+    """Returns a lookup from RMI locality codes to readable locality names"""
     try:
         response = session.get(
             YESHUVIM_URL,
@@ -188,6 +200,7 @@ def get_locality_lookup(session):
     except (requests.RequestException, ValueError):
         return {}
 
+    # YeshuvimApi only returns localities, so it does not need TableID filtering
     return {
         row["mtysvSemelYishuv"]: str(
             row["mtysvShemYishuv"]
@@ -199,7 +212,7 @@ def get_locality_lookup(session):
         )
     }
 
-
+#לוקחת את הג׳ייסון הגדול שמגיע מרמ״י והופכת אותו למערך עובדות מסודר שהמערכת יודעת לעבוד איתו
 def extract_api_facts(
     detail,
     michraz_id,
@@ -207,20 +220,23 @@ def extract_api_facts(
     locality_lookup=None,
     tender_designation_lookup=None,
 ):
-    """שולף מה-JSON הגולמי רק את השדות שהמטלה מבקשת (השאר נשמר בקובץ)."""
+    """Extracts readable and structured facts from RMI tender details"""
+    # Lookups are optional. Raw codes and other facts remain available if they fail
     tender_type_lookup = tender_type_lookup or {}
     locality_lookup = locality_lookup or {}
     tender_designation_lookup = (
         tender_designation_lookup or {}
     )
 
-    gush_helka = []
-    structured_block_parcels = []
+    gush_helka = [] #גוש חלקה להצגה למשתמש
+    structured_block_parcels = [] #גוש חלקה לעבודה של הקוד
     structured_plan_references = []
     migrashim = []
     shetach = None
     hotzaot = None
 
+    # Tik contains tender areas. Each area may include block-parcel pairs
+    # in GushHelka and plan-lot references in TochnitMigrash
     for tik in detail.get("Tik", []):
         if tik.get("MitchamName"):
             migrashim.append(tik["MitchamName"])
@@ -232,15 +248,19 @@ def extract_api_facts(
             hotzaot = tik["HotzaotPituach"]
 
         for gh in tik.get("GushHelka", []):
-            gush_helka.append(f'גוש {gh["Gush"]} חלקה {gh["Helka"]}')
-
+            # Both fields are required. Fail on incomplete API data instead of
+            # silently creating a partial block-parcel pair
             pair = {
                 "gush": str(gh["Gush"]).strip(),
                 "chelka": str(gh["Helka"]).strip(),
             }
 
+            # Keep the readable and structured versions in sync and deduplicated
             if pair not in structured_block_parcels:
                 structured_block_parcels.append(pair)
+                gush_helka.append(
+                    f'גוש {gh["Gush"]} חלקה {gh["Helka"]}'
+                )
 
         for plan_lot in tik.get("TochnitMigrash", []):
             plan_number = str(
@@ -254,6 +274,7 @@ def extract_api_facts(
                 plan_lot.get("MigrashName") or ""
             ).strip()
 
+           # יוצרים אובייקט מסודר שמספר לנו מה מספר התכנית,מאיפה היא הגיעה ובאיזה טיק היא הופיעה 
             reference = {
                 "plan_number": plan_number,
                 "lot_name": lot_name or None,
@@ -261,9 +282,11 @@ def extract_api_facts(
                 "source_field": "Tik.TochnitMigrash",
             }
 
+            # שוב מניעת כפילויות- אם כבר קיים אובייקט כזה ברשימה, לא מוסיפים אותו שוב
             if reference not in structured_plan_references:
                 structured_plan_references.append(reference)
 
+    # Keep full references for context and unique plan numbers for later searches
     structured_plan_numbers = []
 
     for reference in structured_plan_references:
@@ -274,9 +297,9 @@ def extract_api_facts(
 
     tender_type_code = detail.get("KodSugMichraz")
     locality_code = detail.get("KodYeshuv")
-    tender_designation_code = detail.get(
-        "KodYeudMichraz"
-    )
+    tender_designation_code = detail.get("KodYeudMichraz")
+
+    # Keep raw tender type, locality, and designation codes even without lookups
 
     facts = {
         "מספר מכרז": detail.get("MichrazName"),
@@ -294,9 +317,7 @@ def extract_api_facts(
         "גוש/חלקה": gush_helka,
         "גושים/חלקות מובנים": structured_block_parcels,
         "מספרי תכנית מובנים": structured_plan_numbers,
-        "תכניות/מגרשים מובנים": (
-            structured_plan_references
-        ),
+        "תכניות/מגרשים מובנים": (structured_plan_references),
         "תאריך פרסום": detail.get("PirsumDate"),
         "מועד אחרון": detail.get("SgiraDate"),
         "קישור למקור": f"{BASE}/#/michraz/{michraz_id}",
@@ -304,7 +325,12 @@ def extract_api_facts(
             f"{BASE}/#/michraz/"
             f"{michraz_id}/PirsumDocs"
         ),
-        "מסמכים": [d["DocName"] for d in detail.get("MichrazDocList", [])],
+        # Skip unnamed documents because this list is only used for display
+        "מסמכים": [
+            document.get("DocName")
+            for document in detail.get("MichrazDocList", [])
+            if document.get("DocName")
+        ],
         "מסמכי מכרז מובנים": get_tender_documents(
             detail
         ),
@@ -320,11 +346,7 @@ def extract_api_facts(
     if locality:
         facts["יישוב"] = locality
 
-    tender_designation = (
-        tender_designation_lookup.get(
-            tender_designation_code
-        )
-    )
+    tender_designation = (tender_designation_lookup.get(tender_designation_code))
 
     if tender_designation:
         facts["ייעוד מכרז"] = tender_designation
@@ -333,13 +355,16 @@ def extract_api_facts(
 
 
 def download_booklet(session, detail, michraz_id):
-    """מאתר את חוברת המכרז, מוריד אותה ומחזיר גם metadata."""
+    """Downloads the tender booklet and returns its path and metadata
+    Returns None with not-found metadata when no booklet exists
+    """
 
+    # Only MichrazDocList is used to find the booklet
     booklet = next(
         (
             document
             for document in detail.get("MichrazDocList", [])
-            if document.get("Teur") == "חוברת המכרז"
+            if _is_tender_booklet(document)
         ),
         None,
     )
@@ -360,6 +385,8 @@ def download_booklet(session, detail, michraz_id):
 
         return None, document_metadata
 
+    # GetFileContent expects the original document fields as form data
+    # Use empty strings instead of sending None values
     form = {
         key: "" if value is None else value
         for key, value in booklet.items()
@@ -371,15 +398,19 @@ def download_booklet(session, detail, michraz_id):
         headers=HEADERS,
         timeout=60,
     )
+
+    # Do not save an HTTP error response as a PDF file
     response.raise_for_status()
 
+    # Support both the first download and later downloads or refreshes
     os.makedirs("data/booklets", exist_ok=True)
 
     path = f"data/booklets/{michraz_id}.pdf"
 
-    with open(path, "wb") as file:
+    with open(path, "wb") as file: #pdf הוא קובץ הינארי ולא טקטסט לכן צריך wb
         file.write(response.content)
 
+    # "downloaded" means the file is saved. analyze.py updates the status after AI processing
     document_metadata = {
         "role": "tender_booklet",
         "name": booklet.get("DocName"),
@@ -408,35 +439,3 @@ def download_booklet(session, detail, michraz_id):
     )
 
     return path, document_metadata
-
-
-def analyze_tender(session, michraz_id):
-    """התהליך המלא עבור מכרז אחד - הפונקציה שנקרא לה לכל מכרז."""
-    print(f"\n=== מכרז {michraz_id} ===")
-    detail = get_tender_detail(session, michraz_id)
-    (
-        tender_type_lookup,
-        tender_designation_lookup,
-    ) = get_tender_lookups(session)
-    locality_lookup = get_locality_lookup(session)
-    facts = extract_api_facts(
-        detail,
-        michraz_id,
-        tender_type_lookup=tender_type_lookup,
-        locality_lookup=locality_lookup,
-        tender_designation_lookup=(
-            tender_designation_lookup
-        ),
-    )
-    for k, v in facts.items():
-        print(f"  {k}: {v}")
-    download_booklet(session, detail, michraz_id)
-    return facts
-
-
-if __name__ == "__main__":
-    session = get_session()
-
-    # עכשיו זה עובד לכל מכרז - רק מחליפים או מוסיפים מספרים:
-    analyze_tender(session, 20260639)
-    # analyze_tender(session, 20260638)
