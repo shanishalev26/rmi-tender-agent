@@ -336,6 +336,33 @@ def extract_api_facts(
     return facts
 
 
+def get_rmi_tender_data(session, michraz_id):
+    """Fetches and normalizes RMI data for one tender"""
+    detail = get_tender_detail(
+        session,
+        michraz_id,
+    )
+
+    (
+        tender_type_lookup,
+        tender_designation_lookup,
+    ) = get_tender_lookups(session)
+
+    locality_lookup = get_locality_lookup(session)
+
+    api_facts = extract_api_facts(
+        detail,
+        michraz_id,
+        tender_type_lookup=tender_type_lookup,
+        locality_lookup=locality_lookup,
+        tender_designation_lookup=(
+            tender_designation_lookup
+        ),
+    )
+
+    return detail, api_facts
+
+
 def download_booklet(session, detail, michraz_id):
     """Downloads the tender booklet and returns its path and metadata
     Returns None with not-found metadata when no booklet exists

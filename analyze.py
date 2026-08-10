@@ -5,64 +5,18 @@ from datetime import datetime, timezone
 
 from rmi_client import get_session
 from get_booklet import (
-    get_tender_detail,
-    extract_api_facts,
-    get_tender_lookups,
-    get_locality_lookup,
+    get_rmi_tender_data,
     download_booklet,
 )
 from extract import extract_from_pdf
 
 
-def refresh_rmi_data(michraz_id):
-    output_path = (
-        f"data/analysis/{michraz_id}.json"
+def _save_analysis_record(record, output_path):
+    """Saves an analysis record without leaving a partial JSON file"""
+    os.makedirs(
+        os.path.dirname(output_path),
+        exist_ok=True,
     )
-
-    if not os.path.exists(output_path):
-        raise FileNotFoundError(
-            f"Analysis record was not found: "
-            f"{output_path}"
-        )
-
-    with open(
-        output_path,
-        "r",
-        encoding="utf-8",
-    ) as file:
-        record = json.load(file)
-
-    session = get_session()
-    detail = get_tender_detail(
-        session,
-        michraz_id,
-    )
-
-    (
-        tender_type_lookup,
-        tender_designation_lookup,
-    ) = get_tender_lookups(session)
-
-    locality_lookup = get_locality_lookup(session)
-
-    api_facts = extract_api_facts(
-        detail,
-        michraz_id,
-        tender_type_lookup=tender_type_lookup,
-        locality_lookup=locality_lookup,
-        tender_designation_lookup=(
-            tender_designation_lookup
-        ),
-    )
-
-    record.setdefault("sources", {})
-    record["sources"]["rmi_api"] = {
-        "status": "success",
-        "refreshed_at": datetime.now(
-            timezone.utc
-        ).isoformat(),
-        "data": api_facts,
-    }
 
     temporary_path = output_path + ".tmp"
 
@@ -83,41 +37,66 @@ def refresh_rmi_data(michraz_id):
         output_path,
     )
 
+
+def refresh_rmi_data(michraz_id):
+    """Refreshes only the RMI source in an existing analysis record."""
+    output_path = (
+        f"data/analysis/{michraz_id}.json"
+    )
+
+    if not os.path.exists(output_path):
+        raise FileNotFoundError(
+            f"Analysis record was not found: "
+            f"{output_path}"
+        )
+
+    with open(
+        output_path,
+        "r",
+        encoding="utf-8",
+    ) as file:
+        record = json.load(file)
+
+    session = get_session()
+    _, api_facts = get_rmi_tender_data(
+        session,
+        michraz_id,
+    )
+
+    record.setdefault("sources", {})
+    record["sources"]["rmi_api"] = {
+        "status": "success",
+        "refreshed_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "data": api_facts,
+    }
+
+    _save_analysis_record(record, output_path)
+
     return record
 
 
 def analyze(michraz_id):
+    """Analyzes one tender and saves its unified analysis record."""
     print(f"\n=== Analyzing tender {michraz_id} ===")
 
+    # Step 1: Fetch and normalize RMI tender data.
     session = get_session()
-
-    # 1. קבלת פרטי המכרז מה-API של רמ"י
-    detail = get_tender_detail(session, michraz_id)
-    (
-        tender_type_lookup,
-        tender_designation_lookup,
-    ) = get_tender_lookups(session)
-    locality_lookup = get_locality_lookup(session)
-    api_facts = extract_api_facts(
-        detail,
+    detail, api_facts = get_rmi_tender_data(
+        session,
         michraz_id,
-        tender_type_lookup=tender_type_lookup,
-        locality_lookup=locality_lookup,
-        tender_designation_lookup=(
-            tender_designation_lookup
-        ),
     )
 
-    # 2. הורדת חוברת המכרז
+    # Step 2: Download the tender booklet.
     pdf_path, document_metadata = download_booklet(
         session,
         detail,
         michraz_id,
     )
 
-    # 3. חילוץ שדות מהחוברת באמצעות AI
+    # Step 3: Extract structured facts from the booklet with Claude.
     ai_fields = None
-    ai_status = "not_started"
     ai_error = None
 
     if pdf_path:
@@ -136,7 +115,7 @@ def analyze(michraz_id):
     else:
         ai_status = "booklet_not_found"
 
-    # מעדכנים את סטטוס העיבוד של המסמך
+    # Step 4: Align document metadata with the extraction result.
     if ai_status == "success":
         document_metadata["processing_status"] = "processed"
 
@@ -147,24 +126,7 @@ def analyze(michraz_id):
         document_metadata["processing_status"] = "not_found"
 
 
-    output_directory = "data/analysis"
-    output_path = f"{output_directory}/{michraz_id}.json"
-
-    os.makedirs(output_directory, exist_ok=True)
-
-    existing_sources = {}
-
-    if os.path.exists(output_path):
-        try:
-            with open(output_path, "r", encoding="utf-8") as file:
-                existing_record = json.load(file)
-
-            existing_sources = existing_record.get("sources", {})
-
-        except (json.JSONDecodeError, OSError):
-            existing_sources = {}
-
-    # 4. יצירת רשומה מאוחדת, תוך הפרדה ברורה בין המקורות
+    # Step 5: Build and save the unified analysis record.
     record = {
         "michraz_id": michraz_id,
         "analyzed_at": datetime.now(timezone.utc).isoformat(),
@@ -174,16 +136,11 @@ def analyze(michraz_id):
         ],
 
         "sources": {
-            # שומר מקורות שכבר נוספו, למשל planning_api
-            **existing_sources,
-
-            # מעדכן מחדש את נתוני רמ"י
             "rmi_api": {
                 "status": "success",
                 "data": api_facts,
             },
 
-            # מעדכן מחדש את חילוץ ה-AI
             "tender_booklet_ai": {
                 "status": ai_status,
                 "document_path": pdf_path,
@@ -193,26 +150,17 @@ def analyze(michraz_id):
         },
     }
 
-    # 5. שמירת הרשומה
     output_directory = "data/analysis"
     output_path = f"{output_directory}/{michraz_id}.json"
 
-    os.makedirs(output_directory, exist_ok=True)
-
-    with open(output_path, "w", encoding="utf-8") as file:
-        json.dump(
-            record,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    _save_analysis_record(record, output_path)
 
     print(f"OK -> {output_path}")
     print(f"AI extraction status: {ai_status}")
 
     return record
 
-
+# Run the analysis directly for one tender from the command line
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Analyze one RMI tender"
@@ -221,8 +169,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "michraz_id",
         type=int,
-        nargs="?",
-        default=20260639,
         help="RMI tender ID",
     )
 
