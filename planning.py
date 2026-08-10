@@ -17,6 +17,7 @@ PLAN_DETAIL_API_URL = (
 )
 
 def load_analysis(michraz_id):
+    """Loads an analysis record and returns it with its path."""
     path = Path(f"data/analysis/{michraz_id}.json")
 
     if not path.exists():
@@ -29,10 +30,7 @@ def load_analysis(michraz_id):
 
 
 def get_ai_plan_number(record):
-    """
-    Read the plan number extracted by the AI.
-    Return None when the AI did not find one.
-    """
+    """Returns the plan number extracted by the AI, or None."""
 
     ai_source = (
         record
@@ -52,6 +50,7 @@ def get_ai_plan_number(record):
 
 
 def get_structured_plan_numbers(api_data):
+    """Returns unique plan numbers from structured RMI data."""
     results = []
 
     for value in api_data.get("מספרי תכנית מובנים", []):
@@ -64,6 +63,7 @@ def get_structured_plan_numbers(api_data):
 
 
 def get_api_data(record):
+    """Returns the RMI source data from an analysis record."""
     return (
         record
         .get("sources", {})
@@ -73,6 +73,7 @@ def get_api_data(record):
 
 
 def extract_block_parcels(api_data):
+    """Returns unique block-parcel pairs from current or legacy RMI data."""
     results = []
 
     for pair in api_data.get(
@@ -122,6 +123,7 @@ def extract_block_parcels(api_data):
 
 
 def get_address_keywords(api_data):
+    """Returns useful address words for candidate scoring."""
     address = str(api_data.get("שכונה") or "")
 
     for separator in "-/,().":
@@ -147,6 +149,7 @@ def get_address_keywords(api_data):
 
 
 def get_known_non_plan_values(api_data, block_parcels):
+    """Returns known block, parcel, and lot values that are not plan numbers."""
     values = []
 
     for pair in block_parcels:
@@ -173,6 +176,7 @@ def get_usable_ai_plan_number(
     api_data,
     block_parcels,
 ):
+    """Returns the AI plan number unless it matches a known non-plan value."""
     if not ai_plan_number:
         return None
 
@@ -188,12 +192,7 @@ def get_usable_ai_plan_number(
 
 
 def create_session():
-    """
-    Open the public planning website first so that the server
-    can create the required cookies automatically.
-
-    Do not copy browser cookies into the code.
-    """
+    """Creates a planning API session and collects the required cookies."""
 
     session = requests.Session()
 
@@ -223,6 +222,7 @@ def search_plans(
     gush="",
     chelka="",
 ):
+    """Searches the planning API and returns plans with the request payload."""
     payload = {
         "planNumber": plan_number or "",
         "gush": gush or "",
@@ -247,6 +247,7 @@ def search_plans(
 
 
 def get_plan_detail(session, plan_id):
+    """Fetches the full planning record for one plan ID."""
     response = session.get(
         PLAN_DETAIL_API_URL,
         params={"planID": plan_id},
@@ -257,6 +258,7 @@ def get_plan_detail(session, plan_id):
 
 
 def derive_plan_housing_units(areas):
+    """Returns housing units when the plan has one clear positive value."""
     positive_values = []
 
     for area in areas:
@@ -276,6 +278,7 @@ def derive_plan_housing_units(areas):
 
 
 def make_url(path):
+    """Returns an absolute URL for a planning document path."""
     if not path:
         return None
 
@@ -291,6 +294,7 @@ def make_url(path):
 
 
 def normalize_document(document):
+    """Converts one planning document to the stored metadata format."""
     if not document:
         return None
 
@@ -302,6 +306,7 @@ def normalize_document(document):
 
 
 def normalize_documents(documents_set):
+    """Normalizes regular and special planning documents."""
     documents_set = documents_set or {}
     documents = []
 
@@ -334,6 +339,7 @@ def calculate_candidate_score(
     searched_plan_numbers,
     address_keywords,
 ):
+    """Scores a planning candidate against the tender search inputs."""
     score = 0
     reasons = []
 
@@ -368,6 +374,7 @@ def normalize_candidate(
     searched_plan_numbers,
     address_keywords,
 ):
+    """Converts one planning result to the stored candidate format."""
     score, reasons = calculate_candidate_score(
         plan,
         searched_plan_numbers,
@@ -389,7 +396,7 @@ def normalize_candidate(
         ).strip() or None,
         "relation_type": plan.get("relationType"),
 
-        # הנתונים האלו אינם מוחזרים בבקשה הנוכחית.
+        # These values are available only from the full plan details.
         "main_designation": None,
         "housing_units": None,
 
@@ -404,6 +411,7 @@ def normalize_candidate(
 
 
 def remove_duplicate_plans(plans):
+    """Removes duplicate plans while keeping one result per plan ID."""
     unique_plans = {}
 
     for plan in plans:
@@ -421,6 +429,7 @@ def remove_duplicate_plans(plans):
 
 
 def choose_plan(candidates):
+    """Selects one clear positive-scoring candidate when possible."""
     if not candidates:
         return None, (
             "לא נמצאו תכניות מתאימות במקור התכנוני."
@@ -460,6 +469,8 @@ def choose_plan(candidates):
 
 
 def find_plans_for_tender(michraz_id):
+    """Finds planning candidates and saves the planning source for one tender."""
+    # Step 1: Load the tender inputs used for planning searches.
     record, analysis_path = load_analysis(michraz_id)
 
     api_data = get_api_data(record)
@@ -475,6 +486,7 @@ def find_plans_for_tender(michraz_id):
         block_parcels,
     )
 
+    # Prefer structured RMI plan numbers, then fall back to the AI result.
     if structured_plan_numbers:
         searched_plan_numbers = structured_plan_numbers
     elif usable_ai_plan_number:
@@ -482,6 +494,7 @@ def find_plans_for_tender(michraz_id):
     else:
         searched_plan_numbers = []
 
+    # Step 2: Search by plan number and cadastral data.
     session = create_session()
 
     collected_plans = []
@@ -495,6 +508,7 @@ def find_plans_for_tender(michraz_id):
 
         collected_plans.extend(plans)
 
+        # Keep every payload and result count for provenance.
         searches_performed.append({
             "method": "plan_number",
             "payload": payload,
@@ -517,6 +531,7 @@ def find_plans_for_tender(michraz_id):
             "results_count": len(plans),
         })
 
+    # Step 3: Deduplicate, normalize, and score the candidates.
     collected_plans = remove_duplicate_plans(
         collected_plans
     )
@@ -535,6 +550,7 @@ def find_plans_for_tender(michraz_id):
         reverse=True,
     )
 
+    # Step 4: Select one clear candidate and fetch its details.
     selected_plan, selection_reason = choose_plan(
         candidates
     )
@@ -561,6 +577,7 @@ def find_plans_for_tender(michraz_id):
                 derive_plan_housing_units(areas)
             )
 
+        # A detail failure should not discard successful search results.
         except (requests.RequestException, ValueError) as error:
             plan_detail_error = str(error)
 
@@ -570,6 +587,7 @@ def find_plans_for_tender(michraz_id):
         else "not_found"
     )
 
+    # Step 5: Save the planning source in the analysis record.
     record.setdefault("sources", {})
 
     record["sources"]["planning_api"] = {
@@ -602,6 +620,9 @@ def find_plans_for_tender(michraz_id):
             ),
         },
     }
+
+    # Matching depends on planning and must be recalculated after this update.
+    record.pop("derived_analysis", None)
 
     with analysis_path.open(
         "w",
@@ -645,8 +666,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "michraz_id",
         type=int,
-        nargs="?",
-        default=20260639,
         help="RMI tender ID",
     )
 
