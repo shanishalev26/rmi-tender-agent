@@ -2,12 +2,15 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from analysis_store import (
+    ANALYSIS_DIR,
+    save_analysis_record,
+)
 
 PROFILE_PATH = Path("data/company_profile.json")
-ANALYSIS_DIR = Path("data/analysis")
 
 
-# המשקלים מסתכמים ל-100
+# The weights add up to 100, so known weight also represents data coverage
 WEIGHTS = {
     "activity_area": 20,
     "project_type": 20,
@@ -17,8 +20,11 @@ WEIGHTS = {
     "submission_days": 10,
 }
 
+MISSING_DATA_CREDIT = 0.20
+
 
 def load_json(path):
+    """Loads a JSON file and returns its parsed data"""
     if not path.exists():
         raise FileNotFoundError(
             f"File was not found: {path}"
@@ -29,29 +35,29 @@ def load_json(path):
 
 
 def normalize_text(value):
-    """
-    מנרמל טקסט לצורך השוואה פשוטה.
-    """
+    """Normalizes text for simple matching"""
 
     if value is None:
         return ""
 
     return (
-        str(value)
+        str(value) # Convert to string in case it's a number
+        #convert different types of dashes to space
         .replace("-", " ")
         .replace("–", " ")
         .replace("־", " ")
+        #remove quotes
         .replace('"', "")
         .replace("״", "")
+        #remove extra whitespace
         .strip()
+        #convert to lowercase for case-insensitive comparison
         .lower()
     )
 
 
 def values_match(actual_value, expected_values):
-    """
-    בדיקה האם הערך בפועל תואם לאחד מערכי הפרופיל.
-    """
+    """Checks whether a value matches any configured profile value."""
 
     actual = normalize_text(actual_value)
 
@@ -71,6 +77,7 @@ def values_match(actual_value, expected_values):
 
 
 def get_rmi_data(record):
+    """Returns the RMI source data from an analysis record."""
     return (
         record
         .get("sources", {})
@@ -80,6 +87,7 @@ def get_rmi_data(record):
 
 
 def get_selected_plan(record):
+    """Returns the selected planning candidate, or None."""
     return (
         record
         .get("sources", {})
@@ -90,6 +98,7 @@ def get_selected_plan(record):
 
 
 def calculate_days_until_submission(deadline_value):
+    """Returns the number of full days until the submission deadline."""
     if not deadline_value:
         return None
 
@@ -114,48 +123,25 @@ def calculate_days_until_submission(deadline_value):
 
 
 def is_meaningful_designation(value):
+    """Returns whether a designation contains useful project information."""
     return bool(
         value
         and normalize_text(value) != "אחר"
     )
 
 
-def get_project_designation(
-    rmi_data,
-    selected_plan,
-):
-    tender_designation = rmi_data.get(
-        "ייעוד מכרז"
-    )
+def get_project_designation(rmi_data):
+    """Returns the best available project designation and its explanation."""
+    tender_designation = rmi_data.get("ייעוד מכרז")
 
-    if is_meaningful_designation(
-        tender_designation
-    ):
+    if is_meaningful_designation(tender_designation):
         return (
             tender_designation,
             f"ייעוד המכרז ברמ״י הוא "
             f"{tender_designation}",
         )
 
-    plan_designation = None
-
-    if selected_plan:
-        plan_designation = selected_plan.get(
-            "main_designation"
-        )
-
-    if is_meaningful_designation(
-        plan_designation
-    ):
-        return (
-            plan_designation,
-            f"ייעוד התכנית שנבחרה הוא "
-            f"{plan_designation}",
-        )
-
-    housing_units = rmi_data.get(
-        "יחידות דיור"
-    )
+    housing_units = rmi_data.get("יחידות דיור")
 
     if (
         isinstance(housing_units, (int, float))
@@ -174,17 +160,11 @@ def get_project_designation(
             f"{tender_designation}",
         )
 
-    if plan_designation:
-        return (
-            plan_designation,
-            f"ייעוד התכנית שנבחרה הוא "
-            f"{plan_designation}",
-        )
-
     return None, None
 
 
 def normalize_project_type(designation):
+    """Normalizes known residential designations to one project type."""
     if not designation:
         return None
 
@@ -216,7 +196,13 @@ def add_criterion(
     status,
     explanation,
 ):
-    points = weight if status == "matched" else 0
+    """Adds one weighted criterion to the matching result."""
+    if status == "matched":
+        points = weight
+    elif status == "needs_clarification":
+        points = weight * MISSING_DATA_CREDIT
+    else:
+        points = 0
 
     criteria.append({
         "key": key,
@@ -231,18 +217,18 @@ def add_criterion(
 
 
 def calculate_company_match(record, profile):
+    """Calculates the company match for one analysis record."""
+    # Step 1: Read the RMI and planning inputs
     rmi_data = get_rmi_data(record)
     selected_plan = get_selected_plan(record)
 
     criteria = []
 
-    # 1. אזור פעילות
-    city = None
+    # Evaluate the six weighted criteria
+    # 1. Activity area
+    locality = rmi_data.get("יישוב")
 
-    if selected_plan:
-        city = selected_plan.get("city")
-
-    if city is None:
+    if not locality: #no locality found
         add_criterion(
             criteria=criteria,
             key="activity_area",
@@ -257,8 +243,8 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    elif values_match(
-        city,
+    elif values_match( #matched
+        locality,
         profile["activity_areas"],
     ):
         add_criterion(
@@ -266,38 +252,35 @@ def calculate_company_match(record, profile):
             key="activity_area",
             title="אזור פעילות",
             weight=WEIGHTS["activity_area"],
-            actual=city,
+            actual=locality,
             expected=profile["activity_areas"],
             status="matched",
             explanation=(
-                f"היישוב {city} נמצא באזורי "
+                f"היישוב {locality} נמצא באזורי "
                 "הפעילות של החברה."
             ),
         )
 
-    else:
+    else: #not matched
         add_criterion(
             criteria=criteria,
             key="activity_area",
             title="אזור פעילות",
             weight=WEIGHTS["activity_area"],
-            actual=city,
+            actual=locality,
             expected=profile["activity_areas"],
             status="not_matched",
             explanation=(
-                f"היישוב {city} אינו נמצא באזורי "
+                f"היישוב {locality} אינו נמצא באזורי "
                 "הפעילות שהוגדרו."
             ),
         )
 
-    # 2. סוג פרויקט
+    # 2. Project type
     (
         project_designation,
         project_source,
-    ) = get_project_designation(
-        rmi_data,
-        selected_plan,
-    )
+    ) = get_project_designation(rmi_data)
 
     project_type = normalize_project_type(
         project_designation
@@ -369,7 +352,7 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    # 3. מספר יחידות דיור
+    # 3. Housing units
     housing_units = rmi_data.get("יחידות דיור")
 
     if (
@@ -433,7 +416,7 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    # 4. הוצאות פיתוח
+    # 4. Development costs
     development_costs = rmi_data.get(
         "הוצאות פיתוח"
     )
@@ -495,7 +478,7 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    # 5. תכנית מאושרת
+    # 5. Approved plan
     plan_status = None
 
     if selected_plan:
@@ -562,7 +545,7 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    # 6. מספר ימים עד ההגשה
+    # 6. Submission time
     submission_deadline = rmi_data.get(
         "מועד אחרון"
     )
@@ -624,6 +607,7 @@ def calculate_company_match(record, profile):
             ),
         )
 
+    # Exclude unknown criteria from the score denominator
     known_criteria = [
         criterion
         for criterion in criteria
@@ -631,23 +615,32 @@ def calculate_company_match(record, profile):
         != "needs_clarification"
     ]
 
+    # Calculate the all criteria score that we have known data for
     known_weight = sum(
         criterion["weight"]
         for criterion in known_criteria
     )
 
-    earned_points = sum(
+    # Calculate the total points earned from the known criteria
+    known_earned_points = sum(
         criterion["points_awarded"]
-        for criterion in criteria
+        for criterion in known_criteria
     )
 
-    if known_weight:
-        score = round(
-            earned_points / known_weight * 100
+    known_match_score = (
+        round(
+            known_earned_points / known_weight * 100
         )
-    else:
-        score = 0
+        if known_weight
+        else 0
+    )
 
+    score = round(sum(
+        criterion["points_awarded"]
+        for criterion in criteria
+    ))
+
+    # Known weight is the percentage of criteria with usable data.
     data_coverage = known_weight
 
     matched_criteria = [
@@ -670,18 +663,14 @@ def calculate_company_match(record, profile):
         == "needs_clarification"
     ]
 
-    if data_coverage < 70:
+    if data_coverage < 40:
         recommendation = "דורש בירור"
-
     elif score >= 80:
         recommendation = "התאמה גבוהה"
-
     elif score >= 60:
         recommendation = "מתאים לבדיקה"
-
     elif score >= 40:
         recommendation = "דורש בירור"
-
     else:
         recommendation = "התאמה נמוכה"
 
@@ -691,6 +680,7 @@ def calculate_company_match(record, profile):
             timezone.utc
         ).isoformat(),
         "score": score,
+        "known_match_score": known_match_score,
         "data_coverage": data_coverage,
         "recommendation": recommendation,
         "matched_criteria": matched_criteria,
@@ -701,39 +691,43 @@ def calculate_company_match(record, profile):
         "criteria": criteria,
         "scoring_method": {
             "weights": WEIGHTS,
+            "missing_data_credit": MISSING_DATA_CREDIT,
             "explanation": (
-                "הציון מחושב מתוך הקריטריונים "
-                "שעבורם קיים מידע. data_coverage מציג "
+                "הציון הסופי מעניק 20% ממשקל הקריטריון "
+                "כאשר המידע דורש בירור. "
+                "known_match_score מודד התאמה רק לפי "
+                "הקריטריונים הידועים, ו-data_coverage מציג "
                 "כמה מתוך 100 נקודות המשקל נבדקו."
             ),
         },
     }
 
 
-def calculate_match_for_file(analysis_path, profile):
-    record = load_json(analysis_path)
-
+def update_company_match(record, profile):
+    """Calculates and stores company matching in an analysis record."""
     company_match = calculate_company_match(
         record,
         profile,
     )
 
     record.setdefault("derived_analysis", {})
-
     record["derived_analysis"][
         "company_match"
     ] = company_match
 
-    with analysis_path.open(
-        "w",
-        encoding="utf-8",
-    ) as file:
-        json.dump(
-            record,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    return company_match
+
+
+def calculate_match_for_file(analysis_path, profile):
+    """Calculates and saves matching for one analysis file."""
+    record = load_json(analysis_path)
+
+    company_match = update_company_match(
+        record,
+        profile,
+    )
+
+    save_analysis_record(record, analysis_path)
 
     print(
         f"{analysis_path.name}: "
@@ -744,6 +738,7 @@ def calculate_match_for_file(analysis_path, profile):
 
 
 def main():
+    """Recalculates company matching for every analysis record."""
     profile = load_json(PROFILE_PATH)
 
     analysis_files = sorted(
