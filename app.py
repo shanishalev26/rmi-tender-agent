@@ -341,14 +341,6 @@ def format_housing_units(value):
     return "{:,.0f}".format(value)
 
 
-def format_area(value):
-    """Formats an area value in square meters."""
-    if not isinstance(value, (int, float)):
-        return "לא זמין"
-
-    return '{:,.0f} מ"ר'.format(value)
-
-
 def format_score(value):
     """Formats a company match score out of 100."""
     if not isinstance(value, (int, float)):
@@ -1012,11 +1004,6 @@ def render_tender_details_page(records):
                         "מספרי תכנית מובנים"
                     )
                 ),
-            )
-
-            st.write(
-                "**שטח:**",
-                format_area(rmi_data.get("שטח")),
             )
 
             st.write(
