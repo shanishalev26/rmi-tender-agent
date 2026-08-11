@@ -1,16 +1,13 @@
 import html
 import json
 from datetime import datetime, timezone
-from pathlib import Path
 
 import streamlit as st
 
+from analysis_store import ANALYSIS_DIR, save_analysis_record
 from analyze import refresh_rmi_data
 from company_profile import load_profile, save_profile
-from matching import calculate_company_match
-
-
-ANALYSIS_DIR = Path("data/analysis")
+from matching import update_company_match
 
 PAGE_TENDERS = "📋 רשימת מכרזים"
 PAGE_TENDER_DETAILS = "📄 עמוד המכרז"
@@ -302,6 +299,7 @@ st.markdown(
 
 
 def format_date(value, include_time=False):
+    """Formats a date value for display."""
     if not value:
         return "לא זמין"
 
@@ -317,6 +315,7 @@ def format_date(value, include_time=False):
 
 
 def format_list(value):
+    """Formats a list or value for display."""
     if not value:
         return "לא זמין"
 
@@ -327,6 +326,7 @@ def format_list(value):
 
 
 def format_money(value, zero_requires_verification=False):
+    """Formats a numeric value as an amount in shekels."""
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         return "לא זמין"
 
@@ -337,6 +337,7 @@ def format_money(value, zero_requires_verification=False):
 
 
 def format_housing_units(value):
+    """Formats the number of housing units for display."""
     if not isinstance(value, (int, float)):
         return "לא זמין"
 
@@ -347,20 +348,31 @@ def format_housing_units(value):
 
 
 def format_area(value):
+    """Formats an area value in square meters."""
     if not isinstance(value, (int, float)):
         return "לא זמין"
 
     return '{:,.0f} מ"ר'.format(value)
 
 
-def format_score(value, coverage=None):
+def format_score(value):
+    """Formats a company match score out of 100."""
     if not isinstance(value, (int, float)):
         return "טרם חושב"
 
     return "{}/100".format(value)
 
 
+def format_percentage(value):
+    """Formats a numeric value as a percentage."""
+    if not isinstance(value, (int, float)):
+        return "לא חושב"
+
+    return "{}%".format(value)
+
+
 def format_value(value):
+    """Formats a general value for display."""
     if value is None or value == "":
         return "לא זמין"
 
@@ -371,6 +383,7 @@ def format_value(value):
 
 
 def format_table_value(value):
+    """Formats a value for display inside a table."""
     if value is None or value == "":
         return "לא זמין"
 
@@ -393,6 +406,7 @@ def format_table_value(value):
 
 
 def translate_status(status):
+    """Returns the display label for a matching status."""
     translations = {
         "matched": "מתאים",
         "not_matched": "לא מתאים",
@@ -402,6 +416,7 @@ def translate_status(status):
 
 
 def load_analysis_records():
+    """Loads all saved analysis records for the app."""
     records = []
 
     if not ANALYSIS_DIR.exists():
@@ -427,6 +442,7 @@ def load_analysis_records():
 
 
 def get_rmi_data(record):
+    """Returns the RMI data from an analysis record."""
     return (
         record
         .get("sources", {})
@@ -435,25 +451,50 @@ def get_rmi_data(record):
         or {}
     )
 
-def sort_by_deadline(records):
-    """ממיין מכרזים לפי מועד ההגשה - הקרוב ביותר קודם."""
-    def deadline(record):
-        raw = get_rmi_data(record).get("מועד אחרון")
-        if not raw:
-            return datetime.max.replace(tzinfo=timezone.utc)
-        try:
-            parsed = datetime.fromisoformat(
-                str(raw).replace("Z", "+00:00")
-            )
-            if parsed.tzinfo is None:
-                parsed = parsed.replace(tzinfo=timezone.utc)
-            return parsed
-        except (TypeError, ValueError):
-            return datetime.max.replace(tzinfo=timezone.utc)
 
-    return sorted(records, key=deadline)
+def get_tender_deadline(record):
+    """Returns the tender submission deadline."""
+    raw = get_rmi_data(record).get("מועד אחרון")
+
+    if not raw:
+        return None
+
+    try:
+        parsed = datetime.fromisoformat(
+            str(raw).replace("Z", "+00:00")
+        )
+
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+
+        return parsed
+
+    except (TypeError, ValueError):
+        return None
+
+
+def is_open_tender(record):
+    """Checks whether the tender is still open for submission."""
+    deadline = get_tender_deadline(record)
+
+    return (
+        deadline is not None
+        and deadline > datetime.now(timezone.utc)
+    )
+
+
+def sort_by_deadline(records):
+    """Sorts tenders by the nearest submission deadline."""
+    return sorted(
+        records,
+        key=lambda record: (
+            get_tender_deadline(record)
+            or datetime.max.replace(tzinfo=timezone.utc)
+        ),
+    )
 
 def get_ai_data(record):
+    """Returns the AI extraction data from an analysis record."""
     return (
         record
         .get("sources", {})
@@ -464,6 +505,7 @@ def get_ai_data(record):
 
 
 def get_planning_data(record):
+    """Returns the planning data from an analysis record."""
     return (
         record
         .get("sources", {})
@@ -474,10 +516,12 @@ def get_planning_data(record):
 
 
 def get_selected_plan(record):
+    """Returns the selected plan from an analysis record."""
     return get_planning_data(record).get("selected_plan") or {}
 
 
 def get_company_match(record):
+    """Returns the saved company match result."""
     return (
         record
         .get("derived_analysis", {})
@@ -487,6 +531,7 @@ def get_company_match(record):
 
 
 def get_record_by_id(records, michraz_id):
+    """Returns the record with the requested tender ID."""
     for record in records:
         if record.get("michraz_id") == michraz_id:
             return record
@@ -494,6 +539,7 @@ def get_record_by_id(records, michraz_id):
 
 
 def render_html_table(rows, columns, css_class, widths):
+    """Displays rows as a styled HTML table."""
     if not rows:
         st.info("אין נתונים להצגה.")
         return
@@ -611,6 +657,7 @@ def render_html_table(rows, columns, css_class, widths):
 
 
 def create_tender_summary(record):
+    """Creates one row for the main tenders table."""
     rmi_data = get_rmi_data(record)
     selected_plan = get_selected_plan(record)
     company_match = get_company_match(record)
@@ -619,10 +666,7 @@ def create_tender_summary(record):
 
     return {
         "מספר מכרז": rmi_data.get("מספר מכרז") or "לא זמין",
-        "ציון התאמה": format_score(
-            company_match.get("score"),
-            company_match.get("data_coverage"),
-        ),
+        "ציון התאמה": format_score(company_match.get("score")),
         "יישוב": city,
         "מספר יחידות": format_housing_units(
             rmi_data.get("יחידות דיור")
@@ -639,6 +683,7 @@ def create_tender_summary(record):
 
 
 def render_tenders_table(records):
+    """Displays the main tenders table."""
     rows = [create_tender_summary(record) for record in records]
 
     render_html_table(
@@ -657,11 +702,18 @@ def render_tenders_table(records):
 
 
 def render_match_table(criteria):
+    """Displays the company matching criteria table."""
     rows = []
 
     for criterion in criteria:
         weight = criterion.get("weight", 0)
         points_awarded = criterion.get("points_awarded", 0)
+
+        if (
+            isinstance(points_awarded, float)
+            and points_awarded.is_integer()
+        ):
+            points_awarded = int(points_awarded)
 
         rows.append({
             "קריטריון": criterion.get("title") or "לא זמין",
@@ -694,7 +746,8 @@ def render_match_table(criteria):
 
 
 def save_match_to_record(record, profile):
-    file_path = Path(record["_file_path"])
+    """Recalculates and saves company matching for one record."""
+    file_path = record["_file_path"]
 
     clean_record = {
         key: value
@@ -702,39 +755,30 @@ def save_match_to_record(record, profile):
         if key != "_file_path"
     }
 
-    company_match = calculate_company_match(
-        clean_record,
-        profile,
-    )
-
-    clean_record.setdefault("derived_analysis", {})
-    clean_record["derived_analysis"]["company_match"] = company_match
-
-    with file_path.open("w", encoding="utf-8") as file:
-        json.dump(
-            clean_record,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    update_company_match(clean_record, profile)
+    save_analysis_record(clean_record, file_path)
 
 
 def recalculate_all_matches(profile):
+    """Recalculates company matching for all saved records."""
     for record in load_analysis_records():
         save_match_to_record(record, profile)
 
 
 def open_tender_page(michraz_id):
+    """Opens the details page for one tender."""
     st.session_state["selected_tender_id"] = michraz_id
     st.session_state.pop("details_tender_selection", None)
     st.session_state["requested_page"] = PAGE_TENDER_DETAILS
 
 
 def go_to_tenders_page():
+    """Returns the app to the main tenders page."""
     st.session_state["requested_page"] = PAGE_TENDERS
 
 
 def tender_options(records):
+    """Creates tender labels for the selection widget."""
     options = {}
 
     for record in records:
@@ -753,6 +797,7 @@ def tender_options(records):
 
 
 def render_tenders_page(records):
+    """Displays the active tenders page."""
     st.title("📋 רשימת מכרזים")
 
     st.write(
@@ -760,7 +805,17 @@ def render_tenders_page(records):
         "לפרופיל החברה שהוגדר."
     )
 
-    sorted_records = sort_by_deadline(records)
+    open_records = [
+        record
+        for record in records
+        if is_open_tender(record)
+    ]
+
+    if not open_records:
+        st.info("אין מכרזים פתוחים להצגה.")
+        return
+
+    sorted_records = sort_by_deadline(open_records)
     render_tenders_table(sorted_records)
 
     options = tender_options(sorted_records)
@@ -783,6 +838,7 @@ def render_tenders_page(records):
 
 
 def render_tender_details_page(records):
+    """Displays the full details page for a selected tender."""
     st.title("📄 עמוד המכרז")
 
     options = tender_options(records)
@@ -884,7 +940,7 @@ def render_tender_details_page(records):
     tender_number = rmi_data.get("מספר מכרז") or ""
     st.header("מכרז {}".format(tender_number))
 
-    metric_1, metric_2, metric_3, metric_4 = st.columns(4)
+    metric_1, metric_2, metric_3 = st.columns(3)
 
     metric_1.metric(
         "מחיר מינימום",
@@ -897,21 +953,13 @@ def render_tender_details_page(records):
     )
 
     metric_3.metric(
-        "ציון התאמה",
+        "ציון התאמה סופי",
         format_score(company_match.get("score")),
     )
 
+    known_match_score = company_match.get("known_match_score")
     data_coverage = company_match.get("data_coverage")
-    coverage_text = (
-        "{}%".format(data_coverage)
-        if data_coverage is not None
-        else "לא חושב"
-    )
-
-    metric_4.metric(
-        "כיסוי מידע",
-        coverage_text,
-    )
+    coverage_text = format_percentage(data_coverage)
 
     (
         details_tab,
@@ -1299,11 +1347,20 @@ def render_tender_details_page(records):
                 "יש להריץ את matching.py."
             )
         else:
-            score_column, coverage_column = st.columns(2)
+            (
+                score_column,
+                known_match_column,
+                coverage_column,
+            ) = st.columns(3)
 
             score_column.metric(
-                "ציון התאמה",
+                "ציון התאמה סופי",
                 format_score(company_match.get("score")),
+            )
+
+            known_match_column.metric(
+                "התאמה לפי מידע ידוע",
+                format_percentage(known_match_score),
             )
 
             coverage_column.metric(
@@ -1513,6 +1570,7 @@ def render_tender_details_page(records):
 
 
 def render_company_profile_page():
+    """Displays and updates the company profile form."""
     st.title("⚙️ הגדרות חברה")
 
     st.write(
