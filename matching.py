@@ -290,9 +290,16 @@ def calculate_company_match(record, profile):
         project_source,
     ) = get_project_designation(rmi_data)
 
-    project_type = normalize_project_type(
-        project_designation
+    tender_designation_group = normalize_text(
+        rmi_data.get("קטגוריית ייעוד מכרז")
     )
+
+    if tender_designation_group == "מגורים":
+        project_type = "מגורים"
+    else:
+        project_type = normalize_project_type(
+            project_designation
+        )
 
     project_explanation = project_source
 
