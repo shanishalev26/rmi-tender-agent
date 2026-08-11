@@ -397,6 +397,7 @@ def translate_status(status):
         "matched": "מתאים",
         "not_matched": "לא מתאים",
         "needs_clarification": "דורש בירור",
+        "not_applicable": "לא רלוונטי",
     }
     return translations.get(status, status or "לא זמין")
 
