@@ -1192,9 +1192,13 @@ def render_tender_details_page(records):
                 "יש להריץ את planning.py."
             )
         else:
-            st.subheader("התכנית שנבחרה")
+            candidates = planning_data.get(
+                "candidates", []
+            )
 
             if selected_plan:
+                st.subheader("התכנית שנבחרה")
+
                 st.write(
                     "**מספר התכנית שנבחרה במאגר התכנון:**",
                     format_value(
@@ -1260,14 +1264,34 @@ def render_tender_details_page(records):
                         "הבחירה דורשת אימות."
                     )
             else:
-                st.warning("לא נבחרה תכנית באופן אוטומטי.")
+                st.subheader("איתור התכנית")
+
+                searched_plan_numbers = planning_data.get(
+                    "searched_plan_numbers",
+                    [],
+                )
+
+                if candidates:
+                    st.warning(
+                        "נמצאו תכניות אפשריות, אך לא ניתן "
+                        "היה לבחור תכנית אחת באופן אוטומטי."
+                    )
+                elif searched_plan_numbers:
+                    st.warning(
+                        "מספר התכנית במכרז ידוע, אך לא "
+                        "נמצאה תכנית תואמת במאגר התכנון."
+                    )
+                    st.write(
+                        "**מספרי התכנית הידועים מהמכרז:**",
+                        format_list(searched_plan_numbers),
+                    )
+                else:
+                    st.warning(
+                        "אין מספיק מידע כדי לאתר תכנית "
+                        "במאגר התכנון."
+                    )
 
             st.subheader("אפשרויות התאמה")
-
-            candidates = planning_data.get("candidates", [])
-
-            if not candidates:
-                st.info("לא נמצאו תכניות אפשריות.")
 
             selected_plan_id = selected_plan.get("plan_id")
 
