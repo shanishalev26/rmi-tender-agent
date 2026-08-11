@@ -14,6 +14,15 @@ PROMPT = """
 - plan_number:
   מספר התב"ע או מספר התכנית החלה על הקרקע.
 
+- land_designation:
+  ייעוד הקרקע או השימוש בקרקע, רק כאשר הוא מצוין במפורש
+  בחוברת המכרז.
+  אין להסיק את ייעוד הקרקע מתוך מטרת המכרז, סוג המכרז,
+  ייעוד המכרז ברמ"י, היישוב, מספר התכנית או תיאור המגרש.
+  אין להפוך תיאור כללי של עבודה או פרויקט לייעוד קרקע.
+  אם כמה ייעודי קרקע חלים במפורש, יש לשמור את כולם בערך
+  ואין להמציא קטגוריית סיכום אחת.
+
 - threshold_conditions:
   תנאים מרכזיים להשתתפות במכרז או להגשת הצעה.
   יש להחזיר כל תנאי כאובייקט נפרד בתוך מערך.
@@ -72,20 +81,29 @@ PROMPT = """
 
 9. אם plan_number אינו מופיע בבירור, החזר עבורו:
    - value: null
+   - source_document: שם קובץ ה-PDF שנמסר לך
    - page: null
    - excerpt: null
    - confidence: "low"
 
-10. אם לא נמצאו תנאי סף ברורים, החזר עבור
-    threshold_conditions מערך ריק.
-
-11. אם לא נמצאה נקודה משמעותית לבדיקה, החזר עבורה:
+10. אם land_designation אינו נמצא במפורש ובבירור, החזר עבורו:
     - value: null
+    - source_document: שם קובץ ה-PDF שנמסר לך
     - page: null
     - excerpt: null
     - confidence: "low"
 
-12. החזר JSON תקין בלבד.
+11. אם לא נמצאו תנאי סף ברורים, החזר עבור
+    threshold_conditions מערך ריק.
+
+12. אם לא נמצאה נקודה משמעותית לבדיקה, החזר עבורה:
+    - value: null
+    - source_document: שם קובץ ה-PDF שנמסר לך
+    - page: null
+    - excerpt: null
+    - confidence: "low"
+
+13. החזר JSON תקין בלבד.
     אין להוסיף טקסט לפני ה-JSON או אחריו.
     אין להשתמש בסימוני Markdown.
 
@@ -94,6 +112,13 @@ PROMPT = """
 {
   "plan_number": {
     "value": "מספר התכנית או null",
+    "source_document": "שם המסמך",
+    "page": 1,
+    "excerpt": "ציטוט מדויק מהמסמך",
+    "confidence": "high"
+  },
+  "land_designation": {
+    "value": "ייעוד הקרקע המפורש או null",
     "source_document": "שם המסמך",
     "page": 1,
     "excerpt": "ציטוט מדויק מהמסמך",
@@ -199,6 +224,7 @@ def extract_from_pdf(pdf_path):
 
     required_fields = {
         "plan_number",
+        "land_designation",
         "threshold_conditions",
         "point_to_check",
     }
@@ -212,6 +238,9 @@ def extract_from_pdf(pdf_path):
 
     if not isinstance(data["plan_number"], dict):
         raise ValueError("plan_number must be an object")
+
+    if not isinstance(data["land_designation"], dict):
+        raise ValueError("land_designation must be an object")
 
     if not isinstance(data["threshold_conditions"], list):
         raise ValueError("threshold_conditions must be a list")
