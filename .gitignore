@@ -2,3 +2,7 @@ venv/
 .env
 __pycache__/
 
+
+data/details/
+data/booklets/
+.DS_Store
