@@ -1,19 +1,19 @@
 {
   "michraz_id": 20250295,
-  "analyzed_at": "2026-08-09T13:41:21.239305+00:00",
+  "analyzed_at": "2026-08-11T16:40:40.109361+00:00",
   "documents": [
     {
       "role": "tender_booklet",
       "name": "חוברת המכרז.pdf",
       "description": "חוברת המכרז",
-      "source_url": "https://apps.land.gov.il/MichrazimSite/#/michraz/20250295",
+      "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=1&size=5160556&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
       "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
       "source_document_id": 1,
       "file_type": "application/pdf",
-      "downloaded_at": "2026-08-09T13:40:25.061193+00:00",
+      "downloaded_at": "2026-08-11T16:39:48.843362+00:00",
       "local_path": "data/booklets/20250295.pdf",
       "file_size_bytes": 5160556,
-      "processing_status": "processing_failed"
+      "processing_status": "processed"
     }
   ],
   "sources": {
@@ -21,14 +21,14 @@
       "status": "success",
       "data": {
         "מספר מכרז": "295/2025",
+        "מזהה מכרז": 20250295,
         "קוד יישוב": 7100,
         "קוד ייעוד": 2,
         "קוד סוג מכרז": 9,
         "שכונה": "מגדל",
         "מגרשים": [
-          "א"
+          "מתחם א"
         ],
-        "שטח": 419,
         "יחידות דיור": 1,
         "מחיר מינימום": 147420.0,
         "הוצאות פיתוח": 0,
@@ -62,6 +62,7 @@
         "תאריך פרסום": "2025-07-01T00:00:00+03:00",
         "מועד אחרון": "2026-08-17T12:00:00+03:00",
         "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20250295",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20250295/PirsumDocs",
         "מסמכים": [
           "פרסום דחיית מועדים.pdf",
           "חוזה חכירה עדכני.pdf",
@@ -78,20 +79,254 @@
           "פרסום דחיית מועדים.pdf",
           "פרסום ראשון.pdf"
         ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=-1&size=1233378&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 1233378,
+            "source_updated_at": "2026-07-29T16:00:05.52+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131281&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131281,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-07-29T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "חוזה חכירה עדכני.pdf",
+            "description": "חוזה חכירה עדכני",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=3&size=70261&typePirsum=2&fileName=%D7%97%D7%95%D7%96%D7%94+%D7%97%D7%9B%D7%99%D7%A8%D7%94+%D7%A2%D7%93%D7%9B%D7%A0%D7%99.pdf&teur=%D7%97%D7%95%D7%96%D7%94+%D7%97%D7%9B%D7%99%D7%A8%D7%94+%D7%A2%D7%93%D7%9B%D7%A0%D7%99&fileType=application%2Fpdf",
+            "source_document_id": 3,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 70261,
+            "source_updated_at": "2026-07-27T10:21:50.89+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "הסכם הרשאה לתכנון עדכני.pdf",
+            "description": "הסכם הרשאה לתכנון עדכני",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=2&size=68636&typePirsum=2&fileName=%D7%94%D7%A1%D7%9B%D7%9D+%D7%94%D7%A8%D7%A9%D7%90%D7%94+%D7%9C%D7%AA%D7%9B%D7%A0%D7%95%D7%9F+%D7%A2%D7%93%D7%9B%D7%A0%D7%99.pdf&teur=%D7%94%D7%A1%D7%9B%D7%9D+%D7%94%D7%A8%D7%A9%D7%90%D7%94+%D7%9C%D7%AA%D7%9B%D7%A0%D7%95%D7%9F+%D7%A2%D7%93%D7%9B%D7%A0%D7%99&fileType=application%2Fpdf",
+            "source_document_id": 2,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 68636,
+            "source_updated_at": "2026-07-27T10:21:47.477+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "הודעה בדבר חוזה חכירה עדכני.pdf",
+            "description": "הודעה בדבר חוזה חכירה עדכני",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=41&size=88577&typePirsum=4&fileName=%D7%94%D7%95%D7%93%D7%A2%D7%94+%D7%91%D7%93%D7%91%D7%A8+%D7%97%D7%95%D7%96%D7%94+%D7%97%D7%9B%D7%99%D7%A8%D7%94+%D7%A2%D7%93%D7%9B%D7%A0%D7%99.pdf&teur=%D7%94%D7%95%D7%93%D7%A2%D7%94+%D7%91%D7%93%D7%91%D7%A8+%D7%97%D7%95%D7%96%D7%94+%D7%97%D7%9B%D7%99%D7%A8%D7%94+%D7%A2%D7%93%D7%9B%D7%A0%D7%99&fileType=application%2Fpdf",
+            "source_document_id": 41,
+            "publication_type": 4,
+            "file_type": "application/pdf",
+            "file_size_bytes": 88577,
+            "source_updated_at": "2026-07-27T07:56:57.63+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131282&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131282,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-07-26T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "מודעת הבהרה.pdf",
+            "description": "מודעת הבהרה",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131283&typePirsum=3&fileName=%D7%9E%D7%95%D7%93%D7%A2%D7%AA+%D7%94%D7%91%D7%94%D7%A8%D7%94.pdf&teur=%D7%9E%D7%95%D7%93%D7%A2%D7%AA+%D7%94%D7%91%D7%94%D7%A8%D7%94&fileType=application%2Fpdf",
+            "source_document_id": 131283,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-07-23T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131284&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131284,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-06-22T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131285&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131285,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-05-13T00:00:00+03:00"
+          },
+          {
+            "role": "tender_booklet",
+            "name": "חוברת המכרז.pdf",
+            "description": "חוברת המכרז",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=1&size=5160556&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
+            "source_document_id": 1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 5160556,
+            "source_updated_at": "2026-03-17T17:16:20.09+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131286&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131286,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-02-16T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131287&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131287,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-12-07T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131288&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131288,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-11-17T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131289&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131289,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-09-08T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20250295&rowId=131290&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 131290,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-07-01T00:00:00+03:00"
+          }
+        ],
         "סוג מכרז": "מכרז ייזום",
         "יישוב": "אשקלון",
-        "ייעוד מכרז": "בנייה רוויה"
+        "ייעוד מכרז": "בנייה רוויה",
+        "קטגוריית ייעוד מכרז": "מגורים"
       }
     },
     "tender_booklet_ai": {
-      "status": "invalid_json",
+      "status": "success",
       "document_path": "data/booklets/20250295.pdf",
-      "error": "Extra data: line 75 column 1 (char 3835)",
-      "data": null
+      "error": null,
+      "data": {
+        "plan_number": {
+          "value": "159/03/4",
+          "source_document": "20250295.pdf",
+          "page": 8,
+          "excerpt": "התכנית החלה )התקפה( הינה: 159/03/4 )להלן \"תכנית\" או \"תב\"ע(\"",
+          "confidence": "high"
+        },
+        "land_designation": {
+          "value": "כבישים קיימים ומוצעים וחנייה",
+          "source_document": "20250295.pdf",
+          "page": 8,
+          "excerpt": "ייעוד המגרשים הוא: כבישים קיימים ומוצעים וחנייה.",
+          "confidence": "high"
+        },
+        "threshold_conditions": [
+          {
+            "value": "המחיר המוצע לא יפחת ממחיר המינימום, הצעה שתכלול מחיר מוצע נמוך ממחיר המינימום תיפסל",
+            "source_document": "20250295.pdf",
+            "page": 12,
+            "excerpt": "המחיר המוצע לא יפחת מהסכום הנקוב בטבלה שבסעיף 1 )עמודה שכותרתה \"מחיר מזערי בש\"ח למ\"ר בנוי )ללא מע\"מ(\" בכל מתחם ומתחם )להלן: \"מחיר מינימום\"(, הצעה שתכלול מחיר מוצע נמוך ממחיר המינימום תיפסל ולא תובא במניין ההצעות הכשרות במכרז זה.",
+            "confidence": "high"
+          },
+          {
+            "value": "מציע רשאי להגיש הצעה אחת בלבד; מציע שיגיש יותר מהצעה אחת, כל הצעותיו תיפסלנה",
+            "source_document": "20250295.pdf",
+            "page": 12,
+            "excerpt": "מציע רשאי להגיש הצעה אחת בלבד )בטופס הצעה אחד בלבד(. מציע שיגיש יותר מהצעה אחת, בין אם יחידי ובין אם במשותף, תראה רמ\"י, את כל הצעותיו, שלו ושל שותפיו, כפסולות.",
+            "confidence": "high"
+          },
+          {
+            "value": "יש לצרף להצעה ערבות אוטונומית דיגיטלית בסך 32,400 ש\"ח בתוקף עד ליום 18/10/2026",
+            "source_document": "20250295.pdf",
+            "page": 22,
+            "excerpt": "המציע יצרף להצעה ערבות אוטונומית בלתי מותנית לפקודת רשות מקרקעי ישראל בנוסח המצ\"ב לחוברת המכרז לכל הפחות בסכום המפורט בטבלה שבסעיף שגיאה! מקור ההפניה לא נמצא. ) להלן ולעיל: \"ערבויות\" או \"ערבות.(\"",
+            "confidence": "high"
+          },
+          {
+            "value": "חברה קבלנית שהוגדרה כסרבנית רישום מנועה מלהשתתף במכרז אלא אם תצרף ערבות להבטחת רישום",
+            "source_document": "20250295.pdf",
+            "page": 15,
+            "excerpt": "מציע אשר הינו חברה קבלנית אשר הוגדרה כסרבנית רישום, כהגדרתה בסימן ג' בפרק משנה 4.5 לקובץ החלטות מועצת מקרקעי ישראל, עד למועד האחרון להגשת הצעות, יהיה מנוע מלהשתתף במכרז והצעתו תיפסל, אלא אם כן יצרף להצעתו במכרז ערבות אוטונומית וצמודה בנוסח המצ\"ב לחוברת המכ רז )להלן: \"ערבות להבטחת רישום\"(",
+            "confidence": "high"
+          },
+          {
+            "value": "המועד האחרון להגשת ההצעות למכרז הינו 18/05/2026 עד השעה 12:00",
+            "source_document": "20250295.pdf",
+            "page": 21,
+            "excerpt": "המועד האחרון להגשת ההצעות למכרז הינו בתאריך 18/05/2026 עד השעה 12:00 בצהרים )להלן: \"מועד אחרון להגשת הצעות\"(. עד למועד זה על המציע לסיים את הליך הגשת ההצעה.",
+            "confidence": "high"
+          },
+          {
+            "value": "הצעה תתקבל רק בצירוף טופס אישור הצעה חתום ומאומת כנדרש",
+            "source_document": "20250295.pdf",
+            "page": 20,
+            "excerpt": "במהלך הגשת ההצעה לתיבת המכרזים המקוונת, יידרש המציע להדפיס \"טופס אישור הצעה\" לחתום עליו, לאמת החתימה ככל שיידרש לכך ולסרוק את הטופס החתום למערכת המקוונת. יודגש כי הצעה אשר תתקבל ללא טופס אישור הצעה חתום ומאומת כנדרש תיפסל.",
+            "confidence": "high"
+          }
+        ],
+        "point_to_check": {
+          "value": "יש לבדוק כי הזכויות המוצעות מהוות רק את חלקה היחסי של רמ\"י במתחם, וכי לצורך מימוש הבנייה נדרש להגיע להסכמות עם יתר בעלי הזכויות במתחם",
+          "source_document": "20250295.pdf",
+          "page": 16,
+          "excerpt": "ידוע למורשה כי לצורך מימוש הבנייה במתחם לתכנון, יידרש המורשה, בין היתר, להגיע להסכמות עם יתר בעלי הזכויות במתחם לתכנון .",
+          "confidence": "high"
+        }
+      }
     },
     "planning_api": {
       "status": "success",
-      "searched_at": "2026-08-09T13:41:23.256602+00:00",
+      "searched_at": "2026-08-11T16:40:46.067141+00:00",
       "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
       "source_page_url": "https://apps.land.gov.il/TabaSearch/",
       "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
@@ -109,6 +344,20 @@
             "toStatusDate": ""
           },
           "results_count": 0
+        },
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "159/03/4",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 15
         },
         {
           "method": "block_and_parcel",
@@ -140,13 +389,14 @@
         }
       ],
       "data": {
-        "ai_plan_number": null,
-        "usable_ai_plan_number": null,
+        "ai_plan_number": "159/03/4",
+        "usable_ai_plan_number": "159/03/4",
         "structured_plan_numbers": [
           "1054690"
         ],
         "searched_plan_numbers": [
-          "1054690"
+          "1054690",
+          "159/03/4"
         ],
         "block_parcels": [
           {
@@ -170,10 +420,12 @@
             "status": "פרסום לתוקף ברשומות",
             "status_date": "24/04/75",
             "relation_type": null,
-            "main_designation": null,
+            "main_designation": "מגורים מסחר ומשרדי",
             "housing_units": null,
-            "match_score": 0,
-            "match_reasons": [],
+            "match_score": 100,
+            "match_reasons": [
+              "מספר התכנית זהה למספר התכנית שנמצא במקור"
+            ],
             "documents": [
               {
                 "name": "תשריט",
@@ -197,6 +449,632 @@
                 "name": "אתר המפות הממשלתי",
                 "document_type_code": 0,
                 "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001434"
+              }
+            },
+            "general_info": {
+              "category": "מגורים מסחר ומשרדי",
+              "planningCommitteType": "מחוזית",
+              "planType": "מפורטת",
+              "planningCommitte": "אשקלון",
+              "planningConpany": "ש. גירון ",
+              "responsibile": "עיריה"
+            },
+            "areas": [
+              {
+                "designation": "מגורים",
+                "groupDesignation": "01",
+                "dunamArea": 18.22,
+                "percentageOfPlan": 13.2118,
+                "plots": 9,
+                "mrResidence": 21900.0,
+                "units": 0
+              },
+              {
+                "designation": "מגורים מסחר ומשרדי",
+                "groupDesignation": "17",
+                "dunamArea": 48.052,
+                "percentageOfPlan": 34.844,
+                "plots": 18,
+                "mrResidence": 72078.0,
+                "units": 0
+              },
+              {
+                "designation": "מוסדות ציבוריים",
+                "groupDesignation": "05",
+                "dunamArea": 12.96,
+                "percentageOfPlan": 9.3977,
+                "plots": 3,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטח לדרכים",
+                "groupDesignation": "08",
+                "dunamArea": 40.833,
+                "percentageOfPlan": 29.6092,
+                "plots": 9,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטחים פתוחים",
+                "groupDesignation": "07",
+                "dunamArea": 17.841,
+                "percentageOfPlan": 12.937,
+                "plots": 5,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          },
+          {
+            "plan_number": "13/159/03/4",
+            "plan_id": 1000711,
+            "city": "אשקלון",
+            "plan_name": "אשקלון, שכ' מגדל מדרחוב הרצל",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "16/01/96",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 30,
+            "match_reasons": [
+              "שם התכנית תואם לכתובת המכרז: מגדל"
+            ],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000711.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000711.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.1865234375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000711.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1000711"
+              }
+            }
+          },
+          {
+            "plan_number": "14/159/03/4",
+            "plan_id": 1000691,
+            "city": "אשקלון",
+            "plan_name": "אשקלון, מגדל",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "01/05/96",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 30,
+            "match_reasons": [
+              "שם התכנית תואם לכתובת המכרז: מגדל"
+            ],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000691.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000691.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 494 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000691.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1000691"
+              }
+            }
+          },
+          {
+            "plan_number": "10/159/03/4",
+            "plan_id": 1000187,
+            "city": "אשקלון",
+            "plan_name": "איחוד וחלוקה",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "04/03/90",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000187.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000187.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.416015625 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000187.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1000187"
+              }
+            }
+          },
+          {
+            "plan_number": "12/159/03/4",
+            "plan_id": 1000740,
+            "city": "אשקלון",
+            "plan_name": "בית ספר לאומנויות",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "25/01/96",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000740.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000740.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.240234375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000740.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1000740"
+              }
+            }
+          },
+          {
+            "plan_number": "17/159/03/4",
+            "plan_id": 1002043,
+            "city": "אשקלון",
+            "plan_name": "שינוי יעוד הקרקע למסחר",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "09/09/99",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1002043.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1002043.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 545 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1002043.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1002043"
+              }
+            }
+          },
+          {
+            "plan_number": "3/159/03/4",
+            "plan_id": 1004194,
+            "city": "אשקלון",
+            "plan_name": "תכנית מס' 3/159/03/4",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "01/06/78",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [],
+            "special_documents": {}
+          },
+          {
+            "plan_number": "4/159/03/4",
+            "plan_id": 1001217,
+            "city": "אשקלון",
+            "plan_name": "איחוד חלקות",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "01/06/78",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001217.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001217.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 653 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001217.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "5/159/03/4",
+            "plan_id": 1001927,
+            "city": "אשקלון",
+            "plan_name": "שינוי יעוד ממגורים לשצ\"פ",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "04/12/80",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001927.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001927.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 441 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001927.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "6/159/03/4",
+            "plan_id": 1001676,
+            "city": "אשקלון",
+            "plan_name": "שינוי יעוד מגורים ג' למגורים מיוחד",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "23/02/84",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001676.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001676.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.5849609375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001676.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001676"
+              }
+            }
+          },
+          {
+            "plan_number": "7/159/03/4",
+            "plan_id": 1001162,
+            "city": "אשקלון",
+            "plan_name": "שינוי מס' 7 לתכנית מס' 159/03/4",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "23/06/85",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001162.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001162.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 591 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001162.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "8/159/03/4",
+            "plan_id": 1000911,
+            "city": "אשקלון",
+            "plan_name": "שינוי מס' 8 לתכנית מס' 159/03/4",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "01/01/88",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000911.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000911.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 983 KB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000911.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1000911"
+              }
+            }
+          },
+          {
+            "plan_number": "8/159/03/4א",
+            "plan_id": 1000251,
+            "city": "אשקלון",
+            "plan_name": "שינוי קו בנין לגגון",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "04/03/90",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1000251.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1000251.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 1.1787109375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1000251.zip"
+              }
+            }
+          },
+          {
+            "plan_number": "9/159/03/4",
+            "plan_id": 1001148,
+            "city": "אשקלון",
+            "plan_name": "קביעת שטח לדרך להולכי רגל בלבד",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "09/01/89",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001148.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001148.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 3.3427734375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001148.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001148"
+              }
+            }
+          },
+          {
+            "plan_number": "159/03/24",
+            "plan_id": 6009068,
+            "city": "ערד",
+            "plan_name": "הקמת שכונת מגורים",
+            "status": "פרסום לתוקף בעיתונים",
+            "status_date": "12/12/16",
+            "relation_type": null,
+            "main_designation": null,
+            "housing_units": null,
+            "match_score": 0,
+            "match_reasons": [],
+            "documents": [
+              {
+                "name": "פרוגרמה לשטחי ציבור",
+                "document_type_code": 30,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/30.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תנועה",
+                "document_type_code": 38,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/38.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות חשמל",
+                "document_type_code": 42,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/42.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "טכני / תשתיות",
+                "document_type_code": 49,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/49.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תוכנית חלוקה",
+                "document_type_code": 52,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/52.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "איזון חפירה ומילוי",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/איזון חפירה ומילוי.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח-גיליון 1",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/בינוי ופיתוח-גיליון 1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי ופיתוח-גיליון 2",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/בינוי ופיתוח-גיליון 2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "כבישים",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/כבישים.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מים וביוב",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/מים וביוב.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "מסמך נופי סביבתי",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/מסמך נופי סביבתי.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "נספח איזון חפירות ומילוי",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/נספח איזון חפירות ומילוי.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "סקירה גיאולוגית-גיאוטכנית",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/darom/6009068/100/סקירה גיאולוגית-גיאוטכנית.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/darom/6009068.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/darom/6009068.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 11.5302734375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/darom/6009068.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=6009068"
               }
             }
           },
@@ -272,8 +1150,102 @@
             }
           }
         ],
-        "selected_plan": null,
-        "selection_reason": "נמצאו תכניות החלות על הגוש והחלקה, אך אין מספיק מידע לבחירת תכנית אחת.",
+        "selected_plan": {
+          "plan_number": "159/03/4",
+          "plan_id": 1001434,
+          "city": "אשקלון",
+          "plan_name": "שינוי יעוד",
+          "status": "פרסום לתוקף ברשומות",
+          "status_date": "24/04/75",
+          "relation_type": null,
+          "main_designation": "מגורים מסחר ומשרדי",
+          "housing_units": null,
+          "match_score": 100,
+          "match_reasons": [
+            "מספר התכנית זהה למספר התכנית שנמצא במקור"
+          ],
+          "documents": [
+            {
+              "name": "תשריט",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/jerus/1001434.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/jerus/1001434.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 1.650390625 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/jerus/1001434.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=1001434"
+            }
+          },
+          "general_info": {
+            "category": "מגורים מסחר ומשרדי",
+            "planningCommitteType": "מחוזית",
+            "planType": "מפורטת",
+            "planningCommitte": "אשקלון",
+            "planningConpany": "ש. גירון ",
+            "responsibile": "עיריה"
+          },
+          "areas": [
+            {
+              "designation": "מגורים",
+              "groupDesignation": "01",
+              "dunamArea": 18.22,
+              "percentageOfPlan": 13.2118,
+              "plots": 9,
+              "mrResidence": 21900.0,
+              "units": 0
+            },
+            {
+              "designation": "מגורים מסחר ומשרדי",
+              "groupDesignation": "17",
+              "dunamArea": 48.052,
+              "percentageOfPlan": 34.844,
+              "plots": 18,
+              "mrResidence": 72078.0,
+              "units": 0
+            },
+            {
+              "designation": "מוסדות ציבוריים",
+              "groupDesignation": "05",
+              "dunamArea": 12.96,
+              "percentageOfPlan": 9.3977,
+              "plots": 3,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטח לדרכים",
+              "groupDesignation": "08",
+              "dunamArea": 40.833,
+              "percentageOfPlan": 29.6092,
+              "plots": 9,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטחים פתוחים",
+              "groupDesignation": "07",
+              "dunamArea": 17.841,
+              "percentageOfPlan": 12.937,
+              "plots": 5,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום שמספר התכנית זהה למספר התכנית שנמצא במקור.",
         "plan_detail_error": null,
         "requires_verification": true
       }
@@ -282,37 +1254,34 @@
   "derived_analysis": {
     "company_match": {
       "profile_name": "חברת נדל״ן לדוגמה",
-      "calculated_at": "2026-08-09T14:33:05.517220+00:00",
-      "score": 40,
-      "data_coverage": 50,
-      "recommendation": "דורש בירור",
+      "calculated_at": "2026-08-11T17:03:33.088321+00:00",
+      "score": 60,
+      "known_match_score": 60,
+      "data_coverage": 100,
+      "recommendation": "מתאים לבדיקה",
       "matched_criteria": [
-        "סוג פרויקט"
-      ],
-      "criteria_requiring_clarification": [
-        "אזור פעילות",
+        "סוג פרויקט",
         "הוצאות פיתוח",
-        "סטטוס תכנוני"
+        "סטטוס תכנוני",
+        "זמן עד להגשה"
       ],
-      "missing_information": [
-        "לא נמצא שם יישוב שניתן להשוות לאזורי הפעילות של החברה.",
-        "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור.",
-        "לא נמצא סטטוס תכנוני ברור."
-      ],
+      "criteria_requiring_clarification": [],
+      "missing_information": [],
       "criteria": [
         {
           "key": "activity_area",
           "title": "אזור פעילות",
           "weight": 20,
-          "status": "needs_clarification",
-          "actual": null,
+          "status": "not_matched",
+          "actual": "אשקלון",
           "expected": [
             "תל אביב יפו",
             "רמת גן",
-            "גבעתיים"
+            "גבעתיים",
+            "נס ציונה"
           ],
           "points_awarded": 0,
-          "explanation": "לא נמצא שם יישוב שניתן להשוות לאזורי הפעילות של החברה."
+          "explanation": "היישוב אשקלון אינו נמצא באזורי הפעילות שהוגדרו."
         },
         {
           "key": "project_type",
@@ -335,7 +1304,7 @@
           "actual": 1,
           "expected": {
             "minimum": 10,
-            "maximum": 250
+            "maximum": 300
           },
           "points_awarded": 0,
           "explanation": "1 יחידות אינן בטווח שהגדירה החברה."
@@ -344,31 +1313,31 @@
           "key": "development_costs",
           "title": "הוצאות פיתוח",
           "weight": 15,
-          "status": "needs_clarification",
-          "actual": null,
-          "expected": 20000000,
-          "points_awarded": 0,
-          "explanation": "הוצאות הפיתוח אינן זמינות או שאינן רלוונטיות לסוג המכרז, ונדרש בירור."
+          "status": "matched",
+          "actual": 0,
+          "expected": 22000000,
+          "points_awarded": 15,
+          "explanation": "הוצאות הפיתוח אינן חורגות מהמקסימום שהוגדר."
         },
         {
           "key": "approved_plan",
           "title": "סטטוס תכנוני",
           "weight": 15,
-          "status": "needs_clarification",
-          "actual": null,
+          "status": "matched",
+          "actual": "פרסום לתוקף ברשומות",
           "expected": "תכנית מאושרת",
-          "points_awarded": 0,
-          "explanation": "לא נמצא סטטוס תכנוני ברור."
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: פרסום לתוקף ברשומות."
         },
         {
           "key": "submission_days",
           "title": "זמן עד להגשה",
           "weight": 10,
-          "status": "not_matched",
-          "actual": 7,
-          "expected": 14,
-          "points_awarded": 0,
-          "explanation": "נותרו רק 7 ימים עד למועד ההגשה."
+          "status": "matched",
+          "actual": 5,
+          "expected": 4,
+          "points_awarded": 10,
+          "explanation": "נותרו 5 ימים, מספיק לפי פרופיל החברה."
         }
       ],
       "scoring_method": {
@@ -380,7 +1349,8 @@
           "approved_plan": 15,
           "submission_days": 10
         },
-        "explanation": "הציון מחושב מתוך הקריטריונים שעבורם קיים מידע. data_coverage מציג כמה מתוך 100 נקודות המשקל נבדקו."
+        "missing_data_credit": 0.2,
+        "explanation": "הציון הסופי מעניק 20% ממשקל הקריטריון כאשר המידע דורש בירור, ומנורמל לפי הקריטריונים שחלים על המכרז. קריטריונים שאינם חלים אינם נכללים בחישוב. known_match_score מודד התאמה רק לפי הקריטריונים הידועים, ו-data_coverage מציג איזה חלק ממשקל הקריטריונים החלים נבדק."
       }
     }
   }

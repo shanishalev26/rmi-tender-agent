@@ -1,0 +1,549 @@
+{
+  "michraz_id": 20240249,
+  "analyzed_at": "2026-08-11T16:44:43.306377+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": null,
+      "source_url": null,
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "file_type": null,
+      "downloaded_at": null,
+      "local_path": null,
+      "processing_status": "not_found"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "249/2024",
+        "מזהה מכרז": 20240249,
+        "קוד יישוב": 1773,
+        "קוד ייעוד": 10,
+        "קוד סוג מכרז": 1,
+        "שכונה": "מישור רותם",
+        "מגרשים": [],
+        "יחידות דיור": 0,
+        "מחיר מינימום": 93000000.0,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 7000000,
+        "תוקף ערבות": "2026-08-02T00:00:00+03:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "תוכנית 656-0664391"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "תוכנית 656-0664391",
+            "lot_name": null,
+            "tik_id": "0000106000112",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2024-08-06T00:00:00+03:00",
+        "מועד אחרון": "2026-08-24T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240249",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240249/PirsumDocs",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום עדכון.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "מודעת הבהרה על המעמ.pdf",
+          "הודעה ותשובות לשאלות.pdf",
+          "משטח_בסיס_המידע_בקידוחים.zip",
+          "הודעת עדכון 09-12-2024.pdf",
+          "נספח א-2 מעודכן כולל בדיקת קידוחים 09-12-2024.pdf",
+          "תצלום אוויר.zip",
+          "מדידה חישובי נפחים ותוכנית חיצוב – מעודכן.zip",
+          "שטח ההרשאה-מעודכן.zip",
+          "חוברת המכרז מעודכנת.pdf",
+          "פרוטוקול סיור מציעים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "סקרים גיאולוגיים.zip",
+          "סיור מציעים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=-1&size=1809924&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 1809924,
+            "source_updated_at": "2026-06-09T09:33:09.38+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126877&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126877,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-06-09T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126878&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126878,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-05-18T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126879&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126879,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-03-24T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126880&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126880,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-02-22T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126881&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126881,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-12-24T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126882&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126882,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-11-02T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126883&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126883,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-09-03T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126884&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126884,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-06-30T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126885&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126885,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-04-29T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126886&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126886,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-02-26T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126887&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126887,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-01-22T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום עדכון.pdf",
+            "description": "פרסום עדכון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126888&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A2%D7%93%D7%9B%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A2%D7%93%D7%9B%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 126888,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-12-25T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126889&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126889,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-12-24T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "מודעת הבהרה על המעמ.pdf",
+            "description": "הודעת הבהרה לעניין המע\"מ",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=33&size=62340&typePirsum=4&fileName=%D7%9E%D7%95%D7%93%D7%A2%D7%AA+%D7%94%D7%91%D7%94%D7%A8%D7%94+%D7%A2%D7%9C+%D7%94%D7%9E%D7%A2%D7%9E.pdf&teur=%D7%94%D7%95%D7%93%D7%A2%D7%AA+%D7%94%D7%91%D7%94%D7%A8%D7%94+%D7%9C%D7%A2%D7%A0%D7%99%D7%99%D7%9F+%D7%94%D7%9E%D7%A2%22%D7%9E&fileType=application%2Fpdf",
+            "source_document_id": 33,
+            "publication_type": 4,
+            "file_type": "application/pdf",
+            "file_size_bytes": 62340,
+            "source_updated_at": "2024-12-23T12:42:45.49+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "הודעה ותשובות לשאלות.pdf",
+            "description": "הודעה ותשובות לשאלות",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=14&size=112796&typePirsum=2&fileName=%D7%94%D7%95%D7%93%D7%A2%D7%94+%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA+%D7%9C%D7%A9%D7%90%D7%9C%D7%95%D7%AA.pdf&teur=%D7%94%D7%95%D7%93%D7%A2%D7%94+%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA+%D7%9C%D7%A9%D7%90%D7%9C%D7%95%D7%AA&fileType=application%2Fpdf",
+            "source_document_id": 14,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 112796,
+            "source_updated_at": "2024-12-17T12:01:55.42+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "משטח_בסיס_המידע_בקידוחים.zip",
+            "description": "משטח_בסיס_המידע_בקידוחים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=13&size=1586307&typePirsum=2&fileName=%D7%9E%D7%A9%D7%98%D7%97_%D7%91%D7%A1%D7%99%D7%A1_%D7%94%D7%9E%D7%99%D7%93%D7%A2_%D7%91%D7%A7%D7%99%D7%93%D7%95%D7%97%D7%99%D7%9D.zip&teur=%D7%9E%D7%A9%D7%98%D7%97_%D7%91%D7%A1%D7%99%D7%A1_%D7%94%D7%9E%D7%99%D7%93%D7%A2_%D7%91%D7%A7%D7%99%D7%93%D7%95%D7%97%D7%99%D7%9D&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 13,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 1586307,
+            "source_updated_at": "2024-12-09T14:56:47.513+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "הודעת עדכון 09-12-2024.pdf",
+            "description": "הודעת עדכון 09-12-2024",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=12&size=63556&typePirsum=2&fileName=%D7%94%D7%95%D7%93%D7%A2%D7%AA+%D7%A2%D7%93%D7%9B%D7%95%D7%9F+09-12-2024.pdf&teur=%D7%94%D7%95%D7%93%D7%A2%D7%AA+%D7%A2%D7%93%D7%9B%D7%95%D7%9F+09-12-2024&fileType=application%2Fpdf",
+            "source_document_id": 12,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 63556,
+            "source_updated_at": "2024-12-09T11:48:25.363+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "נספח א-2 מעודכן כולל בדיקת קידוחים 09-12-2024.pdf",
+            "description": "נספח א-2 מעודכן כולל בדיקת קידוחים 09-12-2024",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=11&size=608295&typePirsum=2&fileName=%D7%A0%D7%A1%D7%A4%D7%97+%D7%90-2+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F+%D7%9B%D7%95%D7%9C%D7%9C+%D7%91%D7%93%D7%99%D7%A7%D7%AA+%D7%A7%D7%99%D7%93%D7%95%D7%97%D7%99%D7%9D+09-12-2024.pdf&teur=%D7%A0%D7%A1%D7%A4%D7%97+%D7%90-2+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F+%D7%9B%D7%95%D7%9C%D7%9C+%D7%91%D7%93%D7%99%D7%A7%D7%AA+%D7%A7%D7%99%D7%93%D7%95%D7%97%D7%99%D7%9D+09-12-2024&fileType=application%2Fpdf",
+            "source_document_id": 11,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 608295,
+            "source_updated_at": "2024-12-09T11:47:46.943+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "תצלום אוויר.zip",
+            "description": "תצלום אוויר",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=10&size=176122004&typePirsum=2&fileName=%D7%AA%D7%A6%D7%9C%D7%95%D7%9D+%D7%90%D7%95%D7%95%D7%99%D7%A8.zip&teur=%D7%AA%D7%A6%D7%9C%D7%95%D7%9D+%D7%90%D7%95%D7%95%D7%99%D7%A8&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 10,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 176122004,
+            "source_updated_at": "2024-12-05T10:17:59.337+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "מדידה חישובי נפחים ותוכנית חיצוב – מעודכן.zip",
+            "description": "מדידה חישובי נפחים ותוכנית חיצוב – מעודכן",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=9&size=86097904&typePirsum=2&fileName=%D7%9E%D7%93%D7%99%D7%93%D7%94+%D7%97%D7%99%D7%A9%D7%95%D7%91%D7%99+%D7%A0%D7%A4%D7%97%D7%99%D7%9D+%D7%95%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA+%D7%97%D7%99%D7%A6%D7%95%D7%91+%E2%80%93+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.zip&teur=%D7%9E%D7%93%D7%99%D7%93%D7%94+%D7%97%D7%99%D7%A9%D7%95%D7%91%D7%99+%D7%A0%D7%A4%D7%97%D7%99%D7%9D+%D7%95%D7%AA%D7%95%D7%9B%D7%A0%D7%99%D7%AA+%D7%97%D7%99%D7%A6%D7%95%D7%91+%E2%80%93+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 9,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 86097904,
+            "source_updated_at": "2024-12-05T10:16:02.593+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "שטח ההרשאה-מעודכן.zip",
+            "description": "שטח ההרשאה-מעודכן",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=8&size=22020&typePirsum=2&fileName=%D7%A9%D7%98%D7%97+%D7%94%D7%94%D7%A8%D7%A9%D7%90%D7%94-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F.zip&teur=%D7%A9%D7%98%D7%97+%D7%94%D7%94%D7%A8%D7%A9%D7%90%D7%94-%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%9F&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 8,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 22020,
+            "source_updated_at": "2024-12-05T10:13:44.727+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "חוברת המכרז מעודכנת.pdf",
+            "description": "חוברת המכרז מעודכנת",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=7&size=12189008&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96+%D7%9E%D7%A2%D7%95%D7%93%D7%9B%D7%A0%D7%AA&fileType=application%2Fpdf",
+            "source_document_id": 7,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 12189008,
+            "source_updated_at": "2024-12-04T11:14:55.323+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרוטוקול סיור מציעים.pdf",
+            "description": "פרוטוקול סיור מציעים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=6&size=127122&typePirsum=2&fileName=%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C+%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C+%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 6,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 127122,
+            "source_updated_at": "2024-12-04T11:14:29.647+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126890&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126890,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-12-03T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "סקרים גיאולוגיים.zip",
+            "description": "סקרים גיאולוגיים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=2&size=246048399&typePirsum=2&fileName=%D7%A1%D7%A7%D7%A8%D7%99%D7%9D+%D7%92%D7%99%D7%90%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%99%D7%9D.zip&teur=%D7%A1%D7%A7%D7%A8%D7%99%D7%9D+%D7%92%D7%99%D7%90%D7%95%D7%9C%D7%95%D7%92%D7%99%D7%99%D7%9D&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 2,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 246048399,
+            "source_updated_at": "2024-11-10T12:18:00.273+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "סיור מציעים.pdf",
+            "description": "סיור מציעים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126891&typePirsum=3&fileName=%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D.pdf&teur=%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126891,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-11-07T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240249&rowId=126892&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 126892,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-08-06T00:00:00+03:00"
+          }
+        ],
+        "סוג מכרז": "מכרז פומבי רגיל",
+        "יישוב": "מפעלי מישור רותם",
+        "ייעוד מכרז": "כרייה וחציבה",
+        "קטגוריית ייעוד מכרז": "אחר"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "booklet_not_found",
+      "document_path": null,
+      "error": null,
+      "data": null
+    },
+    "planning_api": {
+      "status": "not_found",
+      "searched_at": "2026-08-11T16:51:35.676491+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "תוכנית 656-0664391",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 0
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "תוכנית 656-0664391"
+        ],
+        "searched_plan_numbers": [
+          "תוכנית 656-0664391"
+        ],
+        "block_parcels": [],
+        "address_keywords": [
+          "מישור",
+          "רותם"
+        ],
+        "candidates": [],
+        "selected_plan": null,
+        "selection_reason": "לא נמצאו תכניות מתאימות במקור התכנוני.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-11T17:03:33.076266+00:00",
+      "score": 35,
+      "known_match_score": 38,
+      "data_coverage": 81,
+      "recommendation": "התאמה נמוכה",
+      "matched_criteria": [
+        "הוצאות פיתוח",
+        "זמן עד להגשה"
+      ],
+      "criteria_requiring_clarification": [
+        "סטטוס תכנוני"
+      ],
+      "missing_information": [
+        "לא נמצא סטטוס תכנוני ברור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "מפעלי מישור רותם",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים",
+            "נס ציונה"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב מפעלי מישור רותם אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "כרייה וחציבה",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 0,
+          "explanation": "ייעוד המכרז ברמ״י הוא כרייה וחציבה, והוא אינו מתאים לסוגי הפרויקטים שהוגדרו."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "not_applicable",
+          "actual": 0,
+          "expected": {
+            "minimum": 10,
+            "maximum": 300
+          },
+          "points_awarded": 0,
+          "explanation": "קטגוריית ייעוד המכרז ברמ״י היא אחר, ולכן קריטריון יחידות הדיור אינו חל."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "matched",
+          "actual": 0,
+          "expected": 22000000,
+          "points_awarded": 15,
+          "explanation": "הוצאות הפיתוח אינן חורגות מהמקסימום שהוגדר."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": "תכנית מאושרת",
+          "points_awarded": 3.0,
+          "explanation": "לא נמצא סטטוס תכנוני ברור."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "matched",
+          "actual": 12,
+          "expected": 4,
+          "points_awarded": 10,
+          "explanation": "נותרו 12 ימים, מספיק לפי פרופיל החברה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "missing_data_credit": 0.2,
+        "explanation": "הציון הסופי מעניק 20% ממשקל הקריטריון כאשר המידע דורש בירור, ומנורמל לפי הקריטריונים שחלים על המכרז. קריטריונים שאינם חלים אינם נכללים בחישוב. known_match_score מודד התאמה רק לפי הקריטריונים הידועים, ו-data_coverage מציג איזה חלק ממשקל הקריטריונים החלים נבדק."
+      }
+    }
+  }
+}

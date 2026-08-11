@@ -1,0 +1,344 @@
+{
+  "michraz_id": 20240058,
+  "analyzed_at": "2026-08-11T16:42:45.358612+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": null,
+      "source_url": null,
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "file_type": null,
+      "downloaded_at": null,
+      "local_path": null,
+      "processing_status": "not_found"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "58/2024",
+        "מזהה מכרז": 20240058,
+        "קוד יישוב": 3747,
+        "קוד ייעוד": 7,
+        "קוד סוג מכרז": 1,
+        "שכונה": "",
+        "מגרשים": [
+          "2000"
+        ],
+        "יחידות דיור": 0,
+        "מחיר מינימום": null,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 0,
+        "תוקף ערבות": "2024-10-27T00:00:00+03:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "234/1/3"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "234/1/3",
+            "lot_name": "2000",
+            "tik_id": "0000800022996",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2024-02-08T00:00:00+02:00",
+        "מועד אחרון": "2026-08-24T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240058",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240058/PirsumDocs",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=-1&size=1055292&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 1055292,
+            "source_updated_at": "2026-04-30T09:30:21.347+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123427&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123427,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-04-30T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123428&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123428,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-01-26T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123429&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123429,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-11-12T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123430&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123430,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-08-05T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123431&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123431,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-04-21T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123432&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123432,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-01-15T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123433&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123433,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-10-14T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123434&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123434,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-07-14T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123435&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 123435,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-05-13T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240058&rowId=123436&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 123436,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-02-08T00:00:00+02:00"
+          }
+        ],
+        "סוג מכרז": "מכרז פומבי רגיל",
+        "יישוב": "דולב",
+        "ייעוד מכרז": "תחנות דלק",
+        "קטגוריית ייעוד מכרז": "אחר"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "booklet_not_found",
+      "document_path": null,
+      "error": null,
+      "data": null
+    },
+    "planning_api": {
+      "status": "not_found",
+      "searched_at": "2026-08-11T16:42:50.361205+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "234/1/3",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 0
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "234/1/3"
+        ],
+        "searched_plan_numbers": [
+          "234/1/3"
+        ],
+        "block_parcels": [],
+        "address_keywords": [],
+        "candidates": [],
+        "selected_plan": null,
+        "selection_reason": "לא נמצאו תכניות מתאימות במקור התכנוני.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-11T17:03:33.072948+00:00",
+      "score": 35,
+      "known_match_score": 38,
+      "data_coverage": 81,
+      "recommendation": "התאמה נמוכה",
+      "matched_criteria": [
+        "הוצאות פיתוח",
+        "זמן עד להגשה"
+      ],
+      "criteria_requiring_clarification": [
+        "סטטוס תכנוני"
+      ],
+      "missing_information": [
+        "לא נמצא סטטוס תכנוני ברור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "דולב",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים",
+            "נס ציונה"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב דולב אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "תחנות דלק",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 0,
+          "explanation": "ייעוד המכרז ברמ״י הוא תחנות דלק, והוא אינו מתאים לסוגי הפרויקטים שהוגדרו."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "not_applicable",
+          "actual": 0,
+          "expected": {
+            "minimum": 10,
+            "maximum": 300
+          },
+          "points_awarded": 0,
+          "explanation": "קטגוריית ייעוד המכרז ברמ״י היא אחר, ולכן קריטריון יחידות הדיור אינו חל."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "matched",
+          "actual": 0,
+          "expected": 22000000,
+          "points_awarded": 15,
+          "explanation": "הוצאות הפיתוח אינן חורגות מהמקסימום שהוגדר."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": "תכנית מאושרת",
+          "points_awarded": 3.0,
+          "explanation": "לא נמצא סטטוס תכנוני ברור."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "matched",
+          "actual": 12,
+          "expected": 4,
+          "points_awarded": 10,
+          "explanation": "נותרו 12 ימים, מספיק לפי פרופיל החברה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "missing_data_credit": 0.2,
+        "explanation": "הציון הסופי מעניק 20% ממשקל הקריטריון כאשר המידע דורש בירור, ומנורמל לפי הקריטריונים שחלים על המכרז. קריטריונים שאינם חלים אינם נכללים בחישוב. known_match_score מודד התאמה רק לפי הקריטריונים הידועים, ו-data_coverage מציג איזה חלק ממשקל הקריטריונים החלים נבדק."
+      }
+    }
+  }
+}

@@ -1,0 +1,681 @@
+{
+  "michraz_id": 20240327,
+  "analyzed_at": "2026-08-11T16:45:15.785336+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": null,
+      "source_url": null,
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "file_type": null,
+      "downloaded_at": null,
+      "local_path": null,
+      "processing_status": "not_found"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "327/2024",
+        "מזהה מכרז": 20240327,
+        "קוד יישוב": 702,
+        "קוד ייעוד": 1,
+        "קוד סוג מכרז": 2,
+        "שכונה": "",
+        "מגרשים": [],
+        "יחידות דיור": 48,
+        "מחיר מינימום": null,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 0,
+        "תוקף ערבות": "2025-03-30T00:00:00+03:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "214-0425314"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "214-0425314",
+            "lot_name": null,
+            "tik_id": "103000732",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2024-09-12T00:00:00+03:00",
+        "מועד אחרון": "2026-08-24T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240327",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20240327/PirsumDocs",
+        "מסמכים": [
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום עדכון.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=-1&size=1139723&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 1139723,
+            "source_updated_at": "2026-06-03T13:22:15.857+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126502&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126502,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-06-03T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126503&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126503,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-04-16T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126504&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126504,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-01-28T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126505&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126505,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-12-28T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126506&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126506,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-10-23T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126507&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126507,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-06-03T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126508&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126508,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2025-03-05T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126509&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126509,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-12-08T00:00:00+02:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126510&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 126510,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-10-27T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום עדכון.pdf",
+            "description": "פרסום עדכון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126511&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A2%D7%93%D7%9B%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A2%D7%93%D7%9B%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 126511,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-09-16T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20240327&rowId=126512&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 126512,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2024-09-12T00:00:00+03:00"
+          }
+        ],
+        "סוג מכרז": "הרשמה והגרלה",
+        "יישוב": "האון",
+        "ייעוד מכרז": "בנייה נמוכה/צמודת קרקע",
+        "קטגוריית ייעוד מכרז": "מגורים"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "booklet_not_found",
+      "document_path": null,
+      "error": null,
+      "data": null
+    },
+    "planning_api": {
+      "status": "success",
+      "searched_at": "2026-08-11T16:45:22.675584+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [
+        {
+          "method": "plan_number",
+          "payload": {
+            "planNumber": "214-0425314",
+            "gush": "",
+            "chelka": "",
+            "statuses": [],
+            "planTypes": [],
+            "planTypesUsed": false,
+            "fromStatusDate": "",
+            "toStatusDate": ""
+          },
+          "results_count": 1
+        }
+      ],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "214-0425314"
+        ],
+        "searched_plan_numbers": [
+          "214-0425314"
+        ],
+        "block_parcels": [],
+        "address_keywords": [],
+        "candidates": [
+          {
+            "plan_number": "214-0425314",
+            "plan_id": 2015181,
+            "city": "האון",
+            "plan_name": "קיבוץ האון-שינוי בינוי",
+            "status": "פרסום לתוקף ברשומות",
+            "status_date": "23/10/18",
+            "relation_type": null,
+            "main_designation": "מגורים",
+            "housing_units": null,
+            "match_score": 100,
+            "match_reasons": [
+              "מספר התכנית זהה למספר התכנית שנמצא במקור"
+            ],
+            "documents": [
+              {
+                "name": "דרכים, תנועה וחניה",
+                "document_type_code": 39,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/39.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "בינוי",
+                "document_type_code": 4,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/4.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ביוב",
+                "document_type_code": 43,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/43.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות מים",
+                "document_type_code": 44,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/44.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשתיות ניקוז",
+                "document_type_code": 45,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/45.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "סביבה ונוף-גיליון 1",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 1.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "סביבה ונוף-גיליון 2",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 2.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "סביבה ונוף-גיליון 3",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 3.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "פרסום למתן תוקף",
+                "document_type_code": 100,
+                "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/פרסום למתן תוקף.pdf",
+                "group": "nispachim"
+              },
+              {
+                "name": "תשריט מצב קיים",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2015181_K.pdf",
+                "group": "tasritim"
+              },
+              {
+                "name": "תשריט מצב מוצע",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2015181_M.pdf",
+                "group": "tasritim"
+              }
+            ],
+            "special_documents": {
+              "takanon": {
+                "name": "תקנון סרוק",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/takanonim/tzafon/2015181.pdf"
+              },
+              "mmg": {
+                "name": "הורדת קבצי ממג 7.005859375 MB",
+                "document_type_code": 0,
+                "url": "https://apps.land.gov.il/IturTabotData/download/tzafon/2015181.zip"
+              },
+              "map": {
+                "name": "אתר המפות הממשלתי",
+                "document_type_code": 0,
+                "url": "http://old.govmap.gov.il/mmi?app=app07&ma=2015181"
+              }
+            },
+            "general_info": {
+              "category": "מגורים",
+              "planningCommitteType": "מקומית",
+              "planType": "מתאר מקומית",
+              "planningCommitte": "עמק הירדן",
+              "planningConpany": null,
+              "responsibile": null
+            },
+            "areas": [
+              {
+                "designation": "מוסדות ציבוריים",
+                "groupDesignation": "05",
+                "dunamArea": 15.661,
+                "percentageOfPlan": 6.5194,
+                "plots": 2,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטחים פתוחים",
+                "groupDesignation": "07",
+                "dunamArea": 45.507,
+                "percentageOfPlan": 18.9439,
+                "plots": 26,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "שטח לדרכים",
+                "groupDesignation": "08",
+                "dunamArea": 62.247,
+                "percentageOfPlan": 25.9126,
+                "plots": 53,
+                "mrResidence": 0.0,
+                "units": 0
+              },
+              {
+                "designation": "מגורים",
+                "groupDesignation": "01",
+                "dunamArea": 109.975,
+                "percentageOfPlan": 45.7811,
+                "plots": 286,
+                "mrResidence": 65900.0,
+                "units": 286
+              },
+              {
+                "designation": "מגורים+מוסדות צבור",
+                "groupDesignation": "21",
+                "dunamArea": 0.829,
+                "percentageOfPlan": 0.3451,
+                "plots": 1,
+                "mrResidence": 250.0,
+                "units": 1
+              },
+              {
+                "designation": "אחר",
+                "groupDesignation": "13,10",
+                "dunamArea": 6.0,
+                "percentageOfPlan": 2.4976,
+                "plots": 5,
+                "mrResidence": 0.0,
+                "units": 0
+              }
+            ]
+          }
+        ],
+        "selected_plan": {
+          "plan_number": "214-0425314",
+          "plan_id": 2015181,
+          "city": "האון",
+          "plan_name": "קיבוץ האון-שינוי בינוי",
+          "status": "פרסום לתוקף ברשומות",
+          "status_date": "23/10/18",
+          "relation_type": null,
+          "main_designation": "מגורים",
+          "housing_units": null,
+          "match_score": 100,
+          "match_reasons": [
+            "מספר התכנית זהה למספר התכנית שנמצא במקור"
+          ],
+          "documents": [
+            {
+              "name": "דרכים, תנועה וחניה",
+              "document_type_code": 39,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/39.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "בינוי",
+              "document_type_code": 4,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/4.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ביוב",
+              "document_type_code": 43,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/43.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות מים",
+              "document_type_code": 44,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/44.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשתיות ניקוז",
+              "document_type_code": 45,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/45.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "סביבה ונוף-גיליון 1",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 1.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "סביבה ונוף-גיליון 2",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 2.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "סביבה ונוף-גיליון 3",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/סביבה ונוף-גיליון 3.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "פרסום למתן תוקף",
+              "document_type_code": 100,
+              "url": "https://apps.land.gov.il/IturTabotData/nispachim/tzafon/2015181/100/פרסום למתן תוקף.pdf",
+              "group": "nispachim"
+            },
+            {
+              "name": "תשריט מצב קיים",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2015181_K.pdf",
+              "group": "tasritim"
+            },
+            {
+              "name": "תשריט מצב מוצע",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/tabot/tzafon/2015181_M.pdf",
+              "group": "tasritim"
+            }
+          ],
+          "special_documents": {
+            "takanon": {
+              "name": "תקנון סרוק",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/takanonim/tzafon/2015181.pdf"
+            },
+            "mmg": {
+              "name": "הורדת קבצי ממג 7.005859375 MB",
+              "document_type_code": 0,
+              "url": "https://apps.land.gov.il/IturTabotData/download/tzafon/2015181.zip"
+            },
+            "map": {
+              "name": "אתר המפות הממשלתי",
+              "document_type_code": 0,
+              "url": "http://old.govmap.gov.il/mmi?app=app07&ma=2015181"
+            }
+          },
+          "general_info": {
+            "category": "מגורים",
+            "planningCommitteType": "מקומית",
+            "planType": "מתאר מקומית",
+            "planningCommitte": "עמק הירדן",
+            "planningConpany": null,
+            "responsibile": null
+          },
+          "areas": [
+            {
+              "designation": "מוסדות ציבוריים",
+              "groupDesignation": "05",
+              "dunamArea": 15.661,
+              "percentageOfPlan": 6.5194,
+              "plots": 2,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטחים פתוחים",
+              "groupDesignation": "07",
+              "dunamArea": 45.507,
+              "percentageOfPlan": 18.9439,
+              "plots": 26,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "שטח לדרכים",
+              "groupDesignation": "08",
+              "dunamArea": 62.247,
+              "percentageOfPlan": 25.9126,
+              "plots": 53,
+              "mrResidence": 0.0,
+              "units": 0
+            },
+            {
+              "designation": "מגורים",
+              "groupDesignation": "01",
+              "dunamArea": 109.975,
+              "percentageOfPlan": 45.7811,
+              "plots": 286,
+              "mrResidence": 65900.0,
+              "units": 286
+            },
+            {
+              "designation": "מגורים+מוסדות צבור",
+              "groupDesignation": "21",
+              "dunamArea": 0.829,
+              "percentageOfPlan": 0.3451,
+              "plots": 1,
+              "mrResidence": 250.0,
+              "units": 1
+            },
+            {
+              "designation": "אחר",
+              "groupDesignation": "13,10",
+              "dunamArea": 6.0,
+              "percentageOfPlan": 2.4976,
+              "plots": 5,
+              "mrResidence": 0.0,
+              "units": 0
+            }
+          ]
+        },
+        "selection_reason": "התכנית נבחרה משום שמספר התכנית זהה למספר התכנית שנמצא במקור.",
+        "plan_detail_error": null,
+        "requires_verification": false
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-11T17:03:33.078965+00:00",
+      "score": 80,
+      "known_match_score": 80,
+      "data_coverage": 100,
+      "recommendation": "התאמה גבוהה",
+      "matched_criteria": [
+        "סוג פרויקט",
+        "מספר יחידות דיור",
+        "הוצאות פיתוח",
+        "סטטוס תכנוני",
+        "זמן עד להגשה"
+      ],
+      "criteria_requiring_clarification": [],
+      "missing_information": [],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "האון",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים",
+            "נס ציונה"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב האון אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "matched",
+          "actual": "בנייה נמוכה/צמודת קרקע",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 20,
+          "explanation": "ייעוד המכרז ברמ״י הוא בנייה נמוכה/צמודת קרקע, ולכן סוג הפרויקט סווג כמגורים, והוא מתאים לפרופיל החברה."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "matched",
+          "actual": 48,
+          "expected": {
+            "minimum": 10,
+            "maximum": 300
+          },
+          "points_awarded": 20,
+          "explanation": "48 יחידות נמצאות בטווח שהוגדר."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "matched",
+          "actual": 0,
+          "expected": 22000000,
+          "points_awarded": 15,
+          "explanation": "הוצאות הפיתוח אינן חורגות מהמקסימום שהוגדר."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "matched",
+          "actual": "פרסום לתוקף ברשומות",
+          "expected": "תכנית מאושרת",
+          "points_awarded": 15,
+          "explanation": "סטטוס התכנית הוא: פרסום לתוקף ברשומות."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "matched",
+          "actual": 12,
+          "expected": 4,
+          "points_awarded": 10,
+          "explanation": "נותרו 12 ימים, מספיק לפי פרופיל החברה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "missing_data_credit": 0.2,
+        "explanation": "הציון הסופי מעניק 20% ממשקל הקריטריון כאשר המידע דורש בירור, ומנורמל לפי הקריטריונים שחלים על המכרז. קריטריונים שאינם חלים אינם נכללים בחישוב. known_match_score מודד התאמה רק לפי הקריטריונים הידועים, ו-data_coverage מציג איזה חלק ממשקל הקריטריונים החלים נבדק."
+      }
+    }
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "michraz_id": 20260023,
+  "analyzed_at": "2026-08-11T16:42:18.509009+00:00",
+  "documents": [
+    {
+      "role": "tender_booklet",
+      "name": "חוברת המכרז.pdf",
+      "description": "חוברת המכרז",
+      "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=1&size=3065917&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
+      "download_endpoint": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent",
+      "source_document_id": 1,
+      "file_type": "application/pdf",
+      "downloaded_at": "2026-08-11T16:41:43.914569+00:00",
+      "local_path": "data/booklets/20260023.pdf",
+      "file_size_bytes": 3065917,
+      "processing_status": "processed"
+    }
+  ],
+  "sources": {
+    "rmi_api": {
+      "status": "success",
+      "data": {
+        "מספר מכרז": "23/2026",
+        "מזהה מכרז": 20260023,
+        "קוד יישוב": 4028,
+        "קוד ייעוד": 16,
+        "קוד סוג מכרז": 1,
+        "שכונה": "",
+        "מגרשים": [],
+        "יחידות דיור": 0,
+        "מחיר מינימום": 1600000.0,
+        "הוצאות פיתוח": 0,
+        "סכום ערבות": 1500000,
+        "תוקף ערבות": "2027-02-28T00:00:00+02:00",
+        "גוש/חלקה": [],
+        "גושים/חלקות מובנים": [],
+        "מספרי תכנית מובנים": [
+          "תמל"
+        ],
+        "תכניות/מגרשים מובנים": [
+          {
+            "plan_number": "תמל",
+            "lot_name": null,
+            "tik_id": "232026",
+            "source_field": "Tik.TochnitMigrash"
+          }
+        ],
+        "תאריך פרסום": "2026-01-28T00:00:00+02:00",
+        "מועד אחרון": "2026-08-17T12:00:00+03:00",
+        "קישור למקור": "https://apps.land.gov.il/MichrazimSite/#/michraz/20260023",
+        "קישור למסמכי המכרז": "https://apps.land.gov.il/MichrazimSite/#/michraz/20260023/PirsumDocs",
+        "מסמכים": [
+          "פרוטוקול סיור מציעים.pdf",
+          "מודעת עדכון.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "קבצי מדידה.zip",
+          "חוברת המכרז.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום דחיית מועדים.pdf",
+          "פרסום ראשון.pdf"
+        ],
+        "מסמכי מכרז מובנים": [
+          {
+            "role": "full_tender_document",
+            "name": "מסמך הפרסום המלא.pdf",
+            "description": "מסמך הפרסום המלא",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=-1&size=810644&typePirsum=2&fileName=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90.pdf&teur=%D7%9E%D7%A1%D7%9E%D7%9A+%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%94%D7%9E%D7%9C%D7%90&fileType=application%2Fpdf",
+            "source_document_id": -1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 810644,
+            "source_updated_at": "2026-08-03T12:58:22.98+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרוטוקול סיור מציעים.pdf",
+            "description": "פרוטוקול סיור מציעים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=4&size=99457&typePirsum=2&fileName=%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C+%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C+%D7%A1%D7%99%D7%95%D7%A8+%D7%9E%D7%A6%D7%99%D7%A2%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 4,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 99457,
+            "source_updated_at": "2026-08-03T10:00:36.7+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "מודעת עדכון.pdf",
+            "description": "מודעת עדכון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=3&size=152978&typePirsum=2&fileName=%D7%9E%D7%95%D7%93%D7%A2%D7%AA+%D7%A2%D7%93%D7%9B%D7%95%D7%9F.pdf&teur=%D7%9E%D7%95%D7%93%D7%A2%D7%AA+%D7%A2%D7%93%D7%9B%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 3,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 152978,
+            "source_updated_at": "2026-08-03T10:00:23.417+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131405&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131405,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-07-29T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "קבצי מדידה.zip",
+            "description": "קבצי מדידה",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=2&size=246184168&typePirsum=2&fileName=%D7%A7%D7%91%D7%A6%D7%99+%D7%9E%D7%93%D7%99%D7%93%D7%94.zip&teur=%D7%A7%D7%91%D7%A6%D7%99+%D7%9E%D7%93%D7%99%D7%93%D7%94&fileType=application%2Fx-zip-compressed",
+            "source_document_id": 2,
+            "publication_type": 2,
+            "file_type": "application/x-zip-compressed",
+            "file_size_bytes": 246184168,
+            "source_updated_at": "2026-07-22T11:48:59.377+03:00"
+          },
+          {
+            "role": "tender_booklet",
+            "name": "חוברת המכרז.pdf",
+            "description": "חוברת המכרז",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=1&size=3065917&typePirsum=2&fileName=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96.pdf&teur=%D7%97%D7%95%D7%91%D7%A8%D7%AA+%D7%94%D7%9E%D7%9B%D7%A8%D7%96&fileType=application%2Fpdf",
+            "source_document_id": 1,
+            "publication_type": 2,
+            "file_type": "application/pdf",
+            "file_size_bytes": 3065917,
+            "source_updated_at": "2026-07-01T14:42:32.833+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131406&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131406,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-07-01T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131407&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131407,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-06-02T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131408&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131408,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-05-10T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום דחיית מועדים.pdf",
+            "description": "פרסום דחיית מועדים",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131409&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%93%D7%97%D7%99%D7%99%D7%AA+%D7%9E%D7%95%D7%A2%D7%93%D7%99%D7%9D&fileType=application%2Fpdf",
+            "source_document_id": 131409,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-04-12T00:00:00+03:00"
+          },
+          {
+            "role": "tender_attachment",
+            "name": "פרסום ראשון.pdf",
+            "description": "פרסום ראשון",
+            "source_url": "https://apps.land.gov.il/MichrazimSite/api/MichrazDetailsApi/GetFileContent?michrazId=20260023&rowId=131410&typePirsum=3&fileName=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F.pdf&teur=%D7%A4%D7%A8%D7%A1%D7%95%D7%9D+%D7%A8%D7%90%D7%A9%D7%95%D7%9F&fileType=application%2Fpdf",
+            "source_document_id": 131410,
+            "publication_type": 3,
+            "file_type": "application/pdf",
+            "file_size_bytes": null,
+            "source_updated_at": "2026-01-28T00:00:00+02:00"
+          }
+        ],
+        "סוג מכרז": "מכרז פומבי רגיל",
+        "יישוב": "כנף",
+        "ייעוד מכרז": "עודפים",
+        "קטגוריית ייעוד מכרז": "אחר"
+      }
+    },
+    "tender_booklet_ai": {
+      "status": "success",
+      "document_path": "data/booklets/20260023.pdf",
+      "error": null,
+      "data": {
+        "plan_number": {
+          "value": null,
+          "source_document": "20260023.pdf",
+          "page": null,
+          "excerpt": null,
+          "confidence": "low"
+        },
+        "land_designation": {
+          "value": null,
+          "source_document": "20260023.pdf",
+          "page": null,
+          "excerpt": null,
+          "confidence": "low"
+        },
+        "threshold_conditions": [
+          {
+            "value": "משתתף אשר אינו \"זר\" כהגדרתו בחוק רשות מקרקעי ישראל, תש\"ך-1960",
+            "source_document": "20260023.pdf",
+            "page": 4,
+            "excerpt": "משתתף אשר אינו \"זר\" כהגדרתו בחוק רשות מקרקעי ישראל, תש\"ך.1960- ככל שהמציע הינו זר, תהיה ההתקשרות עמו כפופה לכללים בדבר הקצאת הקרקע לזרים לפי חוק מקרקעי ישראל תש\"ך.1960-",
+            "confidence": "high"
+          },
+          {
+            "value": "המשתתף מחזיק בכל האישורים הנדרשים בהתאם לחוק עסקאות גופים ציבוריים (אכיפת ניהול חשבונות, תשלום חובות מס ושכר מינימום והעסקת עובדים זרים כדין), התשל\"ו – 1976",
+            "source_document": "20260023.pdf",
+            "page": 4,
+            "excerpt": "המשתתף מחזיק בכל האישורים הנדרשים בהתאם לחוק עסקאות גופים ציבוריים )אכיפת ניהול חשבונות, תשלום חובות מס ושכר מינימום והעסקת עובדים זרים כדין( התשל\"ו – .1976",
+            "confidence": "high"
+          },
+          {
+            "value": "השתתפות בסיור המציעים הינה תנאי מוקדם להגשת הצעה במכרז",
+            "source_document": "20260023.pdf",
+            "page": 4,
+            "excerpt": "מי שהשתתף בסיור המציעים.",
+            "confidence": "high"
+          },
+          {
+            "value": "מחיר מינימום להצעה במכרז: המחיר המוצע לא יקטן מ-1,600,000 ₪",
+            "source_document": "20260023.pdf",
+            "page": 4,
+            "excerpt": "מחיר מינימום: המחיר המוצע במכרז לא יקטן מ - 1,600,000 ₪ )מיליון ושש מאות אלף ₪(. על המחיר יתווסף מע\"מ כחוק.",
+            "confidence": "high"
+          },
+          {
+            "value": "יש לצרף להצעה ערבות דיגיטלית לקיום ההצעה בסכום של לכל הפחות 1,500,000 ₪, בתוקף עד 6 חודשים מהמועד האחרון להגשת הצעות",
+            "source_document": "20260023.pdf",
+            "page": 4,
+            "excerpt": "ערבות דגיטלית לקיום ההצעה: להצעה במכרז תצורף ערבות דיגיטלית בסכום של לכל הפחות 1,500,000 ₪ )מיליון וחמש מאות אלף ₪(, שתהיה בתוקף עד 6 חודשים מהמועד האחרון להגשת הצעות במכרז",
+            "confidence": "high"
+          },
+          {
+            "value": "רק חברה שנציג מטעמה השתתף בסיור מציעים יכולה להגיש הצעה במכרז",
+            "source_document": "20260023.pdf",
+            "page": 7,
+            "excerpt": "רק חברה שנציג מטעמה השתתף בסיור מציעים יכולה להגיש הצעה במכרז.",
+            "confidence": "high"
+          }
+        ],
+        "point_to_check": {
+          "value": "על מגיש הצעה לאמוד בעצמו ועל אחריותו את נפח עודפי הבזלת ואת טיב חומרי הגלם הצפויים, ולא יבוא בטענות לרשות בעניין זה",
+          "source_document": "20260023.pdf",
+          "page": 3,
+          "excerpt": "בדיקת נפח וטיב עודפי הבזלת הצפויים: על מגיש הצעה לאמוד את הנפח ואת טיב חומרי הגלם שניתן להפיק מעודפי הבזלת בתחום המכרז, בעצמו ועל אחריותו, והוא לא יבוא בטענות אל הרשות או מי מטעמה בעניין זה.",
+          "confidence": "high"
+        }
+      }
+    },
+    "planning_api": {
+      "status": "not_found",
+      "searched_at": "2026-08-11T16:42:19.314390+00:00",
+      "source_name": "רשות מקרקעי ישראל – מאגר תכניות בניין עיר",
+      "source_page_url": "https://apps.land.gov.il/TabaSearch/",
+      "api_url": "https://apps.land.gov.il/TabaSearch/api/SerachPlans/GetPlans",
+      "searches_performed": [],
+      "data": {
+        "ai_plan_number": null,
+        "usable_ai_plan_number": null,
+        "structured_plan_numbers": [
+          "תמל"
+        ],
+        "searched_plan_numbers": [],
+        "block_parcels": [],
+        "address_keywords": [],
+        "candidates": [],
+        "selected_plan": null,
+        "selection_reason": "לא נמצאו תכניות מתאימות במקור התכנוני.",
+        "plan_detail_error": null,
+        "requires_verification": true
+      }
+    }
+  },
+  "derived_analysis": {
+    "company_match": {
+      "profile_name": "חברת נדל״ן לדוגמה",
+      "calculated_at": "2026-08-11T17:03:33.090126+00:00",
+      "score": 35,
+      "known_match_score": 38,
+      "data_coverage": 81,
+      "recommendation": "התאמה נמוכה",
+      "matched_criteria": [
+        "הוצאות פיתוח",
+        "זמן עד להגשה"
+      ],
+      "criteria_requiring_clarification": [
+        "סטטוס תכנוני"
+      ],
+      "missing_information": [
+        "לא נמצא סטטוס תכנוני ברור."
+      ],
+      "criteria": [
+        {
+          "key": "activity_area",
+          "title": "אזור פעילות",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "כנף",
+          "expected": [
+            "תל אביב יפו",
+            "רמת גן",
+            "גבעתיים",
+            "נס ציונה"
+          ],
+          "points_awarded": 0,
+          "explanation": "היישוב כנף אינו נמצא באזורי הפעילות שהוגדרו."
+        },
+        {
+          "key": "project_type",
+          "title": "סוג פרויקט",
+          "weight": 20,
+          "status": "not_matched",
+          "actual": "עודפים",
+          "expected": [
+            "מגורים",
+            "התחדשות עירונית"
+          ],
+          "points_awarded": 0,
+          "explanation": "ייעוד המכרז ברמ״י הוא עודפים, והוא אינו מתאים לסוגי הפרויקטים שהוגדרו."
+        },
+        {
+          "key": "housing_units",
+          "title": "מספר יחידות דיור",
+          "weight": 20,
+          "status": "not_applicable",
+          "actual": 0,
+          "expected": {
+            "minimum": 10,
+            "maximum": 300
+          },
+          "points_awarded": 0,
+          "explanation": "קטגוריית ייעוד המכרז ברמ״י היא אחר, ולכן קריטריון יחידות הדיור אינו חל."
+        },
+        {
+          "key": "development_costs",
+          "title": "הוצאות פיתוח",
+          "weight": 15,
+          "status": "matched",
+          "actual": 0,
+          "expected": 22000000,
+          "points_awarded": 15,
+          "explanation": "הוצאות הפיתוח אינן חורגות מהמקסימום שהוגדר."
+        },
+        {
+          "key": "approved_plan",
+          "title": "סטטוס תכנוני",
+          "weight": 15,
+          "status": "needs_clarification",
+          "actual": null,
+          "expected": "תכנית מאושרת",
+          "points_awarded": 3.0,
+          "explanation": "לא נמצא סטטוס תכנוני ברור."
+        },
+        {
+          "key": "submission_days",
+          "title": "זמן עד להגשה",
+          "weight": 10,
+          "status": "matched",
+          "actual": 5,
+          "expected": 4,
+          "points_awarded": 10,
+          "explanation": "נותרו 5 ימים, מספיק לפי פרופיל החברה."
+        }
+      ],
+      "scoring_method": {
+        "weights": {
+          "activity_area": 20,
+          "project_type": 20,
+          "housing_units": 20,
+          "development_costs": 15,
+          "approved_plan": 15,
+          "submission_days": 10
+        },
+        "missing_data_credit": 0.2,
+        "explanation": "הציון הסופי מעניק 20% ממשקל הקריטריון כאשר המידע דורש בירור, ומנורמל לפי הקריטריונים שחלים על המכרז. קריטריונים שאינם חלים אינם נכללים בחישוב. known_match_score מודד התאמה רק לפי הקריטריונים הידועים, ו-data_coverage מציג איזה חלק ממשקל הקריטריונים החלים נבדק."
+      }
+    }
+  }
+}
