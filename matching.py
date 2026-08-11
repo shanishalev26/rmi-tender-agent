@@ -8,7 +8,7 @@ from analysis_store import (
 from company_profile import load_profile
 
 
-# The weights add up to 100, so known weight also represents data coverage
+# The configured criterion weights add up to 100
 WEIGHTS = {
     "activity_area": 20,
     "project_type": 20,
@@ -120,6 +120,14 @@ def calculate_days_until_submission(deadline_value):
         return None
 
 
+def is_numeric_value(value):
+    """Returns whether a value is a number but not a boolean."""
+    return (
+        isinstance(value, (int, float))
+        and not isinstance(value, bool)
+    )
+
+
 def is_meaningful_designation(value):
     """Returns whether a designation contains useful project information."""
     return bool(
@@ -142,7 +150,7 @@ def get_project_designation(rmi_data):
     housing_units = rmi_data.get("יחידות דיור")
 
     if (
-        isinstance(housing_units, (int, float))
+        is_numeric_value(housing_units)
         and housing_units > 0
     ):
         return (
@@ -199,6 +207,8 @@ def add_criterion(
         points = weight
     elif status == "needs_clarification":
         points = weight * MISSING_DATA_CREDIT
+    elif status == "not_applicable":
+        points = 0
     else:
         points = 0
 
@@ -352,11 +362,55 @@ def calculate_company_match(record, profile):
 
     # 3. Housing units
     housing_units = rmi_data.get("יחידות דיור")
+    housing_designation_group = normalize_text(
+        rmi_data.get("קטגוריית ייעוד מכרז")
+    )
+    housing_units_are_numeric = is_numeric_value(
+        housing_units
+    )
 
-    if (
-        not isinstance(housing_units, (int, float))
-        or housing_units == 0
-    ):
+    if housing_designation_group == "אחר":
+        add_criterion(
+            criteria=criteria,
+            key="housing_units",
+            title="מספר יחידות דיור",
+            weight=WEIGHTS["housing_units"],
+            actual=housing_units,
+            expected={
+                "minimum": profile["min_housing_units"],
+                "maximum": profile["max_housing_units"],
+            },
+            status="not_applicable",
+            explanation=(
+                "קטגוריית ייעוד המכרז ברמ״י היא אחר, "
+                "ולכן קריטריון יחידות הדיור אינו חל."
+            ),
+        )
+
+    elif housing_designation_group != "מגורים":
+        add_criterion(
+            criteria=criteria,
+            key="housing_units",
+            title="מספר יחידות דיור",
+            weight=WEIGHTS["housing_units"],
+            actual=(
+                housing_units
+                if housing_units_are_numeric
+                else None
+            ),
+            expected={
+                "minimum": profile["min_housing_units"],
+                "maximum": profile["max_housing_units"],
+            },
+            status="needs_clarification",
+            explanation=(
+                "קטגוריית ייעוד המכרז ברמ״י חסרה או "
+                "אינה מוכרת, ולכן לא ניתן לקבוע אם "
+                "קריטריון יחידות הדיור חל."
+            ),
+        )
+
+    elif not housing_units_are_numeric:
         add_criterion(
             criteria=criteria,
             key="housing_units",
@@ -369,8 +423,8 @@ def calculate_company_match(record, profile):
             },
             status="needs_clarification",
             explanation=(
-                "מספר יחידות הדיור אינו זמין או שאינו "
-                "רלוונטי לסוג המכרז, ונדרש בירור."
+                "מספר יחידות הדיור אינו זמין או אינו "
+                "ערך מספרי, ונדרש בירור."
             ),
         )
 
@@ -419,10 +473,7 @@ def calculate_company_match(record, profile):
         "הוצאות פיתוח"
     )
 
-    if (
-        not isinstance(development_costs, (int, float))
-        or development_costs == 0
-    ):
+    if not is_numeric_value(development_costs):
         add_criterion(
             criteria=criteria,
             key="development_costs",
@@ -434,8 +485,8 @@ def calculate_company_match(record, profile):
             ],
             status="needs_clarification",
             explanation=(
-                "הוצאות הפיתוח אינן זמינות או שאינן "
-                "רלוונטיות לסוג המכרז, ונדרש בירור."
+                "הוצאות הפיתוח אינן זמינות או אינן "
+                "ערך מספרי, ונדרש בירור."
             ),
         )
 
@@ -605,21 +656,46 @@ def calculate_company_match(record, profile):
             ),
         )
 
-    # Exclude unknown criteria from the score denominator
+    # Exclude criteria that do not apply to this tender
+    applicable_criteria = [
+        criterion
+        for criterion in criteria
+        if criterion["status"] != "not_applicable"
+    ]
+
+    applicable_weight = sum(
+        criterion["weight"]
+        for criterion in applicable_criteria
+    )
+
+    applicable_points = sum(
+        criterion["points_awarded"]
+        for criterion in applicable_criteria
+    )
+
+    score = (
+        round(
+            applicable_points / applicable_weight * 100
+        )
+        if applicable_weight
+        else 0
+    )
+
+    # Known criteria have a definitive match result
     known_criteria = [
         criterion
         for criterion in criteria
-        if criterion["status"]
-        != "needs_clarification"
+        if criterion["status"] in {
+            "matched",
+            "not_matched",
+        }
     ]
 
-    # Calculate the all criteria score that we have known data for
     known_weight = sum(
         criterion["weight"]
         for criterion in known_criteria
     )
 
-    # Calculate the total points earned from the known criteria
     known_earned_points = sum(
         criterion["points_awarded"]
         for criterion in known_criteria
@@ -633,13 +709,11 @@ def calculate_company_match(record, profile):
         else 0
     )
 
-    score = round(sum(
-        criterion["points_awarded"]
-        for criterion in criteria
-    ))
-
-    # Known weight is the percentage of criteria with usable data.
-    data_coverage = known_weight
+    data_coverage = (
+        round(known_weight / applicable_weight * 100)
+        if applicable_weight
+        else 0
+    )
 
     matched_criteria = [
         criterion["title"]
@@ -692,10 +766,12 @@ def calculate_company_match(record, profile):
             "missing_data_credit": MISSING_DATA_CREDIT,
             "explanation": (
                 "הציון הסופי מעניק 20% ממשקל הקריטריון "
-                "כאשר המידע דורש בירור. "
+                "כאשר המידע דורש בירור, ומנורמל לפי "
+                "הקריטריונים שחלים על המכרז. קריטריונים "
+                "שאינם חלים אינם נכללים בחישוב. "
                 "known_match_score מודד התאמה רק לפי "
                 "הקריטריונים הידועים, ו-data_coverage מציג "
-                "כמה מתוך 100 נקודות המשקל נבדקו."
+                "איזה חלק ממשקל הקריטריונים החלים נבדק."
             ),
         },
     }
