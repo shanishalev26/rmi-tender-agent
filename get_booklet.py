@@ -213,18 +213,26 @@ def extract_api_facts(
     gush_helka = [] #גוש חלקה להצגה למשתמש
     structured_block_parcels = [] #גוש חלקה לעבודה של הקוד
     structured_plan_references = []
+    mitchamim = []
     migrashim = []
     shetach = None
+    shetach_bniya = None
     hotzaot = None
 
     # Tik contains tender areas. Each area may include block-parcel pairs
     # in GushHelka and plan-lot references in TochnitMigrash
     for tik in detail.get("Tik", []):
         if tik.get("MitchamName"):
-            migrashim.append(tik["MitchamName"])
+            mitcham_name = str(tik["MitchamName"]).strip()
+
+            if mitcham_name and mitcham_name not in mitchamim:
+                mitchamim.append(mitcham_name)
 
         if tik.get("Shetach") is not None:
             shetach = tik["Shetach"]
+
+        if tik.get("ShetachBniya") is not None:
+            shetach_bniya = tik["ShetachBniya"]
 
         if tik.get("HotzaotPituach") is not None:
             hotzaot = tik["HotzaotPituach"]
@@ -245,16 +253,19 @@ def extract_api_facts(
                 )
 
         for plan_lot in tik.get("TochnitMigrash", []):
+            lot_name = str(
+                plan_lot.get("MigrashName") or ""
+            ).strip()
+
+            if lot_name and lot_name not in migrashim:
+                migrashim.append(lot_name)
+
             plan_number = str(
                 plan_lot.get("Tochnit") or ""
             ).strip()
 
             if not plan_number:
                 continue
-
-            lot_name = str(
-                plan_lot.get("MigrashName") or ""
-            ).strip()
 
            # יוצרים אובייקט מסודר שמספר לנו מה מספר התכנית,מאיפה היא הגיעה ובאיזה טיק היא הופיעה 
             reference = {
@@ -284,13 +295,16 @@ def extract_api_facts(
     # Keep raw tender type, locality, and designation codes even without lookups
 
     facts = {
-        "מספר מכרז": detail.get("MichrazName"),
+        "מספר מכרז": detail.get("MichrazID"),
+        "שם מכרז": detail.get("MichrazName"),
         "קוד יישוב": locality_code,
         "קוד ייעוד": tender_designation_code,
         "קוד סוג מכרז": tender_type_code,
         "שכונה": detail.get("Shchuna"),
+        "מתחמים": mitchamim,
         "מגרשים": migrashim,
         "שטח": shetach,
+        "שטח בנייה": shetach_bniya,
         "יחידות דיור": detail.get("YechidotDiur"),
         "מחיר מינימום": detail.get("MechirSafMichraz"),
         "הוצאות פיתוח": hotzaot,
