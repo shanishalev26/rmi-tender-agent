@@ -151,8 +151,16 @@ def get_tender_lookups(session):
         )
     }
 
+    # Preserve both the readable designation and its official RMI group
     tender_designation_lookup = {
-        row["Code"]: str(row["Value"]).strip()
+        row["Code"]: {
+            "value": str(row["Value"]).strip(),
+            "group": (
+                str(row["Group"]).strip()
+                if row.get("Group")
+                else None
+            ),
+        }
         for row in rows
         if (
             row.get("TableID")
@@ -342,10 +350,16 @@ def extract_api_facts(
     if locality:
         facts["יישוב"] = locality
 
-    tender_designation = (tender_designation_lookup.get(tender_designation_code))
+    tender_designation_data = (
+        tender_designation_lookup.get(tender_designation_code)
+        or {}
+    )
+    tender_designation = tender_designation_data.get("value")
 
     if tender_designation:
         facts["ייעוד מכרז"] = tender_designation
+
+    facts["קטגוריית ייעוד מכרז"] = tender_designation_data.get("group")
 
     return facts
 
