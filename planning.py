@@ -39,6 +39,23 @@ def get_ai_plan_number(record):
     return value or None
 
 
+def is_usable_plan_reference(value):
+    """Returns whether a plan reference is specific enough for search."""
+    if value is None:
+        return False
+
+    value = str(value).strip()
+
+    if not value:
+        return False
+
+    # General labels such as תמל, תכנית, and תב"ע contain no digits.
+    return any(
+        character.isdigit()
+        for character in value
+    )
+
+
 def get_structured_plan_numbers(api_data):
     """Returns unique plan numbers from structured RMI data."""
     results = []
@@ -167,7 +184,9 @@ def get_usable_ai_plan_number(
     block_parcels,
 ):
     """Returns the AI plan number unless it matches a known non-plan value."""
-    if not ai_plan_number:
+    if not is_usable_plan_reference(
+        ai_plan_number
+    ):
         return None
 
     known_non_plan_values = get_known_non_plan_values(
@@ -471,6 +490,12 @@ def find_plans_for_tender(michraz_id):
     structured_plan_numbers = get_structured_plan_numbers(
         api_data
     )
+    usable_structured_plan_numbers = [
+        plan_number
+        for plan_number in structured_plan_numbers
+        if is_usable_plan_reference(plan_number)
+    ]
+
     ai_plan_number = get_ai_plan_number(record)
     usable_ai_plan_number = get_usable_ai_plan_number(
         ai_plan_number,
@@ -479,8 +504,8 @@ def find_plans_for_tender(michraz_id):
     )
 
     # Prefer structured RMI plan numbers, then fall back to the AI result.
-    if structured_plan_numbers:
-        searched_plan_numbers = structured_plan_numbers
+    if usable_structured_plan_numbers:
+        searched_plan_numbers = usable_structured_plan_numbers
     elif usable_ai_plan_number:
         searched_plan_numbers = [usable_ai_plan_number]
     else:
