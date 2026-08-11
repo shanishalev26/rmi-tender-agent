@@ -325,24 +325,18 @@ def format_list(value):
     return str(value)
 
 
-def format_money(value, zero_requires_verification=False):
+def format_money(value):
     """Formats a numeric value as an amount in shekels."""
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         return "לא זמין"
-
-    if value == 0 and zero_requires_verification:
-        return "דורש בירור"
 
     return "{:,.0f} ₪".format(value)
 
 
 def format_housing_units(value):
     """Formats the number of housing units for display."""
-    if not isinstance(value, (int, float)):
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
         return "לא זמין"
-
-    if value == 0:
-        return "דורש בירור"
 
     return "{:,.0f}".format(value)
 
@@ -1070,10 +1064,7 @@ def render_tender_details_page(records):
 
             st.write(
                 "**הוצאות פיתוח:**",
-                format_money(
-                    rmi_data.get("הוצאות פיתוח"),
-                    zero_requires_verification=True,
-                ),
+                format_money(rmi_data.get("הוצאות פיתוח")),
             )
 
             st.write(
