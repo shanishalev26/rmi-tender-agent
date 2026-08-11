@@ -295,8 +295,8 @@ def extract_api_facts(
     # Keep raw tender type, locality, and designation codes even without lookups
 
     facts = {
-        "מספר מכרז": detail.get("MichrazID"),
-        "שם מכרז": detail.get("MichrazName"),
+        "מספר מכרז": detail.get("MichrazName"),
+        "מזהה מכרז": detail.get("MichrazID"),
         "קוד יישוב": locality_code,
         "קוד ייעוד": tender_designation_code,
         "קוד סוג מכרז": tender_type_code,
