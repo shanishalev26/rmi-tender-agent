@@ -1,10 +1,10 @@
 import json
+import os
 from pathlib import Path
 
 PROFILE_PATH = Path("data/company_profile.json")
 
-# ערכי דוגמה בלבד.
-# בהמשך המשתמש יוכל לשנות אותם דרך הטופס בממשק.
+# These default values can be edited through the app
 DEFAULT_PROFILE = {
     "profile_name": "חברת נדל״ן לדוגמה",
 
@@ -27,9 +27,9 @@ DEFAULT_PROFILE = {
 }
 
 def validate_profile(profile):
-    """
-    בדיקה שהפרופיל מכיל ערכים תקינים.
-    """
+    """Validates the company profile structure and values"""
+    if not isinstance(profile, dict):
+        raise ValueError("Company profile must be an object")
 
     required_fields = [
         "profile_name",
@@ -53,14 +53,47 @@ def validate_profile(profile):
             f"חסרים שדות בפרופיל: {missing_fields}"
         )
 
-    if not isinstance(profile["activity_areas"], list):
-        raise ValueError(
-            "activity_areas חייב להיות מערך"
-        )
+    profile_name = profile["profile_name"]
 
-    if not isinstance(profile["project_types"], list):
+    if (
+        not isinstance(profile_name, str)
+        or not profile_name.strip()
+    ):
+        raise ValueError("profile_name must be a non-empty string")
+
+    for field in ("activity_areas", "project_types"):
+        values = profile[field]
+
+        if not isinstance(values, list):
+            raise ValueError(f"{field} must be a list")
+
+        if not all(
+            isinstance(value, str) and value.strip()
+            for value in values
+        ):
+            raise ValueError(
+                f"{field} must contain only non-empty strings"
+            )
+
+    numeric_fields = (
+        "min_housing_units",
+        "max_housing_units",
+        "max_development_costs",
+        "min_days_until_submission",
+    )
+
+    for field in numeric_fields:
+        value = profile[field]
+
+        if (
+            isinstance(value, bool)
+            or not isinstance(value, (int, float))
+        ):
+            raise ValueError(f"{field} must be a numeric value")
+
+    if not isinstance(profile["requires_approved_plan"], bool):
         raise ValueError(
-            "project_types חייב להיות מערך"
+            "requires_approved_plan must be a boolean"
         )
 
     minimum_units = profile["min_housing_units"]
@@ -89,9 +122,7 @@ def validate_profile(profile):
     
 
 def save_profile(profile):
-    """
-    שומר את פרופיל החברה בקובץ JSON.
-    """
+    """Validates and saves the company profile"""
 
     validate_profile(profile)
 
@@ -100,7 +131,9 @@ def save_profile(profile):
         exist_ok=True,
     )
 
-    with PROFILE_PATH.open(
+    temporary_path = Path(str(PROFILE_PATH) + ".tmp")
+
+    with temporary_path.open(
         "w",
         encoding="utf-8",
     ) as file:
@@ -111,16 +144,13 @@ def save_profile(profile):
             indent=2,
         )
 
+    os.replace(temporary_path, PROFILE_PATH)
+
     print(f"Profile saved -> {PROFILE_PATH}")
 
 
 def load_profile():
-    """
-    טוען את פרופיל החברה.
-
-    אם עדיין לא קיים קובץ,
-    נוצר פרופיל ברירת המחדל.
-    """
+    """Loads the saved company profile or creates the default profile."""
 
     if not PROFILE_PATH.exists():
         print("Company profile does not exist.")

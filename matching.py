@@ -1,13 +1,11 @@
 import json
 from datetime import datetime, timezone
-from pathlib import Path
 
 from analysis_store import (
     ANALYSIS_DIR,
     save_analysis_record,
 )
-
-PROFILE_PATH = Path("data/company_profile.json")
+from company_profile import load_profile
 
 
 # The weights add up to 100, so known weight also represents data coverage
@@ -739,7 +737,7 @@ def calculate_match_for_file(analysis_path, profile):
 
 def main():
     """Recalculates company matching for every analysis record."""
-    profile = load_json(PROFILE_PATH)
+    profile = load_profile()
 
     analysis_files = sorted(
         ANALYSIS_DIR.glob("*.json")
