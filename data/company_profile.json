@@ -3,15 +3,16 @@
   "activity_areas": [
     "תל אביב יפו",
     "רמת גן",
-    "גבעתיים"
+    "גבעתיים",
+    "נס ציונה"
   ],
   "project_types": [
     "מגורים",
     "התחדשות עירונית"
   ],
   "min_housing_units": 10,
-  "max_housing_units": 250,
-  "max_development_costs": 20000000,
+  "max_housing_units": 300,
+  "max_development_costs": 22000000,
   "requires_approved_plan": true,
-  "min_days_until_submission": 14
+  "min_days_until_submission": 4
 }
