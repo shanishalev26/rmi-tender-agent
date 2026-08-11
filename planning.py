@@ -503,13 +503,16 @@ def find_plans_for_tender(michraz_id):
         block_parcels,
     )
 
-    # Prefer structured RMI plan numbers, then fall back to the AI result.
-    if usable_structured_plan_numbers:
-        searched_plan_numbers = usable_structured_plan_numbers
-    elif usable_ai_plan_number:
-        searched_plan_numbers = [usable_ai_plan_number]
-    else:
-        searched_plan_numbers = []
+    # Use all usable plan-number evidence without duplicates.
+    searched_plan_numbers = list(
+        usable_structured_plan_numbers
+    )
+
+    if (
+        usable_ai_plan_number
+        and usable_ai_plan_number not in searched_plan_numbers
+    ):
+        searched_plan_numbers.append(usable_ai_plan_number)
 
     # Step 2: Search by plan number and cadastral data.
     session = create_session()
